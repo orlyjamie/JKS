@@ -5,7 +5,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>Tiff Viewer Annotation </title>
+    <title>Tiff Viewer Annotation1 </title>
     <asp:Literal ID="dt" runat="server" />
     <link rel="stylesheet" href="css/style.css" type="text/css" media="screen, projection" />
     <link rel="stylesheet" href="css/thickbox.css" type="text/css" />
