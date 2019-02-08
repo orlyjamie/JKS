@@ -1,0 +1,199 @@
+body
+{
+    margin: 0;
+    padding: 46px 10px 10px;
+    font: 13px Open Sans,Arial,sans-serif;
+}
+body.active > *
+{
+    display: none;
+}
+body.active > #demoengine
+{
+    display: block;
+}
+#demoengine
+{
+    margin: -46px -10px 10px;
+    height: 36px;
+    background-color: #ccc;
+}
+#demoengine a
+{
+    display: block;
+    float: left;
+    margin: 5px 2px 0 0;
+    border: 1px solid #aaa;
+    padding: 0 10px;
+    line-height: 24px;
+    color: #333;
+    background-color: #eee;
+    text-decoration: none;
+}
+#demoengine a.active
+{
+    border-color: #fbcb09;
+    color: #c77405;
+    background-color: #fdf5ce;
+}
+#demoengine a.corner-l
+{
+    margin-left: 10px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+#demoengine a.corner-r
+{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+#demoengine div
+{
+    display: none;
+    position: absolute;
+    top: 36px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background-color: #eee;
+}
+#demoengine div.active
+{
+    display: block;
+}
+#demoengine pre
+{
+    margin: 0;
+    border: 0;
+    padding: 10px;
+    font-family: Consolas,Courier New,monospace;
+    background-color: #eee;
+}
+body > p:first-child, #demoengine + p
+{
+    margin-top: 0;
+}
+body > div[data-role=page]
+{
+    top: 36px !important;
+}
+@media print
+{
+    #demoengine
+    {
+        display: none;
+    }
+}
+.pln
+{
+    color: #000;
+}
+@media screen
+{
+    .str
+    {
+        color: #080;
+    }
+    .kwd
+    {
+        color: #008;
+    }
+    .com
+    {
+        color: #800;
+    }
+    .typ
+    {
+        color: #606;
+    }
+    .lit
+    {
+        color: #066;
+    }
+    .pun, .opn, .clo
+    {
+        color: #660;
+    }
+    .tag
+    {
+        color: #008;
+    }
+    .atn
+    {
+        color: #606;
+    }
+    .atv
+    {
+        color: #080;
+    }
+    .dec, .var
+    {
+        color: #606;
+    }
+    .fun
+    {
+        color: red;
+    }
+}
+@media print,projection
+{
+    .str
+    {
+        color: #060;
+    }
+    .kwd
+    {
+        color: #006;
+        font-weight: bold;
+    }
+    .com
+    {
+        color: #600;
+        font-style: italic;
+    }
+    .typ
+    {
+        color: #404;
+        font-weight: bold;
+    }
+    .lit
+    {
+        color: #044;
+    }
+    .pun, .opn, .clo
+    {
+        color: #440;
+    }
+    .tag
+    {
+        color: #006;
+        font-weight: bold;
+    }
+    .atn
+    {
+        color: #404;
+    }
+    .atv
+    {
+        color: #060;
+    }
+}
+pre.prettyprint
+{
+    padding: 2px;
+    border: 1px solid #888;
+}
+ol.linenums
+{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+li.L0, li.L1, li.L2, li.L3, li.L5, li.L6, li.L7, li.L8
+{
+    list-style-type: none;
+}
+li.L1, li.L3, li.L5, li.L7, li.L9
+{
+    background: #eee;
+}

@@ -1,0 +1,442 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CBSLibrary2</name>
+    </assembly>
+    <members>
+        <member name="T:CBSolutions.Architecture.Core.ErrorType">
+            <summary>
+            Different error severity options.
+            </summary>
+        </member>
+        <member name="F:CBSolutions.Architecture.Core.ErrorType.Information">
+            <summary>
+            Not an error. Use this to pass information from runtime to the log file
+            </summary>
+        </member>
+        <member name="F:CBSolutions.Architecture.Core.ErrorType.Warning">
+            <summary>
+            A warning exception - work may still proceed with incertainty
+            </summary>
+        </member>
+        <member name="F:CBSolutions.Architecture.Core.ErrorType.Error">
+            <summary>
+            Full error - program will quit
+            </summary>
+        </member>
+        <member name="T:CBSolutions.Architecture.Core.CBSAppUtils">
+            <summary>
+            App class closely resembles VB6 built-in App object, with some other
+            functionalities
+            </summary>
+        </member>
+        <member name="M:CBSolutions.Architecture.Core.CBSAppUtils.#cctor">
+            <summary>
+            accepts an Authentication String without which
+            this class would throw CBSException.AutheticationFailureException
+            </summary>
+        </member>
+        <member name="M:CBSolutions.Architecture.Core.CBSAppUtils.GenerateGuid">
+            <summary>
+            Generates a random and unique GUID
+            </summary>
+            <returns>GUID as a string</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Core.CBSAppUtils.Notify(CBSolutions.Architecture.Core.ErrorType,System.String)">
+            <summary>
+            Used to popup messagebox in addition to status message display
+            </summary>
+            <param name="errorType"></param>
+            <param name="message"></param>
+        </member>
+        <member name="M:CBSolutions.Architecture.Core.CBSAppUtils.GetComputerName">
+            <summary>
+            returns the name of this computer
+            </summary>
+            <returns>String</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Core.CBSAppUtils.GetUserName">
+            <summary>
+            returns the name of the current logged in user
+            </summary>
+            <returns>String</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Core.CBSAppUtils.GetDomainName">
+            <summary>
+            returns the name of the Domain the user is currently logged in
+            </summary>
+            <returns>String</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Core.CBSAppUtils.GetScreenWidth">
+            <summary>
+            emulates VB6 Screen.Width, returning the width of the screen in pixels
+            </summary>
+            <returns>int</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Core.CBSAppUtils.GetScreenHeight">
+            <summary>
+            emulates VB6 Screen.Width, returning the width of the screen in pixels
+            </summary>
+            <returns>int</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Core.CBSAppUtils.GetWorkingWidth">
+            <summary>
+            returns the actual working width of the screen in pixels
+            </summary>
+            <returns>int</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Core.CBSAppUtils.GetWorkingHeight">
+            <summary>
+            returns the actual working height of the screen in pixels
+            </summary>
+            <returns>int</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Core.CBSAppUtils.ParseFileName(System.String)">
+            <summary>
+            Returns the filename portion of a complete filespec
+            </summary>
+            <param name="fileSpec"></param>
+            <returns>String</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Core.CBSAppUtils.ParsePathName(System.String)">
+            <summary>
+            return the pathname portion from a complete filespec. doesn't return trailing \ 
+            </summary>
+            <param name="fileSpec"></param>
+            <returns>String</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Core.CBSAppUtils.PathExists(System.String)">
+            <summary>
+            checks whether the specified path exists or not
+            </summary>
+            <param name="fileSpec"></param>
+            <returns>String</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Core.CBSAppUtils.GetTempPath">
+            <summary>
+            Returns the path of the current system's temporary folder.
+            </summary>
+            <returns>String</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Core.CBSAppUtils.GetTempFile">
+            <summary>
+            Returns a unique temporary file name and 
+            creates a zero-byte file by that name on disk.
+            </summary>
+            <returns>String</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Core.CBSAppUtils.Sleep(System.Int32)">
+            <summary>
+            Sleep n seconds
+            </summary>
+            <param name="secondsTimeOut"></param>
+        </member>
+        <member name="P:CBSolutions.Architecture.Core.CBSAppUtils.DateNull">
+            <summary>
+            Returns January 1, 1753 to represent 
+            a null date
+            </summary>
+            <returns>date type</returns>
+        </member>
+        <member name="P:CBSolutions.Architecture.Core.CBSAppUtils.IsFormApplication">
+            <summary>
+            Marks the current application as Windows Form application or not.
+            used by the CBS Archiecture core functions to determine whether to
+            throw MessageBoxes or not
+            </summary>
+        </member>
+        <member name="P:CBSolutions.Architecture.Core.CBSAppUtils.Settings">
+            <summary>
+            Settings property used to store assorted custom values
+            </summary>
+        </member>
+        <member name="P:CBSolutions.Architecture.Core.CBSAppUtils.StatusBarPanel">
+            <summary>
+            Adds a reference to the statusBarPanel where all status messages 
+            across the application scope will be shown
+            </summary>
+        </member>
+        <member name="P:CBSolutions.Architecture.Core.CBSAppUtils.PrimaryConnectionString">
+            <summary>
+            gets/sets the primary database connection string
+            </summary>
+        </member>
+        <member name="P:CBSolutions.Architecture.Core.CBSAppUtils.AppConfigFile">
+            <summary>
+            Gets/Sets the full path and filename of the Config file
+            </summary>
+        </member>
+        <member name="P:CBSolutions.Architecture.Core.CBSAppUtils.AppVersion">
+            <summary>
+            Gets/Sets product Version
+            </summary>
+        </member>
+        <member name="P:CBSolutions.Architecture.Core.CBSAppUtils.AppName">
+            <summary>
+            Gets/Sets Application Name - to enable a consistent use of this name across
+            all the objects
+            </summary>
+        </member>
+        <member name="P:CBSolutions.Architecture.Core.CBSAppUtils.StatusMessage">
+            <summary>
+            sets the status message at the bottom of the main form
+            </summary>
+        </member>
+        <member name="P:CBSolutions.Architecture.Core.CBSAppUtils.AppUserId">
+            <summary>
+            Gets/Sets current logged in UserID
+            </summary>
+        </member>
+        <member name="P:CBSolutions.Architecture.Core.CBSAppUtils.AppUserName">
+            <summary>
+            gets/Sets current logged in UserName
+            </summary>
+        </member>
+        <member name="P:CBSolutions.Architecture.Core.CBSAppUtils.AppGroupId">
+            <summary>
+            Gets GroupId of the current logged in user
+            </summary>
+        </member>
+        <member name="P:CBSolutions.Architecture.Core.CBSAppUtils.AppGroupName">
+            <summary>
+            Gets/Sets GroupName of the current logged in user
+            </summary>
+        </member>
+        <member name="T:CBSolutions.Architecture.Core.CBSAppConfig">
+            <summary>
+            Class for creating custom application configuration file.
+            </summary>
+        </member>
+        <member name="M:CBSolutions.Architecture.Core.CBSAppConfig.#ctor(System.String)">
+            <summary>
+            constructor to specify the file to load XML
+            </summary>
+            <param name="file"></param>
+        </member>
+        <member name="M:CBSolutions.Architecture.Core.CBSAppConfig.#ctor">
+            <summary>
+            Constructor for initializing document object 
+            </summary>
+        </member>
+        <member name="M:CBSolutions.Architecture.Core.CBSAppConfig.LoadXml">
+            <summary>
+            Creating and initializing XML document
+            </summary>
+        </member>
+        <member name="M:CBSolutions.Architecture.Core.CBSAppConfig.GetDocumentElement">
+            <summary>
+            Getting root node from XML document.
+            </summary>
+        </member>
+        <member name="M:CBSolutions.Architecture.Core.CBSAppConfig.IsElementExist(System.String)">
+            <summary>
+            Checking if the XML element tag does exist.
+            </summary>
+            <param name="elem">XML element to check</param>
+            <returns></returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Core.CBSAppConfig.CreateElement(System.String)">
+            <summary>
+            Creating XML element/node. 
+            </summary>
+            <param name="elem">XML element to create</param>
+            <returns></returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Core.CBSAppConfig.CreateElement(System.String,System.String)">
+            <summary>
+            Creating XML element/node with value 
+            </summary>
+            <param name="elem">XML element to create</param>
+            <param name="text">Value to be set corresponding to the XML element</param>
+            <returns></returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Core.CBSAppConfig.CreateAttribute(System.String,System.String)">
+            <summary>
+            Creating XML attribute of a node 
+            </summary>
+            <param name="attributeName">XML element to create</param>
+            <param name="text">Value to be set corresponding to the attribute</param>
+            <returns></returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Core.CBSAppConfig.GetChildFromParent(System.Xml.XmlElement,System.String)">
+            <summary>
+            Getting child node which does match with argument child from parent node.
+            </summary>
+            <param name="parent">The parent node</param>
+            <param name="child">The child node</param>
+            <returns></returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Core.CBSAppConfig.GetAttributeFromNode(System.Xml.XmlElement,System.String)">
+            <summary>
+            Getting attribute which does match with argument attribute from the node.
+            </summary>
+            <param name="node">The node</param>
+            <param name="attribute">The attribute</param>
+            <returns></returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Core.CBSAppConfig.GetChildCount(System.Xml.XmlElement)">
+            <summary>
+            Getting number of child for a parent node.
+            </summary>
+            <param name="parent">The parent node</param>
+            <returns></returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Core.CBSAppConfig.SetConfigProperty(System.String,System.String)">
+            <summary>
+            Setting configuration property specified by traversing path and the value of the property.
+            </summary>
+            <param name="path">The traversing path of the element</param>
+            <param name="val">The value to be set</param>
+        </member>
+        <member name="M:CBSolutions.Architecture.Core.CBSAppConfig.SetConfigAttribute(System.String,System.String,System.String)">
+            <summary>
+            Setting configuration property's attribute specified by traversing path,attribute itself and the value of the attribute.
+            </summary>
+            <param name="path">The traversing path of the element</param>
+            <param name="attribute">The attribute of the property</param>
+            <param name="val">The value to be set</param>
+        </member>
+        <member name="M:CBSolutions.Architecture.Core.CBSAppConfig.GetConfigProperty(System.String)">
+            <summary>
+            Getting value of the configuration property specified by traversing path. 
+            </summary>
+            <param name="path">The traversing path of the element</param>
+            <returns></returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Core.CBSAppConfig.GetConfigAttribute(System.String,System.String)">
+            <summary>
+            Getting value of the configuration property's attribute specified by traversing path. 
+            </summary>
+            <param name="path">The traversing path of the element</param>
+            <param name="attribute">The attribute of the property</param>
+            <returns></returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Core.CBSAppConfig.DeleteProperty(System.String)">
+            <summary>
+            Deleting configuration property.
+            </summary>
+            <param name="property"></param>
+        </member>
+        <member name="M:CBSolutions.Architecture.Core.CBSAppConfig.DeleteAttribute(System.String,System.String)">
+            <summary>
+            Delete property's attribute.
+            </summary>
+            <param name="property"></param>
+            <param name="attribute"></param>
+        </member>
+        <member name="M:CBSolutions.Architecture.Core.CBSAppConfig.Save">
+            <summary>
+            Saving XML document object to the file. Every changes on XML document needs to call this function.
+            </summary>
+        </member>
+        <member name="M:CBSolutions.Architecture.Core.CBSAppConfig.ClearError">
+            <summary>
+            Clearing error string.
+            </summary>
+        </member>
+        <member name="M:CBSolutions.Architecture.Core.CBSAppConfig.Close">
+            <summary>
+            Releasing XML document object.
+            </summary>
+        </member>
+        <member name="P:CBSolutions.Architecture.Core.CBSAppConfig.LastError">
+            <summary>
+            Getting error occurred during last operation.
+            </summary>
+        </member>
+        <member name="T:CBSolutions.Architecture.Core.EncryptionTypes">
+            <summary>
+            Probable encryption types supported by the encryption class
+            </summary>
+        </member>
+        <member name="F:CBSolutions.Architecture.Core.EncryptionTypes.SHA1">
+            <summary>
+            SHA Encryption enum
+            </summary>
+        </member>
+        <member name="F:CBSolutions.Architecture.Core.EncryptionTypes.MD5">
+            <summary>
+            MD5 encryption enum
+            </summary>
+        </member>
+        <member name="T:CBSolutions.Architecture.Core.Encryption">
+            <summary>
+            This class uses a symmetric key algorithm (Rijndael/AES) to encrypt and 
+            decrypt data. As long as encryption and decryption routines use the same
+            parameters to generate the keys, the keys are guaranteed to be the same.
+            </summary>
+        </member>
+        <member name="F:CBSolutions.Architecture.Core.Encryption.saltValue">
+            Salt value used along with passphrase to generate password. Salt can
+            be any string. In this example we assume that salt is an ASCII string.
+        </member>
+        <member name="F:CBSolutions.Architecture.Core.Encryption.hashAlgorithmString">
+            Hash algorithm used to generate password. Allowed values are: "MD5" and
+            "SHA1". SHA1 hashes are a bit slower, but more secure than MD5 hashes.
+        </member>
+        <member name="F:CBSolutions.Architecture.Core.Encryption.passwordIterations">
+            Number of iterations used to generate password. One or two iterations
+            should be enough.
+        </member>
+        <member name="F:CBSolutions.Architecture.Core.Encryption.initVector">
+            Initialization vector (or IV). This value is required to encrypt the
+            first block of plaintext data. For RijndaelManaged class IV must be 
+            exactly 16 ASCII characters long.
+        </member>
+        <member name="F:CBSolutions.Architecture.Core.Encryption.keySize">
+            Size of encryption key in bits. Allowed values are: 128, 192, and 256. 
+            Longer keys are more secure than shorter keys.
+        </member>
+        <member name="M:CBSolutions.Architecture.Core.Encryption.Encrypt(System.String,System.String,CBSolutions.Architecture.Core.EncryptionTypes)">
+            <summary>
+            Encrypts specified plaintext using Rijndael symmetric key algorithm
+            and returns a base64-encoded result.
+            </summary>
+            <param name="plainText">
+            Plaintext value to be encrypted.
+            </param>
+            <param name="passPhrase">
+            Passphrase from which a pseudo-random password will be derived. The
+            derived password will be used to generate the encryption key.
+            Passphrase can be any string. In this example we assume that this
+            passphrase is an ASCII string.
+            </param>
+            <param name="hashAlgorithm">
+            Number of iterations used to generate password. One or two iterations
+            should be enough.
+            </param>
+            <returns>
+            Encrypted value formatted as a base64-encoded string.
+            </returns>
+            
+        </member>
+        <member name="M:CBSolutions.Architecture.Core.Encryption.Decrypt(System.String,System.String,CBSolutions.Architecture.Core.EncryptionTypes)">
+            <summary>
+            Decrypts specified ciphertext using Rijndael symmetric key algorithm.
+            </summary>
+            <param name="cipherText">
+            Base64-formatted ciphertext value.
+            </param>
+            <param name="passPhrase">
+            Passphrase from which a pseudo-random password will be derived. The
+            derived password will be used to generate the encryption key.
+            Passphrase can be any string. In this example we assume that this
+            passphrase is an ASCII string.
+            </param>
+            <param name="hashAlgorithm">
+            Hash algorithm used to generate password. Allowed values are: "MD5" and
+            "SHA1". SHA1 hashes are a bit slower, but more secure than MD5 hashes.
+            </param>
+            <returns>
+            Decrypted string value.
+            </returns>
+            <remarks>
+            Most of the logic in this function is similar to the Encrypt
+            logic. In order for decryption to work, all parameters of this function
+            - except cipherText value - must match the corresponding parameters of
+            the Encrypt function which was called to generate the
+            ciphertext.
+            </remarks>
+        </member>
+    </members>
+</doc>

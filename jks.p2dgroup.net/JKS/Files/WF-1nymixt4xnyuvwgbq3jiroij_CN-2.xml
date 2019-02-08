@@ -1,0 +1,39 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <CreditNoteDetail>
+    <CreditNoteDetailID>141059</CreditNoteDetailID>
+    <CreditNoteID>107209</CreditNoteID>
+    <SerialNo>1</SerialNo>
+    <Description>Polyamide balaclava (pack of 10) - white</Description>
+    <Quantity>80.00</Quantity>
+    <Rate>-4.00</Rate>
+    <VATRate>20.00</VATRate>
+    <VATAmt>-64.00</VATAmt>
+    <GrossAmt>-320.00</GrossAmt>
+    <TotalAmt>-384.00</TotalAmt>
+    <PurOrderNo>53905</PurOrderNo>
+    <PurOrderLineNo>1</PurOrderLineNo>
+    <BuyersProdCode>F51-055-WH</BuyersProdCode>
+    <ModDate>2018-06-27T16:38:05.04+01:00</ModDate>
+    <ModStamp>AAAAAAgUdSY=</ModStamp>
+    <New_NettValue>-320.00</New_NettValue>
+  </CreditNoteDetail>
+  <CreditNoteDetail>
+    <CreditNoteDetailID>141060</CreditNoteDetailID>
+    <CreditNoteID>107209</CreditNoteID>
+    <SerialNo>2</SerialNo>
+    <Description>Beard net (pack of 36)</Description>
+    <Quantity>-10.00</Quantity>
+    <Rate>3.45</Rate>
+    <VATRate>20.00</VATRate>
+    <VATAmt>-6.90</VATAmt>
+    <GrossAmt>-35.00</GrossAmt>
+    <TotalAmt>-41.40</TotalAmt>
+    <PurOrderNo>53905</PurOrderNo>
+    <PurOrderLineNo>2</PurOrderLineNo>
+    <BuyersProdCode>F51-078-BL</BuyersProdCode>
+    <ModDate>2018-06-27T16:38:05.053+01:00</ModDate>
+    <ModStamp>AAAAAAgUdSc=</ModStamp>
+    <New_NettValue>-34.50</New_NettValue>
+  </CreditNoteDetail>
+</NewDataSet>

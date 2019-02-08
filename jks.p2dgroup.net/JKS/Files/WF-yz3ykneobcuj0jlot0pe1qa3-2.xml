@@ -1,0 +1,20 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <InvoiceDetail>
+    <InvoiceDetailID>4797558</InvoiceDetailID>
+    <InvoiceID>3347930</InvoiceID>
+    <SerialNo>1</SerialNo>
+    <Description>Polyamide balaclava (pack of 10) - white</Description>
+    <Quantity>80.00</Quantity>
+    <Rate>4.00</Rate>
+    <VATRate>0.00</VATRate>
+    <VATAmt>64.00</VATAmt>
+    <TotalAmt>0.00</TotalAmt>
+    <PurOrderNo>0000053385</PurOrderNo>
+    <PurOrderLineNo>1</PurOrderLineNo>
+    <BuyersProdCode>F51-055-WH</BuyersProdCode>
+    <ModDate>2018-07-03T14:16:47.3+01:00</ModDate>
+    <ModStamp>AAAAAAfoeus=</ModStamp>
+    <New_NettValue>320.00</New_NettValue>
+  </InvoiceDetail>
+</NewDataSet>

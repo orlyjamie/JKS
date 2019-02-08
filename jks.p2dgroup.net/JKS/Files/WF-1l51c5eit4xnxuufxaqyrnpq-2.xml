@@ -1,0 +1,18 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <InvoiceDetail>
+    <InvoiceDetailID>5207538</InvoiceDetailID>
+    <InvoiceID>3598276</InvoiceID>
+    <SerialNo>1</SerialNo>
+    <Description>Services rendered  1.00  s Services rendered  Services rendered</Description>
+    <Quantity>750.00</Quantity>
+    <Rate>1.00</Rate>
+    <VATAmt>0.00</VATAmt>
+    <PurOrderNo />
+    <PurOrderLineNo>0</PurOrderLineNo>
+    <BuyersProdCode />
+    <ModDate>2018-10-22T15:34:37.637+01:00</ModDate>
+    <ModStamp>AAAAAAgzQig=</ModStamp>
+    <New_NettValue>750.00</New_NettValue>
+  </InvoiceDetail>
+</NewDataSet>

@@ -1,0 +1,31 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <InvoiceID>3311428</InvoiceID>
+    <InvoiceNo>JM180425</InvoiceNo>
+    <SupplierCompanyID>160153</SupplierCompanyID>
+    <BuyerCompanyID>159523</BuyerCompanyID>
+    <InvoiceDate>2018-04-25T00:00:00+01:00</InvoiceDate>
+    <CurrencyTypeID>159</CurrencyTypeID>
+    <SellerVATNo />
+    <NetTotal>14400.00</NetTotal>
+    <VATAmt>0.00</VATAmt>
+    <TotalAmt>14400.00</TotalAmt>
+    <ModDate>2018-06-15T10:58:16.19+01:00</ModDate>
+    <ModStamp>AAAAAAfeN4o=</ModStamp>
+    <StatusId>29</StatusId>
+    <DepartmentID>2151</DepartmentID>
+    <TaxPointDate>2018-04-25T00:00:00+01:00</TaxPointDate>
+    <Approved1>false</Approved1>
+    <Approved1SB1>false</Approved1SB1>
+    <Approved1SB2>false</Approved1SB2>
+    <Approved2_1>false</Approved2_1>
+    <Approved2_2>false</Approved2_2>
+    <Approved2SB1>false</Approved2SB1>
+    <Approved2SB2>false</Approved2SB2>
+    <ApprovedCEO>false</ApprovedCEO>
+    <StatusID1>29</StatusID1>
+    <NetTotal1>14400.00</NetTotal1>
+    <New_DocumentType>INV</New_DocumentType>
+  </Table>
+</NewDataSet>

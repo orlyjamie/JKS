@@ -1,0 +1,36 @@
+SELECT 	TRD.SupplierCodeAgainstBuyer AS 'Vendor ID', 
+		C.CompanyName AS 'Vendor Name', 	
+		Buyer.CompanyName AS 'Buyer Name',
+		'INV' AS 'Document Type',
+		INV.InvoiceNo AS 'Document Number', 		
+		convert(varchar,INV.InvoiceDate,103) AS 'Document Date',
+		convert(varchar,INV.TaxPointDate,103) AS 'TaxPointDate',
+		INV.New_InvoiceName AS 'Document Name',
+		Curr.CurrencyCode AS 'H:CurrencyCode',
+		INV.NetTotal AS 'H:NettAmount',
+		INV.VATAmt AS 'H:TaxAmount',
+		INV.TotalAmt AS 'H:GrossAmount',		
+		DET.SerialNo AS 'L:LineNo',
+		DET.PurOrderNo AS 'L:OrderNo',
+		replace(DET.Description,',','') AS 'L:Description',
+		DET.New_Definable1 AS 'L:Definable1',
+		DET.Quantity AS 'L:Quantity',
+		DET.Rate AS 'L:Price',
+		DET.New_NettValue AS 'L:NettValue',
+		DET.VATAmt AS 'L:TaxValue',
+		DET.TotalAmt AS 'L:GrossValue',
+		INV.New_RejectionCode AS 'Rejection Code',
+		Stat.Status AS  'Document Status'
+FROM		Invoice INV
+		INNER JOIN InvoiceDetail DET ON INV.INVOICEID		= DET.INVOICEID 
+		INNER JOIN Company C ON INV.SupplierCompanyID		= C.CompanyID 
+		INNER JOIN TradingRelation TRD ON INV.SupplierCompanyID	= TRD.SupplierCompanyID
+		INNER JOIN Company Buyer ON INV.BUYERCOMPANYID		= Buyer.CompanyID 
+		INNER JOIN CurrencyTypes Curr ON INV.CurrencyTypeID	= Curr.CurrencyTypeID 
+		INNER JOIN InvCNStatus Stat ON INV.StatusID	= Stat.StatusID 
+WHERE	INV.BUYERCOMPANYID IN (12858,12859,12860,12861,12862,12863,12864,12865,20779,42413,42421,42422,42423,42424,42425,42426,42427,42428,60395,60396,60397)
+AND INV.SupplierCompanyID = CAST(? AS INT)
+AND TRD.BUYERCOMPANYID = INV.BUYERCOMPANYID
+AND INV.InvoiceDate BETWEEN CAST(? AS DATETIME)   AND CAST(? AS DATETIME)					
+AND INV.StatusID IN ( 21,20,6)						
+ORDER BY 	INV.InvoiceNo

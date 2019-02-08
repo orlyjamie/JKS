@@ -1,0 +1,21 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <InvoiceDetail>
+    <InvoiceDetailID>5264713</InvoiceDetailID>
+    <InvoiceID>3631864</InvoiceID>
+    <SerialNo>1</SerialNo>
+    <Description>Minibus to Hambledon</Description>
+    <Quantity>1.00</Quantity>
+    <Rate>300.00</Rate>
+    <VATRate>20.00</VATRate>
+    <VATAmt>60.00</VATAmt>
+    <GrossAmt>300.00</GrossAmt>
+    <TotalAmt>360.00</TotalAmt>
+    <PurOrderNo>4500000563</PurOrderNo>
+    <PurOrderLineNo>10</PurOrderLineNo>
+    <BuyersProdCode />
+    <ModDate>2018-11-05T17:19:48.64+00:00</ModDate>
+    <ModStamp>AAAAAAhMKGc=</ModStamp>
+    <New_NettValue>300.00</New_NettValue>
+  </InvoiceDetail>
+</NewDataSet>

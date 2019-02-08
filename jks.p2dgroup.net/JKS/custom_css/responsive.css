@@ -1,0 +1,444 @@
+@media only screen and (min-width: 960px) and (max-width: 5000px)
+{
+    #bannerCarousel .carousel-inner
+    {
+        height: /*451px*/ 414px;
+    }
+}
+@media screen and (max-width:640px)
+{
+    .current_comp
+    {
+        padding: 5% 2%;
+    }
+}
+@media screen and (max-width:640px)
+{
+    /*START Header Style*/
+    .h_logo
+    {
+        text-align: center;
+        width: 100%;
+        margin-top: 2%;
+        margin-bottom: 1%;
+        padding: 0 8px;
+    }
+
+    .h_top_links_area
+    {
+        width: 100%;
+        margin-bottom: 3%;
+    }
+
+    .h_top_links
+    {
+        float: none !important;
+        margin: 0 auto;
+        width: 290px;
+    }
+    ul.h_top_links li
+    {
+        font-size: 13pt;
+        padding: 0 10px;
+    }
+    ul.h_top_links li.h_top_links_1st
+    {
+        width: 60%;
+    }
+    ul.h_top_links li.h_top_links_2nd
+    {
+        width: 40%;
+        padding-left: 15px;
+    }
+
+
+    /*START Manin Nav*/
+    .main_nav .nav > li > a
+    {
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+
+
+    /*START News Scroller*/
+    .container_new
+    {
+        padding-bottom: 0;
+    }
+    .container_new_logo
+    {
+        padding-top: 0;
+        padding-bottom: 15px;
+        text-align: center;
+    }
+
+
+    /*START Banner Home Page*/
+    #bannerCarousel .carousel-caption.slider2nd, #bannerCarousel .carousel-caption.slider3rd, #bannerCarousel .carousel-caption.slider4th, #bannerCarousel .carousel-caption.slider5th, #bannerCarousel .carousel-caption.slider6th
+    {
+        top: 2% !important;
+    }
+    #bannerCarousel .carousel-caption h1
+    {
+        font-size: 200%;
+    }
+    #bannerCarousel .carousel-caption p
+    {
+        font-size: 160%;
+    }
+    .btn_ban
+    {
+        font-size: 1.1em;
+    }
+    .carousel-indicators
+    {
+        bottom: -10px;
+    }
+
+    .slider2nd p, .slider3rd p, .slider4th p, .slider5th p, .slider6th p
+    {
+        padding-right: 0;
+    }
+
+
+    /*START Banner Sub Page*/
+    .ban_sub_wrapper h1
+    {
+        font-size: 1.5em;
+    }
+
+
+    /*START Contact Page*/
+    .dl-horizontal.contact_details dd
+    {
+        margin-left: 0;
+    }
+
+
+    /**********START Footer   **********/
+    .f_col
+    {
+        height: 240px; /*float:none; 		display:inline-block;*/ /*width:100%;*/
+        margin-bottom: 5%;
+    }
+    .f_col_third, .f_col_fourth
+    {
+        height: auto;
+    }
+
+    .f_top p img
+    {
+        width: auto;
+    }
+    ul.f_links li
+    {
+        width: 100%;
+    }
+    ul.f_social
+    {
+        margin-bottom: 5px;
+    }
+    ul.f_social li
+    {
+        width: 100%;
+    }
+
+    .f_bottom .f_col
+    {
+        width: 100%;
+        height: auto;
+        text-align: center;
+        margin-bottom: 3%;
+    }
+
+
+    /*START Popup Style*/
+    .pop-wrapper.affix_600
+    {
+        width: 99.9% !important;
+    }
+
+
+    /*START Logo Scroll*/
+    .logo_thumb
+    {
+        float: left;
+        width: 50%;
+    }
+}
+
+
+
+/*=========================================================================*/
+
+/* [Main Navigation Styles] */
+
+@media only screen and (max-width : 979px)
+{
+    .hm_ban_rgtSide_wrapper
+    {
+        padding-left: 15px !important;
+    }
+    /*START News Scroller*/
+    .container_new
+    {
+        float: left;
+    }
+    .container_new_logo
+    {
+        padding-top: 0;
+        padding-bottom: 15px;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1199px)
+{
+    .main_nav .nav > li > a
+    {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /*START Logo Scroll*/
+    .logo_thumb
+    {
+        float: left;
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1023px)
+{
+    .main_nav .nav > li > a
+    {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /*START Logo Scroll*/
+    .logo_thumb
+    {
+        float: left;
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px)
+{
+    ul.h_top_links
+    {
+        padding-top: 7%;
+    }
+
+    /*START Logo Scroll*/
+    .logo_thumb
+    {
+        float: left;
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px)
+{
+    .main_nav .nav > li > a
+    {
+        padding-left: 14px;
+        padding-right: 14px;
+        font-size: 11.5pt;
+    }
+
+    ul.f_links li, ul.f_social li
+    {
+        width: 100%;
+        float: none;
+        display: block;
+    }
+
+
+    .f_top p img
+    {
+        width: 100%;
+    }
+
+
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px)
+{
+
+    .h_logo img
+    {
+        max-width: 100%;
+    }
+
+    /*START Banner Home Page*/
+    .btn_ban
+    {
+        font-size: 1.1em;
+    }
+
+
+
+    .img-thumbnail_lft, .img-thumbnail_rgt
+    {
+        width: 100%;
+    }
+
+    .img_listing_lftRgt .media .pull-left, .img_listing_lftRgt .media .pull-right
+    {
+        float: none;
+        display: block;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    .img_listing_lftRgt .media .media-body
+    {
+        float: none;
+        display: block;
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 320px) and (max-width: 390px)
+{
+
+    /*START Banner*/
+    #bannerCarousel .carousel-caption_inner
+    {
+        padding: 7px 7px 1px 15px;
+    }
+    #bannerCarousel .carousel-caption h1
+    {
+        font-size: 1.4em;
+        line-height: 22px;
+    }
+    .slider1st.carousel-caption h1
+    {
+        font-size: 1em !important;
+    }
+    #bannerCarousel .carousel-caption p
+    {
+        font-size: 1em;
+        line-height: 18px;
+    }
+
+
+    /*START Footer*/
+    .f_col_first, .f_col_second, .f_col_third, .f_col_fourth
+    {
+        display: block;
+        float: none;
+        width: 100%;
+    }
+    .f_col_second
+    {
+        height: auto;
+        margin-bottom: 10%;
+    }
+}
+@media only screen and (max-width : 320px)
+{
+
+}
+
+@media (max-width:767px)
+{
+    .main_nav.navbar-inverse .navbar-nav .open .dropdown-menu > li
+    {
+        margin-left: 2%;
+    }
+
+    .main_nav.navbar-inverse .navbar-nav .open .dropdown-menu > li > a
+    {
+        font-family: 'franklin_gothic_medium_condRg';
+        font-size: 12pt;
+        color: #777;
+        padding: 8px 15px 8px 0;
+        margin-left: 15px;
+        background: url(../assets/img/nav_divider_vertical.gif) 0 100% repeat-x;
+    }
+
+    .main_nav.navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover, .main_nav.navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus
+    {
+        color: #0091F8;
+        background-color: transparent;
+    }
+    .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a, .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:focus
+    {
+        color: #0091F8 !important;
+    }
+
+    /*START Logo Scroll*/
+    .logo_thumb
+    {
+        float: left;
+        width: 50%;
+    }
+}
+
+@media (max-width:768px)
+{
+
+    .contactform_lft, .contactform_rgt
+    {
+        float: left;
+        width: 50%;
+    }
+    .contactform_rgt textarea.form-control
+    {
+        height: 128px;
+    }
+
+}
+
+
+/*	@media only screen and (min-width: 320px) and (max-width: 606px) {
+	.h_logo{
+		text-align:center;
+		}
+		
+	.h_top_links{
+		float:none!important;
+		margin: 0 auto!important;
+		
+		width:290px;
+		}
+	ul.h_top_links li{
+		font-size: 11pt;
+		}
+	}*/
+
+
+
+/*@media only screen and (min-width: 1025px) and (max-width: 1199px) {
+	.nav > li > a{
+		padding-left: 22px;
+		padding-right: 22px;
+		}
+	}
+
+@media only screen and (min-width: 993px) and (max-width: 1023px) {
+	.nav > li > a{
+		padding-left: 22px;
+		padding-right: 22px;
+		}
+	}
+		
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+	.nav > li > a{
+		padding-left: 16px;
+		padding-right: 16px;
+		
+		font-size:11.5pt;
+	}
+
+@media only screen and (min-width: 991px) and (max-width: 1024px) {
+	.nav > li > a{
+		padding-left: 16px;
+		padding-right: 16px;
+		
+		font-size:11.5pt;
+		}
+	}*/
+
+

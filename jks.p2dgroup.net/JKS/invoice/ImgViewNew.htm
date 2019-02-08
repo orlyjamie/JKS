@@ -1,0 +1,466 @@
+<!--<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+    <title>P2D Invoice Viewer</title>
+    <meta name="GENERATOR" content="Microsoft Visual Studio .NET 7.1">
+    <meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
+    <link rel="stylesheet" type="text/css" href="InvView.css"></link>
+    <script language="JScript" src="Utility.js"></script>
+    <script>
+
+        //===================================================================================
+        //Invoice
+        //===================================================================================
+        var selectTop = 0;
+        var selectBottom = 0; //JCB Feb 22
+        var selectLeft = 0;
+        var selectHeight = 0;
+        var selectWidth = 0;
+        var refHeight = 0;
+        var refWidth = 0;
+        var showZoom = false;
+        var zoomWindow = null;
+
+        function window.onbeforeunload() {
+            //			window.alert("closing InView.htm");
+            if (window.ImgToolNew.doc_opened == "yes") {
+                event.returnValue = "Any edits you may have made have not been saved and the invoice is still booked out to you.\nYou MUST Cancel, and then Save or Archive to store and free your document for access by other clerks.";
+
+            }
+            //			window.alert("Setting things to null string and doc_opened=no");
+            //			window.parent.ImgToolbar.doc_opened="no";
+            //			Form1.TextBoxGlobals.value="";	
+            //			Form1.TextBoxGlobals2.value="";	
+            //			window.frames("InVoice").now_closing_down();	
+        }
+
+        //		function window.onunload()
+        //		{
+        //			window.frames("InVoice").outer_closing();
+        //			Form1.pbClose1.click();	
+        //		}
+
+        function remove_spaces() {
+            var string2 = remove_spaces.arguments[0];
+            var string3 = ""
+            for (var j = 0; j < string2.length; j++) {
+                var achar = string2.charAt(j);
+                if (achar == ' ')
+                    achar = '%20';
+                string3 += achar;
+
+            }
+            return (string3);
+        }
+
+        function window.onunload() {
+            //			window.alert("Closing");
+
+            window.frames("ImgForm").close_validation();
+            WScript.Sleep(5000);
+
+            //			WScript.Sleep(5000);
+            //			window.alert("Closing");
+        }
+
+        function clearSelection() {
+            selectTop = 0;
+            selectLeft = 0;
+            selectHeight = 0;
+            selectWidth = 0;
+        }
+
+        function setInvoice(docid) {
+            //			window.alert(docid);
+            clearSelection();
+            //document.all.Invoice.src="InvView.aspx?docid=" + docid;
+            document.all.ImgPopNew.src = "ImgPopNew.aspx?docid=" + docid;
+        }
+
+        function setValidation(docid) {
+
+        }
+
+        function setInvoiceView(docid, page, pages, type, path) {
+            showDocument(docid, page, pages, path, type);
+        }
+
+        function onObjFocus(obj, dataObj) {
+            //			window.alert("Hightlighting in red");
+            var page = obj.ItemPage;
+            if (page == undefined)
+                window.frames("ImgForm").hideSelection();
+            else {
+                page = parseInt(page) + 1;
+                selectTop = parseInt(obj.ItemTop); //JCB Sept 3 now not changed
+                selectBottom = parseInt(obj.ItemBottom);
+                selectLeft = parseInt(obj.ItemLeft);
+                selectHeight = parseInt(obj.ItemHeight);
+                selectWidth = parseInt(obj.ItemWidth);
+                //				window.alert(selectTop);
+                //				window.alert(selectBottom);
+                //				window.alert(selectLeft);
+                //				window.alert(selectWidth);
+
+
+
+                refHeight = parseInt(dataObj.getAttribute("ImgHeight_" + page));
+                refWidth = parseInt(dataObj.getAttribute("ImgWidth_" + page));
+                //				window.alert(refHeight);
+                //				window.alert(refWidth);
+                if (selectTop > refHeight || selectTop + selectHeight > refHeight)
+                    return;
+                if (selectLeft > refWidth || selectLeft + selectWidth > refWidth)
+                    return;
+                if (selectLeft <= 0 || selectTop <= 0)
+                    return;
+
+                //				window.alert(selectTop);
+                if (selectHeight == 0 || selectWidth == 0 || refHeight == 0) {
+                    window.frames("ImgForm").hideSelection();
+                }
+                else {
+                    //					window.alert("calling showSelection but checking page change");
+                    if (page != currentPage)
+                        showPage(page);
+                    else
+                        window.frames("ImgForm").showSelection();
+                    zoomSelect();
+                }
+            }
+        }
+
+        function into_url_escape_codes(instring) {
+            var string2 = into_url_escape_codes.arguments[0];
+            var string3 = "";
+            var sub;
+            for (var j = 0; j < string2.length; j++) {
+                var achar = string2.charAt(j);
+                sub = achar;
+                switch (achar) {
+                    case ' ': sub = '%20'; break;
+                    case '<': sub = '%3C'; break;
+                    case '>': sub = '%3E'; break;
+                    case '#': sub = '%23'; break;
+                    case '%': sub = '%25'; break;
+                    case '{': sub = '%7B'; break;
+                    case '}': sub = '%7D'; break;
+                    case '|': sub = '%7C'; break;
+                    case '\\': sub = '%5C'; break;
+                    case '^': sub = '%5E'; break;
+                    case '~': sub = '%7E'; break;
+                    case '[': sub = '%5B'; break;
+                    case ']': sub = '%5D'; break;
+                    case '`': sub = '%60'; break;
+                    case ';': sub = '%3B'; break;
+                    case '/': sub = '%2F'; break;
+                    case '?': sub = '%3F'; break;
+                    case ':': sub = '%3A'; break;
+                    case '@': sub = '%40'; break;
+                    case '=': sub = '%3D'; break;
+                    case '&': sub = '%26'; break;
+                    case '$': sub = '%24'; break;
+                }
+                string3 += sub;
+            }
+            return (string3);
+        }
+
+
+        function selectInvDlg() {
+            if (window.ImgToolNew.doc_opened == "yes") {
+                window.alert("An invoice is open for editing.\nStore it using one of the two FILE icons at the right of this bar.\nAlternatively Quit this frame with X, Re-start and Re-select Batch and File.");
+                return;
+            }
+
+            var retVal2 = window.showModalDialog("BatchDisplay.aspx", window, "dialogHeight: 640px; dialogWidth: 455px; dialogTop: 60px; dialogLeft: 300px; edge: Raised; center: Yes; help: No; resizable: No; status: No;");
+            //			if (retVal2)
+            //				setInvoice(retVal);
+            if (retVal2 == null || retVal2 == "")
+                return;
+            //			window.alert(retVal2);
+            var params = retVal2.split("¬");
+            //			window.alert(params[0]);
+            //			window.alert(params[1]);
+            //			window.alert(params[2]);	
+            //			window.alert(into_url_escape_codes(params[0]));
+            //			window.alert(into_url_escape_codes(params[1]));
+            //			window.alert(into_url_escape_codes(params[2]));								
+            var mystring = "?batch=" + into_url_escape_codes(params[0]) + "&division=" + into_url_escape_codes(params[1]) + "&type=" + into_url_escape_codes(params[2]);
+
+            //			mystring2=remove_spaces(mystring);
+            //			mystring2=into_url_escape_codes(mystring);
+            mystring2 = mystring;
+            //			window.alert(mystring2);
+
+            var myObject = new Object();
+            myObject.batch = params[0];
+            myObject.division = params[1];
+            myObject.type = params[2];
+            window.ImgToolNew.sbatch = params[0];
+            window.ImgToolNew.sdivision = params[1];
+            window.ImgToolNew.stype = params[2];
+
+            //			var height=window.screenTop;
+            var height = screen.availHeight - 10;
+            var width = screen.availWidth;
+            var x_dis = Math.floor(width * 0.56);
+            //			window.alert(x_dis);
+            var dialog_left = x_dis.toString(10) + "px;";
+            var dialog_height = height.toString(10) + "px;";
+            //			window.alert(dialog_height);
+            var parameter_string = "dialogHeight: " + dialog_height + " dialogWidth: 280px; dialogTop: 10px; dialogLeft: " + dialog_left + " edge: Raised; center: No; help: No; resizable: No; status: No; "
+            //			window.alert(parameter_string);
+            //			var retVal=window.showModalDialog("InvSelectDlg.aspx"+mystring, myObject, "dialogHeight: 710px; dialogWidth: 280px; dialogTop: 30px; dialogLeft: 270px; edge: Raised; center: Yes; help: No; resizable: No; status: No; scroll: No;");
+            //			Session["doc_load_stage"]="doc_saved";
+            //			window.alert("about to open Dialog box 2");
+            var retVal = window.showModalDialog("InvSelectDlg.aspx" + mystring2, myObject, parameter_string);
+
+            //			var retVal=window.showModalDialog("InvSelectDlg.aspx"+mystring2, myObject, "dialogHeight: 700px; dialogWidth: 270px; dialogTop: 100px; dialogLeft: 270px; edge: Raised; center: Yes; help: No; resizable: No; status: No; scroll: No;");
+            //			window.alert(retVal);
+            if (retVal) {
+                window.parent.ImgToolbar.doc_opened = "yes";
+                setInvoice(retVal);
+            }
+        }
+
+
+        function zoomSelect() {
+            if (showZoom) {
+                if (zoomWindow == null)
+                    showZoomWindow();
+                else {
+
+                    // EARLIER EXPERIMENTS TO GET THE PATH
+                    //					if(App.filearea=="Local")
+                    //						filepath_prefix=App.WorkPath;
+                    //					else filepath_prefix=(String)Session["IPE Output Directory"];
+                    //					pbReset.Attributes.Add("ImgUrl",filepath_prefix + client_name +"\\" +"DOC" + docid + "_" + page + ".gif");
+                    //					var path="IPE Output for IIS" + "\\" + file_prefix + "\\DOC" + currentDocId + ".XML";
+
+                    var image = zoomWindow.document.activeElement.all.Image;
+                    var file_prefix = window.frames("InVoice").Form1.TextBox4.value;
+                    /* BEFORE SEPT 27 PROBLEM	*/		//		image.src ="IPE Output for IIS" + "\\" + file_prefix + "\\DOC"+ currentDocId + "_" + currentPage + ".gif";
+                    //					var destination_prefix="C:\\Inetpub\\wwwroot\\P2D2";
+                    var destination_prefix = "work\\";
+                    //					window.alert(file_prefix);
+                    //					var clerk_id="1470";
+                    var clerk_id = window.frames("InVoice").Form1.TextboxClerkId.value;
+
+                    //					image.src =destination_prefix + "DOC"+ clerk_id + "_" + currentPage + ".gif";
+                    // code below is now the only one used /////////////////			
+                    var url = window.frames("ImgForm").Form1.pbReset.getAttribute("ImgUrl");
+                    //			window.alert(url);
+                    image.src = url;
+                    ////////////////////////////////////////////////////////			
+                    //					window.alert(image.src);
+                    image.style.width = window.frames("ImgForm").stdWidth * 3
+                    image.style.hight = window.frames("ImgForm").stdHeight * 3
+                }
+
+            }
+        }
+
+        function showZoomWindow() {
+            zoomWindow = window.showModelessDialog("ImgZoom.htm", window, "dialogHeight: 150px; dialogWidth: 200px; dialogTop: 100px; dialogLeft: 100px; edge: Raised; center: Yes; help: No; resizable: Yes; status: No;");
+        }
+        function zoomClosed() {
+            zoomWindow = null;
+            showZoom = false;
+        }
+
+        //===================================================================================
+        //Image
+        //===================================================================================
+
+        var currentDocId = 0;
+        var currentPage = 0;
+        var currentPages = 0;
+        var showThumbs = 0;
+        var thumbSize = 0;
+        var Initialised = false;
+
+        var imgStretchMode = 0;
+
+        function showDocument(docid, page, pages, path, type) {
+            //			window.alert("in showDocument");
+            if (!Initialised) {
+                getViewOptions();
+                Initialised = true;
+            }
+            // JCB April 30			
+            if (docid != currentDocId)
+                if (true) {
+                    currentDocId = docid;
+                    currentPage = page;
+                    currentPages = pages;
+                    selectPage(page);
+                    setThumbView();
+                }
+        }
+
+        function selectPage(page) {
+            clearSelection();
+            showPage(page);
+        }
+        function showPage(page) {
+            currentPage = Math.max(1, Math.min(page, currentPages));
+            //document.all.ImgPopNew.src="ImgPopNew.aspx?docid=" + currentDocId + "&iPageNo=" + currentPage;
+            document.all.ImgPopNew.src = "ImgPopNew.aspx?docid=" + currentDocId + "&iPageNo=" + currentPage;
+            window.ImgToolNew.Form1.tbPageNo.value = currentPage;
+
+        }
+
+        function setThumbView() {
+            if (showThumbs == 0 || (showThumbs == 2 && currentPages < 2))
+                window.fs2.cols = "0,*";
+            else {
+                if (thumbSize == 1)
+                    window.fs2.cols = "165,*";
+                else
+                    window.fs2.cols = "92,*";
+                document.all.ImgThumbs.src = "ImgThumbs.aspx?docid=" + currentDocId + "&pages=" + currentPages + "&size=" + thumbSize;
+            }
+        }
+
+        function getViewOptions() {
+            var cook = GetCookie("ThumbView");
+            if (cook != null) {
+                var s = cook.split(",");
+                showThumbs = s[0];
+                thumbSize = s[1];
+                if (showThumbs == 0)
+                    window.fs2.cols = "0,*";
+            }
+        }
+
+        function viewOptionsDlg() {
+            var retVal = window.showModalDialog("ViewOptionsDlg.aspx", window, "dialogHeight: 300px; dialogWidth: 275px; dialogTop: 100px; dialogLeft: 100px; edge: Raised; center: Yes; help: Yes; resizable: No; status: No;");
+            if (retVal == true) {
+                getViewOptions();
+                setThumbView();
+            }
+        }
+
+        function remove_spaces() {
+            var string2 = remove_spaces.arguments[0];
+            var string3 = ""
+            for (var j = 0; j < string2.length; j++) {
+                var achar = string2.charAt(j);
+                if (achar == ' ')
+                    achar = '%20';
+                string3 += achar;
+
+            }
+            return (string3);
+        }
+
+        function search_for_latest_file(suffix, clerk_id) {
+            var fso, f, fc, s;
+            var folderspec = "work";
+            return;
+            fso = new ActiveXObject("Scripting.FileSystemObject");
+            return;
+            f = fso.GetFolder(folderspec);
+            fc = new Enumerator(f.files);
+            s = "";
+            for (; !fc.atEnd(); fc.moveNext()) {
+                s = fc.item();
+                window.alert(s);
+            }
+            return ("work\\" + s);
+        }
+
+
+        function viewInvTxt() {
+            var file_prefix = window.frames("InVoice").Form1.TextBox4.value;
+            //			window.alert(file_prefix);
+            //			image.src = file_prefix + "\\DOC"+ currentDocId + "_" + currentPage + ".gif";
+            // 	"..\\..\\..\\P2D\IPE Output\\Client 1\\DOC"
+            // BEFORE PROBLEM SEPTEMBER 27			var path="IPE Output for IIS" + "\\" + file_prefix + "\\DOC" + currentDocId + "_" + currentPage + ".txt";
+            //			var path="work" + "\\DOC" + currentDocId + ".XML";
+
+            var destination_prefix = "work\\";
+            //			var clerk_id="1470";
+            var clerk_id = window.frames("InVoice").Form1.TextboxClerkId.value;
+
+            //			var path=destination_prefix + "doc"+ clerk_id + "_" + currentPage + ".txt";
+            //			window.alert(path);
+            //			var path2=EncodeURL(path);
+            // code below is now the only one used /////////////////			
+            var url = window.frames("ImgForm").Form1.pbReset.getAttribute("ImgUrl");
+            //			window.alert(url);
+            var i = url.indexOf(".");
+            var path = url.substr(0, i) + ".txt";
+            var index1 = path.indexOf('_');
+            var index2 = path.indexOf('_', index1 + 1);
+            var path2 = path.substr(0, index1) + "_1" + path.substr(index2);
+            var page_number = path.substr(index1 + 1, index2 - index1 - 1);
+            //			window.alert(path);
+            if (page_number != "1") {
+                window.alert("You are currently on a none-first page. Only Text for the first page is available.");
+            }
+            ////////////////////////////////////////////////////////				
+            if (currentDocId != 0)
+                dWin = window.open(path2, "_blank", "scrollbars=yes menubar=no status=no resizable=yes titlebar=yes toolbar=yes fullscreen=no directories=no ", false);
+            else
+                window.alert("Select an invoice before choosing this option");
+        }
+
+        function viewInvXml() {
+            var file_prefix = window.frames("InVoice").Form1.TextBox4.value;
+            //			window.alert(file_prefix);
+            //			image.src = file_prefix + "\\DOC"+ currentDocId + "_" + currentPage + ".gif";
+            // BEFORE PROBLEM SEPT 27			var path="IPE Output for IIS" + "\\" + file_prefix + "\\DOC" + currentDocId + ".XML";
+            //			var path="work\\DOC" + currentDocId + ".XML";
+
+            var destination_prefix = "work\\";
+            //			var clerk_id="1470";
+            var clerk_id = window.frames("InVoice").Form1.TextboxClerkId.value;
+            //			var xxx=window.frames("InVoice").Form1.TextBox4.value;
+            //			window.alert(xxx);
+
+            // code below is now the only one used /////////////////			
+            var url = window.frames("ImgForm").Form1.pbReset.getAttribute("ImgUrl");
+            //			window.alert(url);
+            var i = url.indexOf(".");
+            var path = url.substr(0, i) + ".XML";
+            var index1 = path.indexOf('_');
+            var index2 = path.indexOf('_', index1 + 1);
+            var path2 = path.substr(0, index1) + "_1" + path.substr(index2);
+            //			window.alert(path2);
+            ////////////////////////////////////////////////////////			
+
+            //			var path=destination_prefix + "DOC"+ clerk_id + ".XML";
+            //			search_for_latest_file(".xml", "1470");
+            //			window.alert(path);
+            if (currentDocId != 0)
+                dWin = window.open(path2, "_blank", "scrollbars=yes menubar=no status=no resizable=yes titlebar=yes toolbar=yes fullscreen=no directories=no ", false);
+            else
+                window.alert("Select an invoice before choosing this option");
+        }
+
+        function centreWindow() {
+            window.screen.availHeight;
+            window.screen.availWidth;
+            window.moveTo(x, y);
+
+        }
+    </script>
+</head>
+<frameset rows="29,99%,1%,0" id="fs1" border="0" framespacing="0" frameborder="yes">
+		<frame id="ImgToolNew" name="ImgToolNew" src="ImgToolNew.htm" frameBorder="no" noResize
+			scrolling="no">
+		<frameset cols="0,100%" id="fs2">
+			<frame id="ImgThumbs" name="ImgThumbs" src="" style="BACKGROUND-COLOR: buttonface" frameBorder="yes"
+				scrolling="auto">
+			<frame id="ImgPopNew" name="ImgPopNew" src="ImgPopNew.aspx?iPageNo=1" style="BACKGROUND-COLOR: buttonface"
+				scrolling="auto">
+		</frameset>
+		<frame id="Invoice" name="Invoice" src="InvView.aspx" scrolling="no">	
+		<frame id="InvTabs" name="InvTabs" src="InvToolbar.htm" scrolling="no" frameBorder="no" 
+			noresize>		
+		
+	</frameset>
+</html>

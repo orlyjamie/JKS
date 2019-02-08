@@ -1,0 +1,73 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <InvoiceDetail>
+    <InvoiceDetailID>4903268</InvoiceDetailID>
+    <InvoiceID>3409363</InvoiceID>
+    <SerialNo>1</SerialNo>
+    <Description>Black U-Power zip-sided lined Rigger boot with steel midsole - 7</Description>
+    <Quantity>10.00</Quantity>
+    <Rate>23.62</Rate>
+    <VATAmt>0.00</VATAmt>
+    <PurOrderNo>0000040909</PurOrderNo>
+    <BuyersProdCode>B06-9454-07</BuyersProdCode>
+    <ModDate>2018-07-31T06:20:36.8+01:00</ModDate>
+    <ModStamp>AAAAAAf8DxQ=</ModStamp>
+    <New_NettValue>236.20</New_NettValue>
+  </InvoiceDetail>
+  <InvoiceDetail>
+    <InvoiceDetailID>4903269</InvoiceDetailID>
+    <InvoiceID>3409363</InvoiceID>
+    <SerialNo>2</SerialNo>
+    <Description>Black U-Power zip-sided lined Rigger boot with steel midsole - 8</Description>
+    <Quantity>10.00</Quantity>
+    <Rate>23.62</Rate>
+    <VATAmt>0.00</VATAmt>
+    <PurOrderNo>0000040909</PurOrderNo>
+    <BuyersProdCode>B06-9454-08</BuyersProdCode>
+    <ModDate>2018-07-31T06:20:36.833+01:00</ModDate>
+    <ModStamp>AAAAAAf8Dxc=</ModStamp>
+    <New_NettValue>236.20</New_NettValue>
+  </InvoiceDetail>
+  <InvoiceDetail>
+    <InvoiceDetailID>4903270</InvoiceDetailID>
+    <InvoiceID>3409363</InvoiceID>
+    <SerialNo>3</SerialNo>
+    <Description>Black U-Power zip-sided lined Rigger boot with steel midsole - 10</Description>
+    <Quantity>5.00</Quantity>
+    <Rate>23.62</Rate>
+    <VATAmt>0.00</VATAmt>
+    <PurOrderNo>0000040909</PurOrderNo>
+    <BuyersProdCode>B06-9454-10</BuyersProdCode>
+    <ModDate>2018-07-31T06:20:36.833+01:00</ModDate>
+    <ModStamp>AAAAAAf8Dxo=</ModStamp>
+    <New_NettValue>118.10</New_NettValue>
+  </InvoiceDetail>
+  <InvoiceDetail>
+    <InvoiceDetailID>4903271</InvoiceDetailID>
+    <InvoiceID>3409363</InvoiceID>
+    <SerialNo>4</SerialNo>
+    <Description>Black full grain leather non-metallic brogue - 10</Description>
+    <Quantity>2.00</Quantity>
+    <Rate>26.91</Rate>
+    <VATAmt>0.00</VATAmt>
+    <PurOrderNo>0000040909</PurOrderNo>
+    <BuyersProdCode>B10-1145-10</BuyersProdCode>
+    <ModDate>2018-07-31T06:20:36.837+01:00</ModDate>
+    <ModStamp>AAAAAAf8Dx0=</ModStamp>
+    <New_NettValue>53.82</New_NettValue>
+  </InvoiceDetail>
+  <InvoiceDetail>
+    <InvoiceDetailID>4903272</InvoiceDetailID>
+    <InvoiceID>3409363</InvoiceID>
+    <SerialNo>5</SerialNo>
+    <Description>14/11 jty chasing line 1</Description>
+    <Quantity>10.00</Quantity>
+    <Rate>0.00</Rate>
+    <VATAmt>0.00</VATAmt>
+    <PurOrderNo>0000040909</PurOrderNo>
+    <BuyersProdCode>Y-02</BuyersProdCode>
+    <ModDate>2018-07-31T06:20:36.843+01:00</ModDate>
+    <ModStamp>AAAAAAf8DyA=</ModStamp>
+    <New_NettValue>0.00</New_NettValue>
+  </InvoiceDetail>
+</NewDataSet>

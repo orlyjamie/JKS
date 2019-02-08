@@ -1,0 +1,34 @@
+/* CSS Document */
+
+.logintop{height:88px; width:400px; text-align:center; color:#FFFFFF; background-image:url(../images/img1.jpg); font-family:Verdana; font-size:14px; font-weight:bold;}
+.loginmid{width:400px; background-image:url(../images/img2.jpg); color:#000066;}
+.loginbot{width:400px; height:120px; background-image:url(../images/img8.jpg);}
+.loginform{font-family:Verdana; font-size:11px;}
+
+body{font-family:Arial, Helvetica, sans-serif; font-size:11px;}
+
+.header{width:900px; background-image:url(../images/img12c.jpg); height:88px;}
+.header_left{width:162px; background-image:url(../images/img12b.jpg); height:88px; float:left;}
+.header_middle{width:708px;; height:88px; float:left;}
+.header_right{width:30px; background-image:url(../images/img12a.jpg); height:88px; float:left;}
+
+.content{width:900px; background-image:url(../images/img12.jpg);}
+.content_wrap{width:850px; text-align:left; margin-left:25px; margin-right:25px;}
+.left_pannel{width:190px; padding-left:5px; padding-bottom:5px; padding-right:5px; float:left;}
+.right_pannel{width:640px; padding:5px; float:left;}
+.right_pannel_raffle{width:840px; padding:5px; float:left; border:0px solid #000000;}
+.txt_heading_main{font-family:Verdana; font-size:14px; font-weight:bold; color:#FFFFFF;}
+.logout{text-decoration:none; font-weight:bold; font-size:12px; color:#000000;}
+a.logout:hover{text-decoration:none; color:#FF6600;}
+
+.menu_heading{font-weight:bold; font-size:12px; margin:5px; margin-bottom:1px;}
+.menu_list{padding-left:15px; padding-bottom:5px; line-height:18px;}
+.menu_heading_bg{background-color:#A4C747; line-height:25px;}
+.menu_list_bg{background-color:#BFD859;}
+.menu_link{text-decoration:none; color:black;}
+a.menu_link:hover{text-decoration:none; color:black; font-weight:bold;}
+
+.footer{width:900px; height:120px; background-image:url(../images/img10.jpg);}
+.footer_left{width:133px; height:120px; background-image:url(../images/img9.jpg); float:left;}
+.footer_middle{width:656px; height:120px; float:left;}
+.footer_right{width:111px; height:120px; background-image:url(../images/img11.jpg); float:left;}

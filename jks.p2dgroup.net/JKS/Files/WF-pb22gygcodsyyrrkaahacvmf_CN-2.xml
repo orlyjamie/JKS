@@ -1,0 +1,18 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <CreditNoteDetail>
+    <CreditNoteDetailID>154200</CreditNoteDetailID>
+    <CreditNoteID>116742</CreditNoteID>
+    <SerialNo>1</SerialNo>
+    <Description>Introduction fee - Head of Digital</Description>
+    <Quantity>1.00</Quantity>
+    <Rate>70.00</Rate>
+    <VATAmt>0.00</VATAmt>
+    <PurOrderNo>4500002497</PurOrderNo>
+    <PurOrderLineNo>10</PurOrderLineNo>
+    <BuyersProdCode />
+    <ModDate>2018-11-05T17:19:48.29+00:00</ModDate>
+    <ModStamp>AAAAAAg8+Kw=</ModStamp>
+    <New_NettValue>70.00</New_NettValue>
+  </CreditNoteDetail>
+</NewDataSet>

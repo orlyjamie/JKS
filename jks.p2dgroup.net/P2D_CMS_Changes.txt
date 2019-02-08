@@ -1,0 +1,18 @@
+
+Site Manager CMS DataBase Changes----
+
+Table:----------
+1)CREATE TABLE [dbo].[P2D_ManageCMSPage]
+2)CREATE TABLE [dbo].[P2D_ManageCMSPageContent]
+
+View:---------------
+1)CREATE VIEW dbo.P2D_ManageCMSPageContentView
+
+Stored Procedure: 
+1)CREATE  PROCEDURE [dbo].[P2D_SP_DeleteFetchManageCMSPage]
+2)CREATE  PROCEDURE [dbo].[P2D_SP_DeleteFetchManageCMSPageContent]
+3)CREATE  PROCEDURE [dbo].[P2D_SP_InsertUpdateManageCMSPage]
+4)CREATE  PROCEDURE [dbo].[P2D_SP_InsertUpdateManageCMSPageContent]
+5)CREATE  PROCEDURE [dbo].[sp_DeleteCMSPageContentData]
+6)CREATE  PROCEDURE [dbo].[sp_P2D_DeleteManageCMSPageData]
+7)CREATE  PROCEDURE [dbo].[sp_P2D_ManageCMSPageData]

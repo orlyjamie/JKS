@@ -1,0 +1,1151 @@
+body
+{
+    color: #848484;
+    background-color: white;
+    font-family: verdana, Tahoma, Arial;
+    font-size: 11px;
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+}
+
+.rapper
+{
+    margin: 5px;
+    padding: 5px;
+    position: relative; /*border:solid 1px #999999;*/
+}
+.outerborder
+{
+    /*border:solid 1px #999999;*/
+    padding: 20px;
+}
+.lefttopimage
+{
+    background: url(../ImagesAsos/design_short.gif) 0 0 no-repeat;
+    position: absolute;
+    width: 293px;
+    height: 439px;
+}
+
+.righrimage
+{
+    background-image: url(../ImagesAsos/toprightimage.gif);
+    height: 53px;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+.btnDiv
+{
+    width: 100px;
+    padding: 4px;
+    margin: 0px;
+    float: left;
+    background: #000;
+}
+.inputtxt
+{
+    width: 100px;
+    height: 22px;
+    padding: 1px 0px 2px 0px;
+    margin: 0px auto;
+    border: #FFF solid 1px;
+    background: #000;
+    text-align: center;
+    font-family: Arial;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: bold;
+    letter-spacing: .3px;
+    text-decoration: none;
+    color: #fff;
+}
+
+
+/* NEW LOOK GLOBAL CSS CLASSES START*/
+
+.PageHeaderNL
+{
+    font-weight: bolder;
+    font-size: 10pt; /*	color: white;*/
+    color: #000000;
+    font-family: verdana, Tahoma, Arial; /*	background-color: #3399cc;*/
+    background-color: #BED600;
+    font-variant: small-caps;
+}
+.AlternatingGridNL
+{
+    background-color: "#EEEEEE";
+}
+.HeaderGridNL
+{
+    color: "#000000";
+    background-color: "#BED600"; /*	 Color: "White" ; BACKGROUND-COLOR: "#3399CC";*/
+}
+a.aNL
+{
+    color: #000000; /*color:#0081c5;*/
+}
+a:hover.aNL
+{
+    color: #0000FF; /*color:#004d77;*/
+}
+
+a:visited.aNL
+{
+    /*	color:#FF0000;*/
+    color: #993366;
+}
+
+.BannerNL
+{
+    font-size: 8pt;
+    color: #000000; /*	color: #076da1;*/
+    background-color: #dcdcdc;
+}
+.GridCaptionNL
+{
+    font-size: smaller;
+    font-family: Verdana;
+    background-color: #EEEEEE; /*	background-color: lightcyan;*/
+    font-family: verdana, Tahoma, Arial;
+    font-size: 11px;
+}
+.ButtonCssNL
+{
+    cursor: hand;
+    background-color: #BED600;
+    height: 23px;
+    width: 109px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #000000; /*color: #FFFFFF;*/
+    text-decoration: none;
+    font-size: 11px;
+    background-image: url(../ImagesAsos/button_bgNL.gif); /*background-image: url(../images/button_bg.gif);*/
+    background-repeat: no-repeat;
+    background-position: left top;
+    border: none;
+}
+
+/* NEW LOOK GLOBAL CSS CLASSES END */
+
+a
+{
+    color: #0081c5;
+}
+a:hover
+{
+    color: #000;
+}
+a:visited
+{
+    color: #660066;
+}
+.ErrMsg
+{
+    color: red;
+    background-color: white;
+    font-family: verdana, Tahoma, Arial;
+    font-size: 11px;
+}
+
+
+.NormalBody
+{
+    /*color: #848484;*/
+    color: #191717;
+    font-family: verdana, Tahoma, Arial;
+    font-size: 11px;
+}
+
+.NormalBodylink
+{
+    color: #143D51;
+    font-family: verdana, Tahoma, Arial;
+    font-size: 10px;
+    text-decoration: underline;
+}
+.buttoncssnew1
+{
+    cursor: hand;
+    background-color: #ff0033;
+    height: 23px;
+    width: 109px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 11px;
+    background-image: url(../ImagesAsos/button_bg_red.gif);
+    background-repeat: no-repeat;
+    background-position: left top;
+    border: none;
+}
+.buttoncssnew2
+{
+    cursor: hand;
+    background-color: #4bacc6;
+    height: 23px;
+    width: 100px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 11px;
+    background-image: url(../ImagesAsos/button_bg_lightblued.gif);
+    background-repeat: no-repeat;
+    background-position: left top;
+    border: none;
+}
+.NormalBodylink:hover
+{
+    color: #297BA3;
+    text-decoration: none;
+}
+.Banner
+{
+    font-size: 8pt;
+    color: #000000;
+    background-color: #dcdcdc;
+}
+.SelectButton
+{
+    background-image: url(../ImagesAsos/Select.jpg);
+}
+
+.SubmitButton
+{
+    width: 100px;
+    height: 23px;
+    float: left;
+    background-image: url(../ImagesAsos/Submit.jpg);
+    border: none;
+}
+.SubmitButton_ETC_CMS
+{
+    width: 100px;
+    height: 23px;
+    background-image: url(../ImagesAsos/Submit.jpg);
+    border: none;
+}
+.SubmitLine
+{
+    background-image: url(../ImagesAsos/submitline.gif);
+}
+.SubmitLine_2
+{
+    cursor: hand;
+    background-color: #0081C5;
+    height: 24px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 11px;
+    background-repeat: no-repeat;
+    background-position: left top;
+    border: none;
+    width: 85px;
+    background-image: url(../ImagesAsos/submitline_2.gif);
+}
+.DownloadButton
+{
+    cursor: hand;
+    background-color: #0081C5;
+    height: 24px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 11px;
+    background-repeat: no-repeat;
+    background-position: left top;
+    border: none;
+    width: 81px;
+    background-image: url(../ImagesAsos/download.gif);
+}
+.ContinueButton
+{
+    background-image: url(../ImagesAsos/Continue.jpg);
+}
+.ContinueButton_2
+{
+    cursor: hand;
+    background-color: #0081C5;
+    height: 24px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 11px;
+    background-repeat: no-repeat;
+    background-position: left top;
+    border: none;
+    width: 85px;
+    background-image: url(../ImagesAsos/continue_2.gif);
+}
+.ProceedButton
+{
+    background-image: url(../ImagesAsos/Proceed.gif);
+}
+
+.ContinueDisableButton
+{
+    background-image: url(../ImagesAsos/ContinueD.jpg);
+}
+.ContinueDisableButton_2
+{
+    cursor: hand;
+    background-color: #0081C5;
+    height: 24px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 11px;
+    background-repeat: no-repeat;
+    background-position: left top;
+    border: none;
+    width: 85px;
+    background-image: url(../ImagesAsos/ContinueD_2.gif);
+}
+.BackButton
+{
+    background-image: url(../ImagesAsos/Back.jpg);
+}
+
+.ConfirmInvoice
+{
+    background-image: url(../ImagesAsos/ConfirmInvoice.jpg);
+}
+
+.ConfirmCreditNote
+{
+    background-image: url(../ImagesAsos/confirmcreditnote.gif);
+}
+.DeleteButton
+{
+    background-image: url(../ImagesAsos/delete.gif);
+}
+.SearchButton
+{
+    background-image: url(../ImagesAsos/search.gif);
+}
+.DeleteArchiveButton
+{
+    background-image: url(../ImagesAsos/deletearchive.gif);
+}
+.ReopenButton
+{
+    background-image: url(../ImagesAsos/reopen.gif);
+}
+.RejectButton
+{
+    background-image: url(../ImagesAsos/reject.gif);
+}
+.ApproveButton
+{
+    background-image: url(../ImagesAsos/approve.gif);
+}
+.GeneratePDF
+{
+    background-image: url(../ImagesAsos/GeneratePDF.jpg);
+}
+.ConfirmInvoice_2
+{
+    cursor: hand;
+    background-color: #0081C5;
+    height: 23px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 11px;
+    background-repeat: no-repeat;
+    background-position: left top;
+    border: none;
+    width: 139px;
+    background-image: url(../ImagesAsos/confirminvoice_2.gif);
+}
+
+.ConfirmCreditNote_2
+{
+    background-image: url(../ImagesAsos/confirmcredit_2.gif);
+}
+
+.GeneratePDF_2
+{
+    cursor: hand;
+    background-color: #0081C5;
+    height: 23px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 11px;
+    background-repeat: no-repeat;
+    background-position: left top;
+    border: none;
+    width: 139px;
+    background-image: url(../ImagesAsos/generatepdf_2.gif);
+    border: none;
+    cursor: default;
+}
+
+input, textarea
+{
+    border: #000 1px solid;
+    font-family: verdana, Tahoma, Arial;
+    font-size: 11px;
+}
+.noborder
+{
+    border: none !important;
+}
+select
+{
+    font-family: verdana, Tahoma, Arial;
+    font-size: 11px;
+}
+checkbox
+{
+    border: none;
+}
+.MYINPUT
+{
+    border-right: 1px solid;
+    border-top: 1px solid;
+    border-left: 1px solid;
+    border-bottom: 1px solid;
+    font-family: verdana, Tahoma, Arial;
+    font-size: 11px;
+    float: left;
+}
+
+.MYINPUTFORVAT
+{
+    border-right: 1px solid;
+    border-top: 1px solid;
+    border-left: 1px solid;
+    border-bottom: 1px solid;
+    font-family: verdana, Tahoma, Arial;
+    font-size: 11px;
+    text-align: right;
+}
+.GridCaption
+{
+    font-size: smaller;
+    font-family: Verdana;
+    background-color: lightcyan;
+    font-family: verdana, Tahoma, Arial;
+    font-size: 11px;
+}
+
+.GridCaptionBold
+{
+    font-style: normal;
+    font-size: medium;
+    font-family: Verdana;
+    background-color: lightcyan;
+    font-family: verdana, Tahoma, Arial;
+    font-size: 11px;
+}
+
+.BorderLessInput
+{
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;
+    border-bottom-style: none;
+}
+.PageHeader
+{
+    font-weight: bolder;
+    font-size: 10pt;
+    color: white;
+    font-family: verdana, Tahoma, Arial;
+    background-color: #000;
+    text-transform: capitalize;
+}
+.BlueHeading
+{
+    text-align: justify;
+    font-family: Verdana;
+    font-size: 10pt;
+    color: blue;
+    font-weight: bolder;
+    margin-left: 19px;
+}
+.graybody
+{
+    text-align: justify;
+    font-family: Verdana;
+    font-size: 10pt;
+    color: #848484;
+    font-weight: normal;
+    margin-left: 39px;
+    margin-right: 0px;
+}
+.ConfirmCreditNote
+{
+    cursor: hand;
+    background-color: #0081C5;
+    height: 23px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 11px;
+    background-image: url(../ImagesAsos/button_bg.gif);
+    background-repeat: no-repeat;
+    background-position: left top;
+    border: none;
+    width: 139px;
+}
+.ButtonCss
+{
+    cursor: hand;
+    background-color: #0081C5;
+    height: 23px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 11px;
+    background-image: url(../ImagesAsos/button_bg.gif);
+    background-repeat: no-repeat;
+    background-position: left top;
+    border: none;
+    width: 109px;
+}
+.buttoncss:hover
+{
+    color: #fff;
+    background-image: url(../ImagesAsos/button_bg_m.gif);
+    background-repeat: repeat-x;
+}
+
+
+.ButtonCssNewAkkeron
+{
+    cursor: hand;
+    background-color: #0081C5;
+    height: 23px;
+    width: 109px;
+    margin-right: 10px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 11px;
+    background-image: url(../ImagesAsos/button_bg.gif);
+    background-repeat: no-repeat;
+    background-position: left top;
+    border: none;
+}
+
+.ButtonCssNew
+{
+    cursor: hand;
+    background-color: #0081C5;
+    height: 23px;
+    width: 109px;
+    float: left;
+    margin-right: 10px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #fff;
+    text-decoration: none;
+    font-size: 11px;
+    background-image: url(../ImagesAsos/button_bg.gif);
+    background-repeat: no-repeat;
+    background-position: left top;
+    border: none;
+}
+.ButtonCssNew:hover
+{
+    color: #fff;
+    background-image: url(../ImagesAsos/button_bg_m.gif);
+    background-repeat: repeat-x;
+}
+
+#divPrint
+{
+}
+@media print
+{
+    #divPrint
+    {
+        display: none;
+    }
+}
+
+#divPrint1
+{
+}
+@media print
+{
+    #divPrint1
+    {
+        display: none;
+    }
+}
+
+.tlbborder
+{
+    border-top: 1px solid #468CB7;
+    border-right: 1px solid #468CB7;
+    border-bottom: 1px solid #468CB7;
+    border-left: 1px solid #468CB7;
+}
+
+.create_credit
+{
+    background-image: url(../ImagesAsos/create-credit.gif);
+}
+.create_invoice
+{
+    background-image: url(../ImagesAsos/create-invoice.gif);
+}
+/*========Sourayan24-11-2008(Start)========*/
+.edit_data
+{
+    width: 130px;
+    height: 23px;
+    float: left;
+    margin-right: 10px;
+    background-image: url(../ImagesAsos/editdata.gif);
+    border: none;
+    cursor: default;
+}
+.delete_lines
+{
+    width: 130px;
+    height: 23px;
+    float: left;
+    background-image: url(../ImagesAsos/deletelines.gif);
+    border: none;
+}
+.add_newline
+{
+    width: 130px;
+    height: 23px;
+    float: left;
+    background-image: url(../ImagesAsos/addnewline.gif);
+    border: none;
+}
+.save
+{
+    width: 130px;
+    height: 23px;
+    background-image: url(../ImagesAsos/save.gif);
+    border: none;
+}
+.cancel_new
+{
+    width: 130px;
+    height: 23px;
+    background-image: url(../ImagesAsos/cancel_new.gif);
+    border: none;
+}
+.for_back
+{
+    background-image: url(../ImagesAsos/back_new_2.gif);
+    border: none;
+}
+.for_calculate
+{
+    width: 130px;
+    height: 23px;
+    background-image: url(../ImagesAsos/calculate.gif);
+    border: none;
+}
+.EditGrid
+{
+    color: #848484;
+    font-family: verdana, Tahoma, Arial;
+    font-size: 10px;
+    text-decoration: none;
+    border-collapse: collapse;
+}
+/*========Sourayan24-11-2008(End)========*/
+
+.buttonnew
+{
+    cursor: hand;
+    background-color: #0081C5;
+    height: 23px;
+    width: 109px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 11px;
+    background-image: url(../ImagesAsos/button.gif);
+    background-repeat: no-repeat;
+    background-position: left top;
+    border: none;
+}
+.leveltext
+{
+    color: #848484;
+    font: bold 11px Verdana;
+    text-align: right;
+    padding-right: 28px;
+}
+.smallheading
+{
+    font-size: smaller;
+    font-family: Verdana;
+    background-color: lightcyan;
+    font-family: verdana, Tahoma, Arial;
+    font-size: 11px;
+    display: block;
+    width: 110px;
+    float: left;
+    text-align: center;
+}
+.longheading
+{
+    font-size: smaller;
+    font-family: Verdana;
+    background-color: lightcyan;
+    font-family: verdana, Tahoma, Arial;
+    font-size: 11px;
+    display: block;
+    width: 150px;
+    float: left;
+    text-align: center;
+}
+.dropBox
+{
+    height: 18px;
+    width: 110px;
+    color: #848484;
+    font-family: verdana, Tahoma, Arial;
+    font-size: 11px;
+    text-decoration: none;
+}
+
+.inputbox1
+{
+    margin-right: 10px;
+    padding: 2px;
+    height: 18px;
+    width: 200px;
+    border: #000 solid 1px;
+    font: normal 11px/18px Arial;
+    text-align: left;
+    color: #848484;
+}
+.inputbox_date
+{
+    margin-right: 5px;
+    padding: 2px;
+    height: 18px;
+    width: 180px;
+    border: #000 solid 1px;
+    float: left;
+    font: normal 11px/18px Arial;
+    text-align: left;
+    color: #848484;
+}
+.dropBox1
+{
+    height: 18px;
+    width: 200px;
+    color: #848484;
+    border: #000 solid 1px;
+    font: normal 11px/18px Arial;
+    text-align: left;
+    color: #848484;
+}
+.txtarea1
+{
+    margin-right: 10px;
+    padding: 2px;
+    height: 80px;
+    width: 375px; /*border:#000 solid 1px;*/
+    font: normal 11px/18px Arial;
+    text-align: left;
+    color: #848484;
+}
+.txtarea2
+{
+    margin-right: 10px;
+    padding: 2px;
+    height: 80px;
+    width: 200px; /*border:#000 solid 1px;*/
+    font: normal 11px/18px Arial;
+    text-align: left;
+    color: #848484;
+}
+.txtComments
+{
+    width: 45%;
+    padding: 0 10px 0 0;
+    font: normal 11px Verdana;
+    text-align: left;
+    color: #848484;
+}
+
+.nobg
+{
+    background: none !important;
+}
+.topBdr
+{
+    border-top: 1px solid #999;
+}
+
+.bottomBdr
+{
+    border-bottom: 1px solid #999;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+}
+
+
+/*edited by Indrani 20/12/11*/
+table.listingArea
+{
+    width: 99%;
+    border: #ccc solid 1px;
+}
+
+table.listingArea .tableHd, table.listingArea .tableHd a, table.listingArea .tableHd td
+{
+    background-color: #0A0909;
+    font: bold 11px Verdana;
+    font-size: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+table.listingArea td, table.listingArea tr.redcolor td
+{
+    padding: 5px;
+    font: normal 10px Verdana;
+    color: #333;
+    text-decoration: none;
+    border-right: #ccc solid 1px;
+}
+
+table.listingArea tr.redcolor td
+{
+    color: Red !important;
+}
+
+
+
+table.listingArea02
+{
+    width: 99%;
+    border: none;
+}
+
+table.listingArea02 .PageHeader, table.listingArea02 .PageHeader a, table.listingArea02 .PageHeader td
+{
+    padding: 5px;
+    background-color: #3399CC;
+    font: bold 10px Verdana;
+    color: #fff;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+table.listingArea02 td
+{
+    padding: 8px 5px 0 5px;
+    font: normal 10px Verdana;
+    font-size: 10px;
+    color: #333;
+    text-decoration: none;
+}
+
+.nopadding
+{
+    padding: 0 !important;
+}
+.noBorder
+{
+    border: none !important;
+}
+
+/*edited by Indrani 20/12/11*/
+
+/*edited by rinku 16-05-2012*/
+table.listingArea_NL
+{
+    width: 99%;
+    border: #ccc solid 1px;
+}
+
+table.listingArea_NL .tableHd, table.listingArea_NL .tableHd a, table.listingArea_NL .tableHd td
+{
+    background-color: #BED600;
+    font: bold 11px Verdana;
+    font-size: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+table.listingArea_NL td, table.listingArea_NL tr.redcolor td
+{
+    padding: 5px;
+    font: normal 10px Verdana;
+    color: #333;
+    text-decoration: none;
+    border-right: #ccc solid 1px;
+}
+
+.nopadding
+{
+    padding: 0 !important;
+}
+.noBorder
+{
+    border: none !important;
+}
+
+/*edited by rinku 16-05-2012*/
+
+/*start Listing Area*/
+
+.useradd
+{
+    width: 30px;
+    margin: 0 auto;
+}
+
+.useradd ul
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.useradd ul li
+{
+    margin: 0;
+    padding: 0;
+    margin: 3px;
+    list-style: none;
+    width: 30px;
+    height: 31px;
+    line-height: 31px;
+}
+
+.useradd ul li a
+{
+    width: 30px;
+    height: 31px;
+    background: url(../ImagesAsos/btn_bg.png) no-repeat;
+    display: block;
+}
+
+
+
+
+.useradd ul li a:hover
+{
+    background: url(../ImagesAsos/btn_bg_hover.png) no-repeat;
+}
+
+
+
+.btnNext
+{
+    background: url(../ImagesAsos/btnNext01.png) no-repeat;
+    width: 30px;
+    height: 31px;
+    border: 0;
+}
+.btnNextAll
+{
+    background: url(../ImagesAsos/btnNext02.png) no-repeat;
+    width: 30px;
+    height: 31px;
+    border: 0;
+}
+
+.btnPrev
+{
+    background: url(../ImagesAsos/btnPrev01.png) no-repeat;
+    width: 30px;
+    height: 31px;
+    border: 0;
+}
+.btnPrevAll
+{
+    background: url(../ImagesAsos/btnPrev02.png) no-repeat;
+    width: 30px;
+    height: 31px;
+    border: 0;
+}
+/* Added By Sougata on 31st December 2012*/
+.noborder
+{
+    border: none !important;
+}
+
+
+
+/*start Listing Area*/
+
+
+/*end Listing Area*/
+
+/* Added By Mrinal on 22nd January 2013*/
+
+.AddAttachment
+{
+    cursor: hand;
+    background-color: #0081C5;
+    height: 23px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 11px;
+    background-repeat: no-repeat;
+    background-position: left top;
+    border: none;
+    width: 139px;
+    background-image: url(../ImagesAsos/Attachments.gif);
+    border: none;
+    cursor: default;
+}
+
+.CreateNewInvoice
+{
+    cursor: hand;
+    background-color: #0081C5;
+    height: 23px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 11px;
+    background-repeat: no-repeat;
+    background-position: left top;
+    border: none;
+    width: 139px;
+    background-image: url(../ImagesAsos/CreateNewInvoice.gif);
+    border: none;
+    cursor: default;
+}
+
+.CreateNewCredit
+{
+    cursor: hand;
+    background-color: #0081C5;
+    height: 23px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 11px;
+    background-repeat: no-repeat;
+    background-position: left top;
+    border: none;
+    width: 139px;
+    background-image: url(../ImagesAsos/CreateNewCredit.gif);
+    border: none;
+    cursor: default;
+}
+
+/* Added By Sougata on 23rd January 2013 */
+
+.ConfirmCREDIT_2
+{
+    cursor: hand;
+    background-color: #0081C5;
+    height: 23px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 11px;
+    background-repeat: no-repeat;
+    background-position: left top;
+    border: none;
+    width: 139px;
+    background-image: url(../ImagesAsos/confirmCredit_2_2.gif);
+}
+
+.NormalBody_test a
+{
+    text-decoration: none;
+    color: #ffffff !important;
+}
+.NormalBody_test a:hover
+{
+    text-decoration: none;
+}
+
+.ButtonCss_akkeron
+{
+    background-color: #0081C5;
+    height: 23px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 11px;
+    background-image: url(../ImagesAsos/aqillaInvoiceexport.gif);
+    background-repeat: no-repeat;
+    background-position: left top;
+    border: none;
+    width: 109px;
+    cursor: pointer;
+}
+.ButtonCss_akkeron:hover
+{
+    color: #00FF01;
+    background-image: url(../ImagesAsos/aqillaInvoiceexport_h.gif);
+    background-repeat: repeat-x;
+}
+
+
+
+/* Added by Mrinal on 5th June 2013 */
+.SetGrayColor
+{
+    padding: 0 6px;
+    background: #848181;
+    background-color: Gray;
+    border: #000 solid 1px;
+}
+.SetValidationColor
+{
+    /*border-width:thick; 	border-color:Red; 	background-color:White;	*/
+    padding: 0 6px;
+    background: #fff;
+    border: #F00 solid 2px;
+    color: #000;
+    text-align: left;
+}
+.RemoveValidationColor
+{
+    padding: 0 6px;
+    background: #fff;
+    border: #000 solid 1px;
+    color: #000;
+    text-align: left;
+}
+.ButtonCssNewIpad
+{
+    cursor: hand;
+    background-color: #0081C5;
+    height: 23px;
+    width: 109px;
+    float: left;
+    margin-right: 10px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #fff;
+    text-decoration: none;
+    font-size: 11px;
+    background-image: url(../ImagesAsos/button_bg_Ipad.gif);
+    background-repeat: no-repeat;
+    background-position: left top;
+    border: none;
+}
+.ButtonCssNewIpad:hover
+{
+    color: #fff;
+    background-image: url(../ImagesAsos/button_bg_m_Ipad.gif);
+    background-repeat: repeat-x;
+}
+
+
+.SetPaperClipColor
+{
+    background: #fff;
+    border: #F00 solid 2px;
+}
+.RemovePaperClipColor
+{
+    background: #fff;
+}

@@ -1,0 +1,382 @@
+set ANSI_NULLS ON
+set QUOTED_IDENTIFIER ON
+go
+
+--usp_DownloadInvoiceforSupplier '30509', '29552', '01/01/2008', '01/09/2009', '1'
+ALTER Procedure [dbo].[usp_DownloadInvoiceforSupplier]
+(
+	@iSupplierID	Varchar(20),
+	@iBuyerID	Varchar(20),
+	@iFromDate	Varchar(20),
+	@iToDate	Varchar(20),
+	@iType		Varchar(20),
+	@iCurrOnly		int,
+	@iDateReceived	int
+)
+
+AS 
+BEGIN
+
+set nocount on
+
+DECLARE @Count INT	
+
+	IF (@iType=1)
+		BEGIN
+		
+			SELECT 	TRD.SupplierCodeAgainstBuyer AS 'Vendor ID', 
+		C.CompanyName AS 'Vendor Name', 
+	--	DBO.fn_GetVatRegNo (INV.SupplierCompanyID) AS 'Vendor VAT No', 
+	--	DBO.fn_GetVatRegNo (INV.BuyerCompanyID) AS 'Buyer VAT No', 
+Buyer.CompanyName AS 'Buyer Name',
+		'INV' AS 'Document Type',
+		INV.InvoiceNo AS 'Document Number', 
+		--INV.CreditInvoiceNo AS 'Associated Invoice No',
+		convert(varchar,INV.InvoiceDate,103) AS 'Document Date',
+		convert(varchar,INV.TaxPointDate,103) AS 'TaxPointDate',
+		INV.New_InvoiceName AS 'Document Name',
+	--	INV.New_InvoiceAccount AS 'H:InvoiceAccount',
+	--	INV.InvoiceAddress1 AS 'H:InvoiceAddress1',
+	--	INV.InvoiceAddress2 AS 'H:InvoiceAddress2',
+	--	INV.InvoiceAddress3 AS 'H:InvoiceAddress3',
+	--	INV.InvoiceAddress4 AS 'H:InvoiceAddress4',
+	--	INV.InvoiceZIP AS 'H:InvoicePostcode',
+	--	INV.New_InvoiceCountryCode AS 'H:InvoiceCountryCode',
+	--	INV.New_InvoiceContact AS 'H:InvoiceContact',
+	--	INV.New_DeliveryAccount AS 'H:DeliveryAccount',
+	--	INV.New_DeliveryName AS 'H:DeliveryName',
+	--	INV.DeliveryAddress1 AS 'H:DeliveryAddress1',
+	--	INV.DeliveryAddress2 AS 'H:DeliveryAddress2',
+	--	INV.DeliveryAddress3 AS 'H:DeliveryAddress3',
+	--	INV.DeliveryAddress4 AS 'H:DeliveryAddress4',
+	--	INV.DeliveryZIP AS 'H:DeliveryPostcode',
+	--	INV.New_DeliveryCountryCode AS 'H:DeliveryCountryCode',
+	--	INV.New_DespatchContact AS 'H:DespatchContact',
+	--	INV.PaymentTerm AS 'Terms',
+	--	INV.PaymentDueDate AS 'H:DueDate',
+	--	DBO.fn_GetCurrencyCode(INV.CurrencyTypeID) AS 'H:CurrencyCode',
+		Curr.CurrencyCode AS 'H:CurrencyCode',
+	-- 	INV.New_TaxCountryCode1 AS 'H:TaxCountryCode1',
+	--	INV.New_TradersReference AS 'H:TradersReference',
+	--	INV.New_TaxCountryNumber AS 'H:TaxCountryNumber',
+	--	INV.New_TaxRegistrationNo AS 'H:TaxRegistrationNumber',
+	--	INV.New_OverallDiscountPercent AS 'H:OverallDiscountPercent',
+	--	INV.New_OverallDiscountAmount AS 'H:OverallDiscountAmount',
+		INV.NetTotal AS 'H:NettAmount',
+	--	INV.New_SettlementDays1 AS 'H:SettlementDays1',
+	--	INV.New_SettlementPercent1 AS 'H:SettlementPercent1',
+	--	INV.New_SettlementAmount1 AS 'H:SettlementAmount1',
+	--	INV.New_SettlementDays2 AS 'H:SettlementDays2',
+	--	INV.New_SettlementPercent2 AS 'H:SettlementPercent2',INV.New_SettlementAmount2 AS 'H:SettlementAmount2',
+		INV.VATAmt AS 'H:TaxAmount',
+	--	INV.AmountIfNotGBPCurrency AS 'H:GBPTaxAmount',
+		INV.TotalAmt AS 'H:GrossAmount',
+		
+		DET.SerialNo AS 'L:LineNo',
+	--	DET.New_Type As 'L:Type',
+		DET.PurOrderNo AS 'L:OrderNo',
+	--	DET.PurOrderLineNo AS 'L:OrderLineNo',
+	--	DET.PurOrderDate AS 'L:OrderDate', 
+	--	DET.SuppliersProdCode AS 'L:ManufacturerCode',
+	--	DET.BuyersProdCode AS 'L:BuyerCode',	
+	--	DET.New_DespatchNoteNumber AS 'L:DespatchNoteNumber',
+	--	DET.New_DespatchDate AS 'L:DespatchDate',
+		replace(DET.Description,',','') AS 'L:Description',
+		DET.New_Definable1 AS 'L:Definable1',
+	--	DET.New_Definable2 AS 'L:Definable2',
+		DET.Quantity AS 'L:Quantity',
+	--	DET.UOM AS 'L:UnitofMeasure',
+		DET.Rate AS 'L:Price',
+	--	DET.GrossAmt AS 'L:ExtendedValue',
+	--	DET.Discount AS 'L:DiscountPercent1',
+	--	DET.New_DiscountValue1 AS 'L:DiscountValue1',
+	--	DET.New_DiscountPercent2 AS 'L:DiscountPercent2',
+	--	DET.New_DiscountValue2 AS 'L:DiscountValue2',
+	--	DET.New_PostDiscountValue AS 'L:PostDiscountValue',
+	--	DET.New_OverallDiscountValue AS 'L:OverallDiscountValue',
+		DET.New_NettValue AS 'L:NettValue',
+	--	DET.New_TaxCode AS 'L:TaxCode',
+	--	DET.VATRate AS 'L:TaxPercent',
+		DET.VATAmt AS 'L:TaxValue',
+		DET.TotalAmt AS 'L:GrossValue',
+	--	DET.New_ModeOfTransport AS 'L:ModeOfTransport',
+	--	DET.New_NatureOfTransaction AS 'L:NatureOfTransaction',
+	--	DET.New_TermsOfDelivery AS 'L:TermsOfDelivery',
+	--	DET.New_CountryOfOrigin AS 'L:CountryOfOrigin',
+	--	DET.New_CommodityCode AS 'L:CommodityCode',
+	--	DET.New_SupplementaryUnits AS 'L:SupplementaryUnits',
+	--	DET.New_NettMass AS 'L:NettMass',
+
+	--	DBO.GetDepartment(INV.DepartmentID) AS 'Department',
+	--	DBO.GetNominalCode(INV.NominalCodeID) AS 'Nominal',
+	--	DBO.GetProject(Inv.ProjectID) AS 'Project Code',
+		--Voucher Number	Account	Sub-Account	Activity Code	
+		--Account Category	Authorization String	User ID	Rejection Code	Payment Method	Payment Date	
+		--Discount Given	Document Status	URL to image
+
+	--	C.New_APCompanyID AS 'AP Company ID',
+	--	DET.New_GLCompanyID AS 'GL Company ID',
+	--	DET.New_AccountingUnit AS 'Accounting Unit',
+	--	INV.VoucherNumber AS 'Voucher Number',
+	--	DET.New_Account AS 'Account',
+	--	DET.New_InvoiceSubAccount AS 'Sub-Account',
+	--	INV.New_ActivityCode AS 'Activity Code',
+	--	INV.New_AccountCategory AS 'AccountCategory',
+	--	dbo.fn_GetAuthorisationStringNL(INV.InvoiceID) AS 'Authorization String',
+	--	INV.ModUserID AS 'User ID',
+		INV.New_RejectionCode AS 'Rejection Code',
+	--	INV.New_PaymentMethod AS 'Payment Method',
+	--	INV.New_PaymentDate AS 'Payment Date',
+	--	INV.New_DiscountGiven AS 'Discount Given',
+		--INV.New_DocumentStatus AS 'Document Status',
+		DBO.fn_GetCurrentStatus(INV.StatusID) AS  'Document Status',
+	--	INV.Document AS  'URL to image',
+	--	dbo.fn_GetUserCode(INV.PassedToUserID) AS 'H.PassedToUserCode',
+	--	INV.PassedToGroupCode AS 'H.PassedToGroupCode',
+	--	convert(varchar,INVST.ActionDate,103) AS 'DateReceived',
+		(SELECT convert(varchar,ActionDate,103) FROM InvoiceStatus WHERE DisplaySequence = 1 and INVOICEID = INV.INVOICEID) AS 'DateReceived',
+	--	INV.DateExportedForAuth AS 'DateExported',
+	--	INV.INVOICEID AS 'DocumentID',
+		(SELECT TOP 1 convert(varchar,ActionDate,103) FROM InvoiceStatus WHERE INVOICEID = INV.INVOICEID ORDER BY DisplaySequence DESC) AS 'Last Status Date'
+FROM		Invoice INV 
+		INNER JOIN InvoiceDetail DET ON INV.INVOICEID		= DET.INVOICEID 
+		INNER JOIN Company C ON INV.SupplierCompanyID		= C.CompanyID 
+		INNER JOIN TradingRelation TRD ON INV.SupplierCompanyID	= TRD.SupplierCompanyID
+	--	INNER JOIN InvoiceStatus INVST ON INV.INVOICEID	= INVST.INVOICEID and INVST.DisplaySequence = 1
+		INNER JOIN Company Buyer ON INV.BUYERCOMPANYID		= Buyer.CompanyID 
+		INNER JOIN CurrencyTypes Curr ON INV.CurrencyTypeID	= Curr.CurrencyTypeID 
+			WHERE	INV.BUYERCOMPANYID = CAST(@iBuyerID AS INT) 
+					AND INV.SupplierCompanyID in (select CompanyID from Company where ParentCompanyID = @iSupplierID or CompanyID = @iSupplierID)
+					AND TRD.BUYERCOMPANYID = INV.BUYERCOMPANYID
+					AND 
+					(
+					(@iDateReceived =0 and INV.InvoiceDate BETWEEN CAST(@iFromDate AS DATETIME)   AND CAST(@iToDate AS DATETIME) ) 
+					OR
+					(@iDateReceived =1 and 
+					INV.INVOICEID in (
+								select INVOICEID from InvoiceStatus where DisplaySequence = 1 and 
+								ActionDate BETWEEN CAST(@iFromDate AS DATETIME)   AND CAST(@iToDate AS DATETIME)
+								))
+					)
+					AND ( 
+						(@iCurrOnly = 1 and INV.StatusID IN ( 21,20,6))
+						or
+						(@iCurrOnly = 0)
+						)
+			ORDER BY 	INV.InvoiceNo
+		END	
+	
+		
+	IF (@iType=2)
+	BEGIN
+		SELECT 	TRD.SupplierCodeAgainstBuyer AS 'Vendor ID', 
+		C.CompanyName AS 'Vendor Name', 
+		Buyer.CompanyName AS 'Buyer Name',
+	--	DBO.fn_GetVatRegNo (INV.SupplierCompanyID) AS 'Vendor VAT No', 
+	--	DBO.fn_GetVatRegNo (INV.BuyerCompanyID) AS 'Buyer VAT No', 
+		'CREDIT' AS 'Document Type',
+		INV.InvoiceNo AS 'Document Number', 
+	--	INV.CreditInvoiceNo AS 'Associated Invoice No',
+		convert(varchar,INV.InvoiceDate,103) AS 'Document Date',
+		convert(varchar,INV.TaxPointDate,103) AS 'TaxPointDate',
+		INV.New_InvoiceName AS 'Document Name',
+	--	INV.New_InvoiceAccount AS 'H:InvoiceAccount',
+	--	INV.InvoiceAddress1 AS 'H:InvoiceAddress1',
+	--	INV.InvoiceAddress2 AS 'H:InvoiceAddress2',
+	--	INV.InvoiceAddress3 AS 'H:InvoiceAddress3',
+	--	INV.InvoiceAddress4 AS 'H:InvoiceAddress4',
+	--	INV.InvoiceZIP AS 'H:InvoicePostcode',
+	--	INV.New_InvoiceCountryCode AS 'H:InvoiceCountryCode',
+	--	INV.New_InvoiceContact AS 'H:InvoiceContact',
+	--	INV.New_DeliveryAccount AS 'H:DeliveryAccount',
+
+	--	INV.New_DeliveryName AS 'H:DeliveryName',
+	--	INV.DeliveryAddress1 AS 'H:DeliveryAddress1',
+	--	INV.DeliveryAddress2 AS 'H:DeliveryAddress2',
+	--	INV.DeliveryAddress3 AS 'H:DeliveryAddress3',
+	--	INV.DeliveryAddress4 AS 'H:DeliveryAddress4',
+	--	INV.DeliveryZIP AS 'H:DeliveryPostcode',
+	--	INV.New_DeliveryCountryCode AS 'H:DeliveryCountryCode',
+	--	INV.New_DespatchContact AS 'H:DespatchContact',
+	--	INV.PaymentTerm AS 'Terms',
+	--	INV.PaymentDueDate AS 'H:DueDate',
+	--	DBO.fn_GetCurrencyCode(INV.CurrencyTypeID) AS 'H:CurrencyCode',
+		Curr.CurrencyCode AS 'H:CurrencyCode',
+	 --	INV.New_TaxCountryCode1 AS 'H:TaxCountryCode1',
+	--	INV.New_TradersReference AS 'H:TradersReference',
+	--	INV.New_TaxCountryNumber AS 'H:TaxCountryNumber',
+	--	INV.New_TaxRegistrationNo AS 'H:TaxRegistrationNumber',
+	--	INV.New_OverallDiscountPercent AS 'H:OverallDiscountPercent',
+	--	INV.New_OverallDiscountAmount AS 'H:OverallDiscountAmount',
+		INV.NetTotal AS 'H:NettAmount',
+	--	INV.New_SettlementDays1 AS 'H:SettlementDays1',
+	--	INV.New_SettlementPercent1 AS 'H:SettlementPercent1',
+	--	INV.New_SettlementAmount1 AS 'H:SettlementAmount1',
+	--	INV.New_SettlementDays2 AS 'H:SettlementDays2',
+	--	INV.New_SettlementPercent2 AS 'H:SettlementPercent2',INV.New_SettlementAmount2 AS 'H:SettlementAmount2',
+		INV.VATAmt AS 'H:TaxAmount',
+	--	INV.AmountIfNotGBPCurrency AS 'H:GBPTaxAmount',
+		INV.TotalAmt AS 'H:GrossAmount',
+
+		DET.SerialNo AS 'L:LineNo',
+	--	DET.New_Type As 'L:Type',
+		DET.PurOrderNo AS ' L:OrderNo',
+	--	DET.PurOrderLineNo AS 'L:OrderLineNo',
+	--	DET.PurOrderDate AS 'L:OrderDate', 
+	--	DET.SuppliersProdCode AS 'L:ManufacturerCode',
+	--	DET.BuyersProdCode AS 'L:BuyerCode',	
+	--	DET.New_DespatchNoteNumber AS 'L:DespatchNoteNumber',
+	--	DET.New_DespatchDate AS 'L:DespatchDate',
+		replace(DET.Description,',','') AS 'L:Description',
+		DET.New_Definable1 AS 'L:Definable1',
+	--	DET.New_Definable2 AS 'L:Definable2',
+		DET.Quantity AS 'L:Quantity',
+	--	DET.UOM AS 'L:UnitofMeasure',
+		DET.Rate AS 'L:Price',
+	--	DET.GrossAmt AS 'L:ExtendedValue',
+	--	DET.Discount AS 'L:DiscountPercent1',
+	--	DET.New_DiscountValue1 AS 'L:DiscountValue1',
+	--	DET.New_DiscountPercent2 AS 'L:DiscountPercent2',
+	--	DET.New_DiscountValue2 AS 'L:DiscountValue2',
+	--	DET.New_PostDiscountValue AS 'L:PostDiscountValue',
+	--	DET.New_OverallDiscountValue AS 'L:OverallDiscountValue',
+		DET.New_NettValue AS 'L:NettValue',
+	--	DET.New_TaxCode AS 'L:TaxCode',
+	--	DET.VATRate AS 'L:TaxPercent',
+		DET.VATAmt AS 'L:TaxValue',
+		DET.TotalAmt AS 'L:GrossValue',
+	--	DET.New_ModeOfTransport AS 'L:ModeOfTransport',
+	--	DET.New_NatureOfTransaction AS 'L:NatureOfTransaction',
+	--	DET.New_TermsOfDelivery AS 'L:TermsOfDelivery',
+	--	DET.New_CountryOfOrigin AS 'L:CountryOfOrigin',
+	--	DET.New_CommodityCode AS 'L:CommodityCode',
+	--	DET.New_SupplementaryUnits AS 'L:SupplementaryUnits',
+	--	DET.New_NettMass AS 'L:NettMass',
+
+	--	DBO.GetDepartment(INV.DepartmentID) AS 'Department',
+	--	DBO.GetNominalCode(INV.NominalCodeID) AS 'Nominal',
+	--	DBO.GetProject(Inv.ProjectID) AS 'Project Code',
+		--Voucher Number	Account	Sub-Account	Activity Code	
+		--Account Category	Authorization String	User ID	Rejection Code	Payment Method	Payment Date	
+		--Discount Given	Document Status	URL to image
+
+		
+	--	C.New_APCompanyID AS 'AP Company ID',
+	--	DET.New_GLCompanyID AS 'GL Company ID',
+	--	DET.New_AccountingUnit AS 'Accounting Unit',
+	--	INV.VoucherNumber AS 'Voucher Number',
+	--	DET.New_Account AS 'Account',
+	--	DET.New_InvoiceSubAccount AS 'Sub-Account',
+	--	INV.New_ActivityCode AS 'Activity Code',
+	--	INV.New_AccountCategory AS 'AccountCategory',
+		--dbo.fn_GetAuthorisationStringNL(INV.CREDITNOTEID) AS 'Authorization String',
+	--	INV.ModUserID AS 'User ID',
+	--	INV.New_RejectionCode AS 'Rejection Code',
+		'' AS 'Rejection Code',
+	--	INV.New_PaymentMethod AS 'Payment Method',
+	--	INV.New_PaymentDate AS 'Payment Date',
+	--	INV.New_DiscountGiven AS 'Discount Given',
+	--	INV.New_DocumentStatus AS 'Document Status',
+		DBO.fn_GetCurrentStatus(INV.StatusID) AS  'Document Status',
+	--	INV.Document AS  'URL to image',
+	--	convert(varchar,INVST.ActionDate,103) AS 'DateReceived',
+		(SELECT convert(varchar,ActionDate,103) FROM CreditNoteStatus WHERE DisplaySequence = 1 and CreditNoteID = INV.CreditNoteID) AS 'DateReceived',
+	--	INV.DateExportedForAuth AS 'DateExported',
+	--	INV.CreditNoteID AS 'DocumentID',
+		(SELECT TOP 1 convert(varchar,ActionDate,103) FROM CreditNoteStatus WHERE CreditNoteID = INV.CreditNoteID ORDER BY DisplaySequence DESC) AS 'Last Status Date'
+FROM		CreditNote INV 
+		INNER JOIN CreditNotedetail DET ON INV.CREDITNOTEID	= DET.CREDITNOTEID 
+		INNER JOIN Company C ON INV.SupplierCompanyID		= C.CompanyID 
+		INNER JOIN TradingRelation TRD ON INV.SupplierCompanyID	= TRD.SupplierCompanyID
+	--	INNER JOIN CreditNoteStatus INVST ON INV.CreditNoteID	= INVST.CreditNoteID and INVST.DisplaySequence = 1
+		INNER JOIN Company Buyer ON INV.BUYERCOMPANYID		= Buyer.CompanyID 
+		INNER JOIN CurrencyTypes Curr ON INV.CurrencyTypeID	= Curr.CurrencyTypeID 
+			WHERE	TRD.BUYERCOMPANYID = INV.BUYERCOMPANYID
+					AND INV.BUYERCOMPANYID = CAST(@iBuyerID AS INT) 
+					AND INV.SupplierCompanyID in (select CompanyID from Company where ParentCompanyID = @iSupplierID or CompanyID = @iSupplierID)
+					AND 
+					(
+					(@iDateReceived =0 and INV.InvoiceDate BETWEEN CAST(@iFromDate AS DATETIME)   AND CAST(@iToDate AS DATETIME) ) 
+					OR
+					(@iDateReceived =1 and 
+						INV.CREDITNOTEID in (
+						select CREDITNOTEID from CreditNoteStatus where DisplaySequence = 1 and 
+						ActionDate BETWEEN CAST(@iFromDate AS DATETIME)   AND CAST(@iToDate AS DATETIME)
+						))
+					)
+					AND ( 
+						(@iCurrOnly = 1 and INV.StatusID IN ( 21,20,6))
+						or
+						(@iCurrOnly = 0)
+						)
+			ORDER BY	INV.InvoiceNo
+
+		END
+
+		IF (@iType=3)
+		BEGIN
+				
+				SELECT 	TRD.SupplierCodeAgainstBuyer AS 'Vendor ID', 
+		C.CompanyName AS 'Vendor Name', 
+		Buyer.CompanyName AS 'Buyer Name',
+		INV.Document_Type AS 'Document Type',
+		INV.Document_No  AS 'Document Number', 
+		convert(varchar,INV.Document_Date,103) AS 'Document Date',
+	--	INV.TaxPointDate AS 'TaxPointDate',
+		'' AS 'TaxPointDate',
+	--	INV.New_InvoiceName AS 'Document Name',
+		'' AS 'Document Name',
+	--	DBO.fn_GetCurrencyCode(INV.CurrencyTypeID) AS 'H:CurrencyCode',
+		Curr.CurrencyCode AS 'H:CurrencyCode',
+		INV.Gross_Amount AS 'H:NettAmount',
+		INV.Tax_Amount AS 'H:TaxAmount',
+		INV.Nett_Amount AS 'H:GrossAmount',
+
+		DET.DebitNoteLineNo AS 'L:LineNo',
+		DET.PurOrderNo AS 'L:OrderNo',
+		replace(DET.DDescription,',','') AS 'L:Description',
+		DET.New_Definable1 AS 'L:Definable1',
+		DET.Quantity AS 'L:Quantity',
+		DET.Price AS 'L:Price',
+		DET.NettValue AS 'L:NettValue',
+	--	DET.VATAmt AS 'L:TaxValue',
+		'' AS 'L:TaxValue',
+	--	DET.TotalAmt AS 'L:GrossValue',
+		'' AS 'L:GrossValue',
+		
+	
+	--	INV.New_RejectionCode AS 'Rejection Code',
+		'' AS 'Rejection Code',
+		INV.DocumentStatus AS 'Document Status',
+	--	convert(varchar,INVST.ActionDate,103) AS 'DateReceived',
+		(SELECT convert(varchar,ActionDate,103) FROM DebitNoteStatus WHERE DisplaySequence = 1 and DebitNoteID = INV.DebitNoteID) AS 'DateReceived',
+		(SELECT TOP 1 convert(varchar,ActionDate,103) FROM DebitNoteStatus WHERE DebitNoteID = INV.DebitNoteID ORDER BY DisplaySequence DESC) AS 'Last Status Date'				
+				FROM		DebitNote INV 
+						INNER JOIN DebitNotedetail DET ON INV.DebitNoteID	= DET.DebitNoteID 
+						INNER JOIN Company C ON INV.VendorID		= C.CompanyID 
+						INNER JOIN TradingRelation TRD ON INV.VendorID	= TRD.SupplierCompanyID
+						INNER JOIN Company Buyer ON INV.AP_Company_ID		= Buyer.CompanyID 
+					--	INNER JOIN DebitNoteStatus INVST ON INV.DebitNoteID	= INVST.DebitNoteID and INVST.DisplaySequence = 1
+						INNER JOIN CurrencyTypes Curr ON INV.CurrencyTypeID	= Curr.CurrencyTypeID 
+				WHERE	TRD.BUYERCOMPANYID = INV.AP_Company_ID
+						AND INV.AP_Company_ID = CAST(@iBuyerID AS INT) 
+						AND INV.VendorID in (select CompanyID from Company where ParentCompanyID = @iSupplierID or CompanyID = @iSupplierID)
+						AND 
+						(
+						(@iDateReceived =0 and INV.Document_Date BETWEEN CAST(@iFromDate AS DATETIME)   AND CAST(@iToDate AS DATETIME) ) 
+						OR
+						(@iDateReceived =1 and 
+							INV.DebitNoteID in (
+								select DebitNoteID from DebitNoteStatus where DisplaySequence = 1 and 
+								ActionDate BETWEEN CAST(@iFromDate AS DATETIME)   AND CAST(@iToDate AS DATETIME)
+								))
+						)
+						AND ( 
+							(@iCurrOnly = 1 and INV.StatusID IN ( 21,20,6))
+							or
+							(@iCurrOnly = 0)
+							)				
+				ORDER BY 	INV.Document_No
+
+		END
+END

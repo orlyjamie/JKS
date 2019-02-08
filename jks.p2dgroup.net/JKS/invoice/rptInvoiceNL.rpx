@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ActiveReportsLayout Version="3" PrintWidth="19110" DocumentName="ActiveReports Document" ScriptLang="C#" CodeFile="rptInvoiceNL3.cs">
+  <StyleSheet>
+    <Style Name="Normal" Value="font-family: Arial; font-style: normal; font-variant: inherit; font-weight: normal; font-size: 10pt; font-size-adjust: inherit; font-stretch: inherit; color: rgb(0,0,0); background-repeat: inherit; background-attachment: inherit; opacity: inherit; word-spacing: inherit; letter-spacing: inherit; text-decoration: none; vertical-align: inherit; text-transform: inherit; text-align: inherit; text-indent: inherit; unicode-bidi: inherit; line-height: inherit; white-space: inherit; ddo-char-set: 0; " />
+    <Style Name="Heading1" Value="font-family: inherit; font-style: inherit; font-variant: inherit; font-weight: bold; font-size: 16pt; font-size-adjust: inherit; font-stretch: inherit; " />
+    <Style Name="Heading2" Value="font-family: Times New Roman; font-style: italic; font-variant: inherit; font-weight: bold; font-size: 14pt; font-size-adjust: inherit; font-stretch: inherit; " />
+    <Style Name="Heading3" Value="font-family: inherit; font-style: inherit; font-variant: inherit; font-weight: bold; font-size: 13pt; font-size-adjust: inherit; font-stretch: inherit; " />
+  </StyleSheet>
+  <Sections>
+    <Section Type="PageHeader" Name="PageHeader" Height="315" BackColor="16777215" CanShrink="0">
+      <Control Type="AR.Label" Name="Label23" MOD="4" Left="90" Top="0" Width="17100" Height="270" Caption="Invoice" Style="ddo-char-set: 0; text-align: center; font-weight: bold; background-color: WhiteSmoke; font-size: 9.75pt; font-family: Verdana; " />
+    </Section>
+    <Section Type="GroupHeader" Name="GroupHeader1" Height="3840" DataField="InvoiceID" BackColor="16777215" CanShrink="0">
+      <Control Type="AR.Shape" Name="Shape1" MOD="4" Left="0" Top="0" Width="19080" Height="2250" BackColor="16777215" />
+      <Control Type="AR.Field" Name="TextBox1" DataField="SellerVATNo" MOD="4" Left="1980" Top="450" Width="2790" Height="270" Text="TextBox1" Style="ddo-char-set: 0; font-size: 9pt; font-family: Verdana; " />
+      <Control Type="AR.Field" Name="TextBox2" DataField="InvoiceDate" MOD="4" Left="1980" Top="810" Width="2790" Height="270" Text="TextBox2" OutputFormat="dd-MMM-yyyy" Style="ddo-char-set: 0; font-size: 9pt; font-family: Verdana; " />
+      <Control Type="AR.Field" Name="TextBox3" DataField="PaymentTerm" MOD="4" Left="1980" Top="1170" Width="2790" Height="270" Text="TextBox3" Style="ddo-char-set: 0; font-size: 9pt; font-family: Verdana; " />
+      <Control Type="AR.Label" Name="Label1" MOD="4" Left="180" Top="450" Width="1710" Height="270" Caption="VAT Reg. No." Style="ddo-char-set: 0; font-weight: normal; font-size: 9pt; font-family: Verdana; " />
+      <Control Type="AR.Label" Name="Label2" MOD="4" Left="180" Top="810" Width="1710" Height="270" Caption="Invoice Date" Style="ddo-char-set: 0; font-weight: normal; font-size: 9pt; font-family: Verdana; " />
+      <Control Type="AR.Label" Name="Label3" MOD="4" Left="180" Top="1170" Width="1710" Height="270" Caption="Payment Terms" Style="ddo-char-set: 0; font-weight: normal; font-size: 9pt; font-family: Verdana; " />
+      <Control Type="AR.Label" Name="Label5" MOD="4" Left="5490" Top="90" Width="1710" Height="270" Caption="Payment Due Date" Style="ddo-char-set: 0; font-weight: normal; font-size: 9pt; font-family: Verdana; " />
+      <Control Type="AR.Label" Name="Label6" MOD="4" Left="11250" Top="90" Width="2160" Height="270" Caption="Settlement Discount %" Style="ddo-char-set: 0; font-weight: normal; font-size: 9pt; font-family: Verdana; " />
+      <Control Type="AR.Label" Name="Label8" MOD="4" Left="5490" Top="810" Width="1710" Height="270" Caption="Customer Account No." Style="ddo-char-set: 0; font-weight: normal; font-size: 9pt; font-family: Verdana; " />
+      <Control Type="AR.Label" Name="Label9" MOD="4" Left="180" Top="1530" Width="1710" Height="270" Caption="Currency" Style="ddo-char-set: 0; font-weight: normal; font-size: 9pt; font-family: Verdana; " />
+      <Control Type="AR.Field" Name="TextBox6" DataField="PaymentDueDate" MOD="4" Left="7290" Top="90" Width="2790" Height="270" Text="" OutputFormat="dd-MMM-yyyy" Style="ddo-char-set: 0; font-size: 9pt; font-family: Verdana; " />
+      <Control Type="AR.Field" Name="txtSettlementDiscount" DataField="DiscountPercent" MOD="4" Left="13500" Top="90" Width="2790" Height="270" Text="" OutputFormat="0.00" Style="ddo-char-set: 0; font-size: 9pt; font-family: Verdana; " />
+      <Control Type="AR.Field" Name="TextBox8" DataField="CustomerAccNo" MOD="4" Left="7290" Top="810" Width="2790" Height="270" Text="" Style="ddo-char-set: 0; font-size: 9pt; font-family: Verdana; " />
+      <Control Type="AR.Field" Name="TextBox9" MOD="4" Left="1980" Top="1530" Width="2790" Height="270" Text="" Style="ddo-char-set: 0; font-size: 9pt; font-family: Verdana; " />
+      <Control Type="AR.Label" Name="Label10" MOD="4" Left="90" Top="3510" Width="810" Height="270" Caption="PO No." Style="ddo-char-set: 0; text-align: center; font-weight: normal; font-size: 8.25pt; font-family: Verdana; " />
+      <Control Type="AR.Label" Name="Label11" MOD="4" Left="4770" Top="3510" Width="990" Height="270" Caption="Description" Style="ddo-char-set: 0; text-align: center; font-weight: normal; font-size: 8.25pt; font-family: Verdana; " />
+      <Control Type="AR.Label" Name="Label13" MOD="4" Left="15840" Top="3510" Width="900" Height="270" Caption="VAT Rate" Style="ddo-char-set: 0; text-align: center; font-weight: normal; font-size: 8.25pt; font-family: Verdana; " />
+      <Control Type="AR.Label" Name="Label15" MOD="4" Left="14940" Top="3510" Width="900" Height="270" Caption="Net Value" Style="ddo-char-set: 0; text-align: center; font-weight: normal; font-size: 8.25pt; font-family: Verdana; " />
+      <Control Type="AR.Label" Name="Label16" MOD="4" Left="13230" Top="3510" Width="630" Height="270" Caption="Disc.%" Style="ddo-char-set: 0; text-align: center; font-weight: normal; font-size: 8.25pt; font-family: Verdana; " />
+      <Control Type="AR.Label" Name="Label17" MOD="4" Left="17910" Top="3510" Width="1170" Height="270" Caption="Gross Value" Style="ddo-char-set: 0; text-align: center; font-weight: normal; font-size: 8.25pt; font-family: Verdana; " />
+      <Control Type="AR.Label" Name="Label18" MOD="4" Left="12330" Top="3510" Width="900" Height="270" Caption="Quantity" Style="ddo-char-set: 0; text-align: center; font-weight: normal; font-size: 8.25pt; font-family: Verdana; " />
+      <Control Type="AR.Label" Name="Label19" MOD="4" Left="5490" Top="2700" Width="1260" Height="270" Caption="Supplier Address" Style="ddo-char-set: 1; font-weight: bold; font-size: 7pt; " />
+      <Control Type="AR.Label" Name="Label20" MOD="4" Left="11700" Top="2700" Width="1260" Height="270" Caption="Delivery Address" Style="ddo-char-set: 1; font-weight: bold; font-size: 7pt; " />
+      <Control Type="AR.Label" Name="Label21" MOD="4" Left="180" Top="2700" Width="1170" Height="270" Caption="Invoice Address" Style="ddo-char-set: 1; font-weight: bold; font-size: 7pt; " />
+      <Control Type="AR.Field" Name="TextBox19" DataField="DeliveryAddress" MOD="4" Left="13500" Top="2700" Width="3780" Height="270" Text="" Style="ddo-char-set: 1; font-size: 8pt; " />
+      <Control Type="AR.Field" Name="TextBox20" DataField="InvoiceAddress" MOD="4" Left="1530" Top="2700" Width="3510" Height="270" Text="" Style="ddo-char-set: 1; font-size: 8pt; " />
+      <Control Type="AR.Field" Name="TextBox21" DataField="SupplierAddress" MOD="4" Left="7290" Top="2700" Width="3600" Height="270" Text="" Style="ddo-char-set: 1; font-size: 8pt; " />
+      <Control Type="AR.Label" Name="Label22" MOD="4" Left="180" Top="3150" Width="18900" Height="270" Caption="Invoice Details" Style="color: Indigo; text-decoration: underline; text-align: justify; font-weight: bold; background-color: WhiteSmoke; " />
+      <Control Type="AR.Line" Name="Line1" MOD="4" X1="100" Y1="3070" X2="19080" Y2="3060" />
+      <Control Type="AR.Label" Name="Label27" MOD="4" Left="180" Top="90" Width="1710" Height="270" Caption="Invoice No." Style="ddo-char-set: 0; font-weight: normal; font-size: 9pt; font-family: Verdana; " />
+      <Control Type="AR.Field" Name="TextBox25" DataField="InvoiceNo" MOD="4" Left="1980" Top="90" Width="2790" Height="270" Text="TextBox25" Style="ddo-char-set: 0; font-size: 9pt; font-family: Verdana; " />
+      <Control Type="AR.Line" Name="Line3" MOD="4" X1="90" Y1="3420" X2="19080" Y2="3420" />
+      <Control Type="AR.Label" Name="Label28" MOD="4" Left="2160" Top="3510" Width="1170" Height="270" Caption="Buyers Code" Style="ddo-char-set: 0; text-align: center; font-weight: normal; font-size: 8.25pt; font-family: Verdana; " />
+      <Control Type="AR.Label" Name="Label29" MOD="4" Left="3420" Top="3510" Width="1350" Height="270" Caption="Suppliers Code" Style="ddo-char-set: 0; text-align: center; font-weight: normal; font-size: 8.25pt; font-family: Verdana; " />
+      <Control Type="AR.Label" Name="Label30" MOD="4" Left="11340" Top="3510" Width="630" Height="270" Caption="Price" Style="ddo-char-set: 0; text-align: center; font-weight: normal; font-size: 8.25pt; font-family: Verdana; " />
+      <Control Type="AR.Label" Name="lblTaxPointDate" MOD="4" Left="5490" Top="450" Width="1710" Height="270" Caption="Tax Point Date" Style="ddo-char-set: 0; font-weight: normal; font-size: 9pt; font-family: Verdana; " />
+      <Control Type="AR.Field" Name="tbTaxPointDate" DataField="TaxPointDate" MOD="4" Left="7290" Top="450" Width="2790" Height="270" Text="" OutputFormat="dd-MMM-yyyy" Style="ddo-char-set: 0; font-size: 9pt; font-family: Verdana; " />
+      <Control Type="AR.Label" Name="lblCustomerContact" MOD="4" Left="5490" Top="1170" Width="1710" Height="270" Caption="Customer Contact Name" Style="ddo-char-set: 0; font-weight: normal; font-size: 9pt; font-family: Verdana; " />
+      <Control Type="AR.Field" Name="txtCustomerContact" DataField="New_InvoiceContact" MOD="4" Left="7290" Top="1170" Width="2790" Height="270" Text="" Style="ddo-char-set: 0; font-size: 9pt; font-family: Verdana; " />
+      <Control Type="AR.Label" Name="lblOverallDiscount" MOD="4" Left="11250" Top="1530" Width="2160" Height="270" Caption="Overall Discount %" Style="ddo-char-set: 0; font-weight: normal; font-size: 9pt; font-family: Verdana; " />
+      <Control Type="AR.Field" Name="txtOverallDiscount" DataField="New_OverallDiscountPercent" MOD="4" Left="13500" Top="1530" Width="2790" Height="270" Text="txtOverallDiscount" Style="ddo-char-set: 0; font-size: 9pt; font-family: Verdana; " />
+      <Control Type="AR.Label" Name="lblSecondDisc" MOD="4" Left="13860" Top="3510" Width="1080" Height="270" Caption="2nd Disc.%" Style="ddo-char-set: 0; text-align: center; font-weight: normal; font-size: 8.25pt; font-family: Verdana; " />
+      <Control Type="AR.Field" Name="txtSettlementDays" DataField="New_SettlementDays1" MOD="4" Left="13500" Top="450" Width="2790" Height="270" Text="txtSettlementDay" OutputFormat="0.00" Style="ddo-char-set: 0; font-size: 9pt; font-family: Verdana; " />
+      <Control Type="AR.Label" Name="lblSettlementDay" MOD="4" Left="11250" Top="450" Width="2160" Height="270" Caption="Settlement Discount Days" Style="ddo-char-set: 0; font-weight: normal; font-size: 9pt; font-family: Verdana; " />
+      <Control Type="AR.Label" Name="lblSupplierCompany" MOD="4" Left="5490" Top="2340" Width="1710" Height="270" Caption="Supplier Company" Style="ddo-char-set: 1; font-weight: bold; font-size: 7pt; " />
+      <Control Type="AR.Label" Name="lblBuyerCompany" MOD="4" Left="11700" Top="2340" Width="1170" Height="270" Caption="Buyer Company" Style="ddo-char-set: 1; font-weight: bold; font-size: 7pt; " />
+      <Control Type="AR.Field" Name="txtSupplierCompany" DataField="SupplierComapany" MOD="4" Left="7290" Top="2340" Width="2790" Height="270" Text="" Style="ddo-char-set: 1; font-size: 8pt; " />
+      <Control Type="AR.Field" Name="txtBuyerCompany" DataField="BuyerComapany" MOD="4" Left="13500" Top="2340" Width="2790" Height="270" Text="txtBuyerCompany" Style="ddo-char-set: 1; font-size: 8pt; " />
+      <Control Type="AR.Label" Name="lblInvoiceName" MOD="4" Left="180" Top="2340" Width="1080" Height="270" Caption="Invoice Name" Style="ddo-char-set: 1; font-weight: bold; font-size: 8pt; " />
+      <Control Type="AR.Field" Name="txtInvoiceName" DataField="New_InvoiceName" MOD="4" Left="1530" Top="2340" Width="2790" Height="270" Text="txtInvoiceName" Style="ddo-char-set: 1; font-weight: bold; font-size: 8pt; " />
+      <Control Type="AR.Label" Name="lblSecondSettlementDays" MOD="4" Left="11250" Top="1170" Width="2160" Height="270" Caption="2nd Settlement Discount Days" Style="ddo-char-set: 0; font-weight: normal; font-size: 9pt; font-family: Verdana; " />
+      <Control Type="AR.Field" Name="txtSecondSettlementDays" DataField="New_SettlementDays2" MOD="4" Left="13500" Top="1170" Width="2790" Height="270" Text="txtSecondSettlementDays" OutputFormat="0.00" Style="ddo-char-set: 0; font-size: 9pt; font-family: Verdana; " />
+      <Control Type="AR.Label" Name="Label73" MOD="4" Left="11250" Top="810" Width="2160" Height="270" Caption="2nd Settlement Discount %" Style="ddo-char-set: 0; font-weight: normal; font-size: 9pt; font-family: Verdana; " />
+      <Control Type="AR.Field" Name="txtSettlementDiscount2" DataField="New_SettlementPercent2" MOD="4" Left="13500" Top="810" Width="2790" Height="270" Text="txtSettlementDiscount2" OutputFormat="0.00" Style="ddo-char-set: 0; font-size: 9pt; font-family: Verdana; " />
+      <Control Type="AR.Label" Name="Label75" MOD="4" Left="16920" Top="3510" Width="540" Height="270" Caption="VAT" Style="ddo-char-set: 0; text-align: center; font-weight: normal; font-size: 8.25pt; font-family: Verdana; " />
+      <Control Type="AR.Label" Name="lblPaymentDate" MOD="4" Left="5490" Top="1530" Width="1710" Height="288" Caption="Payment Date" Style="ddo-char-set: 0; font-weight: normal; font-size: 9pt; font-family: Verdana; " />
+      <Control Type="AR.Label" Name="lblPaymentMethod" MOD="4" Left="5490" Top="1890" Width="1710" Height="288" Caption="Payment Method" Style="ddo-char-set: 0; font-weight: normal; font-size: 9pt; font-family: Verdana; " />
+      <Control Type="AR.Label" Name="txtPaymentMethod" DataField="New_PaymentMethod" MOD="4" Left="7290" Top="1890" Width="2790" Height="288" Caption="" Style="ddo-char-set: 0; font-size: 9pt; font-family: Verdana; " />
+      <Control Type="AR.Label" Name="txtPaymentDate" DataField="New_PaymentDate" MOD="4" Left="7290" Top="1530" Width="2790" Height="288" Caption="" Style="ddo-char-set: 0; font-size: 9pt; font-family: Verdana; " />
+      <Control Type="AR.Label" Name="lblDiscountGiven" MOD="4" Left="11250" Top="1890" Width="2160" Height="288" Caption="Discount Given" Style="ddo-char-set: 0; font-weight: normal; font-size: 9pt; font-family: Verdana; " />
+      <Control Type="AR.Label" Name="txtDiscountGiven" DataField="New_DiscountGiven" MOD="4" Left="13500" Top="1890" Width="2790" Height="270" Caption="" Style="ddo-char-set: 0; font-weight: normal; font-size: 9pt; font-family: Verdana; " />
+      <Control Type="AR.Label" Name="Label76" MOD="4" Left="10080" Top="3510" Width="1260" Height="270" Caption="Color" Style="ddo-char-set: 0; text-align: center; font-weight: normal; font-size: 8.25pt; font-family: Verdana; " />
+    </Section>
+    <Section Type="Detail" Name="Detail" Height="855" BackColor="16777215" CanShrink="0">
+      <Control Type="AR.Field" Name="TextBox10" DataField="PurInfo" MOD="4" Left="90" Top="0" Width="2070" Height="270" Text="TextBox10" Style="ddo-char-set: 0; font-size: 8.25pt; font-family: Verdana; " />
+      <Control Type="AR.Field" Name="TextBox12" DataField="Description" MOD="4" Left="4770" Top="0" Width="5310" Height="810" Text="TextBox12" Style="ddo-char-set: 0; font-size: 8.25pt; font-family: Verdana; white-space: inherit; " />
+      <Control Type="AR.Field" Name="TextBox13" DataField="VATRate" MOD="4" Left="15840" Top="0" Width="1080" Height="270" Text="TextBox13" OutputFormat="0.00" Style="ddo-char-set: 0; text-align: right; font-size: 8.25pt; font-family: Verdana; " />
+      <Control Type="AR.Field" Name="TextBox15" DataField="New_NettValue" MOD="4" Left="14940" Top="0" Width="720" Height="270" Text="TextBox15" OutputFormat="0.00" Style="ddo-char-set: 0; text-align: right; font-size: 8.25pt; font-family: Verdana; " />
+      <Control Type="AR.Field" Name="TextBox16" DataField="Discount" MOD="4" Left="13245" Top="0" Width="630" Height="270" Text="TextBox16" OutputFormat="0.00" Style="ddo-char-set: 0; text-align: right; font-size: 8.25pt; font-family: Verdana; " />
+      <Control Type="AR.Field" Name="TextBox17" DataField="TotalAmt" MOD="4" Left="17910" Top="0" Width="1170" Height="270" Text="TextBox17" OutputFormat="0.00" Style="ddo-char-set: 0; text-align: right; font-size: 8.25pt; font-family: Verdana; " />
+      <Control Type="AR.Field" Name="TextBox18" DataField="Quantity" MOD="4" Left="12330" Top="0" Width="900" Height="270" Text="TextBox18" OutputFormat="0.00" Style="ddo-char-set: 0; text-align: right; font-size: 8.25pt; font-family: Verdana; " />
+      <Control Type="AR.Field" Name="TextBox26" DataField="Rate" MOD="4" Left="11340" Top="0" Width="990" Height="270" Text="TextBox26" OutputFormat="0.00" Style="ddo-char-set: 0; text-align: right; font-size: 8.25pt; font-family: Verdana; " />
+      <Control Type="AR.Field" Name="TextBox27" DataField="BuyersProdCode" MOD="4" Left="2160" Top="0" Width="900" Height="270" Text="TextBox27" Style="ddo-char-set: 0; font-size: 8.25pt; font-family: Verdana; " />
+      <Control Type="AR.Field" Name="TextBox28" DataField="SuppliersProdCode" MOD="4" Left="3420" Top="0" Width="990" Height="270" Text="TextBox28" Style="ddo-char-set: 0; font-size: 8.25pt; font-family: Verdana; " />
+      <Control Type="AR.Field" Name="txtSecondDisc" DataField="New_DiscountPercent2" MOD="4" Left="13875" Top="0" Width="810" Height="270" Text="txtSecondDisc" OutputFormat="0.00" Style="ddo-char-set: 0; text-align: right; font-size: 8.25pt; font-family: Verdana; " />
+      <Control Type="AR.Field" Name="TextBox30" DataField="VATAmt" MOD="4" Left="16920" Top="0" Width="990" Height="270" Text="TextBox30" OutputFormat="0.00" Style="ddo-char-set: 0; text-align: right; font-size: 8.25pt; font-family: Verdana; " />
+      <Control Type="AR.Field" Name="txtColor" DataField="New_Definable1" MOD="4" Left="10080" Top="0" Width="1290" Height="270" Text="" Style="ddo-char-set: 0; text-align: center; font-size: 8.25pt; font-family: Verdana; " />
+    </Section>
+    <Section Type="GroupFooter" Name="GroupFooter1" Height="1198" BackColor="16777215" CanShrink="0">
+      <Control Type="AR.Label" Name="Label24" MOD="4" Left="15660" Top="630" Width="990" Height="270" Caption="Total" Style="ddo-char-set: 0; font-weight: normal; font-size: 8.25pt; font-family: Verdana; " />
+      <Control Type="AR.Field" Name="TextBox22" DataField="H_TotalAmt" MOD="4" Left="16920" Top="630" Width="1260" Height="270" Text="TextBox22" OutputFormat="0.00" Style="ddo-char-set: 0; text-align: right; font-size: 8.25pt; font-family: Verdana; " />
+      <Control Type="AR.Field" Name="TextBox23" DataField="H_VATAmt" MOD="4" Left="16920" Top="360" Width="1260" Height="270" Text="TextBox23" OutputFormat="0.00" Style="ddo-char-set: 0; text-align: right; font-size: 8.25pt; font-family: Verdana; " />
+      <Control Type="AR.Label" Name="Label25" MOD="4" Left="15660" Top="360" Width="990" Height="270" Caption="VAT" Style="ddo-char-set: 0; font-weight: normal; font-size: 8.25pt; font-family: Verdana; " />
+      <Control Type="AR.Label" Name="Label26" MOD="4" Left="15660" Top="90" Width="990" Height="270" Caption="Net Total" Style="ddo-char-set: 0; font-weight: normal; font-size: 8.25pt; font-family: Verdana; " />
+      <Control Type="AR.Field" Name="TextBox24" DataField="NetTotal" MOD="4" Left="16920" Top="90" Width="1260" Height="270" Text="TextBox24" OutputFormat="0.00" Style="ddo-char-set: 0; text-align: right; font-size: 8.25pt; font-family: Verdana; " />
+      <Control Type="AR.Line" Name="Line2" MOD="4" X1="180" Y1="0" X2="17010" Y2="0" />
+      <Control Type="AR.Label" Name="lblGBPEquivalentAmount" Visible="0" MOD="4" Left="15660" Top="900" Width="990" Height="270" Caption="Vat in GBP " Style="font-size: 8.25pt; font-family: Verdana; " />
+      <Control Type="AR.Field" Name="tblGBPEquivalentAmount" MOD="4" Left="16920" Top="900" Width="1260" Height="270" Text="" Style="text-align: right; font-size: 8.25pt; font-family: Verdana; " />
+    </Section>
+    <Section Type="PageFooter" Name="PageFooter" Height="405" BackColor="16777215" CanShrink="0">
+      <Control Type="AR.Label" Name="Label71" Visible="0" MOD="4" Left="180" Top="90" Width="5400" Height="270" Caption="Do not attempt to re-key this invoice. It has already been processed." Style="text-decoration: underline; ddo-char-set: 0; font-weight: bold; font-style: italic; font-size: 8.25pt; font-family: Verdana; " />
+    </Section>
+  </Sections>
+  <PageSettings />
+</ActiveReportsLayout>

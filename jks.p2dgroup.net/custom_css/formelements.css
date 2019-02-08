@@ -1,0 +1,121 @@
+/*==========================================================================
+
+	Form Elements Stylesheet
+	____________________________________________________________
+
+	Client:		P2D Paper 2 Data
+	Date:		27th March 2014
+	Author:		vnsinfo
+	Website:	www.vnsinfo.com.au
+	Version:	1.1
+
+===========================================================================*/
+
+
+/* [Import Stylesheets] */
+
+/*@import url(jqtransform.css);*/
+
+
+/* [Fieldset Styles] */
+
+.login_formBox
+{
+    padding: 12px;
+    margin-bottom: 30px;
+}
+.login_formBox h3
+{
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.4);
+    margin-bottom: 5px;
+}
+.login_formBox .form-horizontal .control-label
+{
+    text-align: left;
+    font-size: 105%;
+    font-weight: 400;
+}
+
+.login_formBox .form-horizontal .form-control
+{
+    background: url(../assets/img/bg_lightgrey_trans.png) 0 0 repeat;
+    border: #fff solid 1px;
+    border-radius: 0;
+    color: #fff;
+}
+
+
+/*.form_section .form-group{
+			margin-bottom: 15px;
+			}*/
+
+
+.form_section .control-label
+{
+    text-align: left;
+}
+
+.form_section .form-control
+{
+    background: #d6d5d5;
+    border-radius: 0;
+    color: #6b6969 !important;
+}
+
+
+
+
+.tagline
+{
+    font: bold 12px/18px Arial, Helvetica, sans-serif;
+    text-align: left;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 24px;
+    width: 520px;
+}
+.tagline .color_green
+{
+    margin-right: 12px;
+}
+
+
+.notselected
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 18px;
+    color: #fff !important;
+}
+
+
+.error
+{
+    color: #F00;
+    padding: 0;
+    margin-top: 6px;
+    float: left;
+    width: auto;
+}
+
+
+
+
+.error_strings a
+{
+    text-decoration: none;
+    margin-bottom: 14px;
+}
+.error_strings ul
+{
+    list-style-type: none;
+    border: none;
+}
+.error_strings
+{
+    font: bold 11px Arial, Helvetica, sans-serif;
+    text-align: left;
+    text-decoration: none;
+    color: #F00;
+}

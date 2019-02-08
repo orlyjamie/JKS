@@ -1,0 +1,20 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <InvoiceDetail>
+    <InvoiceDetailID>5397577</InvoiceDetailID>
+    <InvoiceID>3708945</InvoiceID>
+    <SerialNo>1</SerialNo>
+    <Description>Nilesh Chauhan estimate of fees</Description>
+    <Quantity>10000.00</Quantity>
+    <Rate>1.00</Rate>
+    <VATAmt>0.00</VATAmt>
+    <PurOrderNo>4500002289</PurOrderNo>
+    <PurOrderLineNo>10</PurOrderLineNo>
+    <BuyersProdCode />
+    <ModDate>2018-12-08T11:26:57.527+00:00</ModDate>
+    <ModStamp>AAAAAAhYSRU=</ModStamp>
+    <New_NettValue>10000.00</New_NettValue>
+    <PriceMatch>true</PriceMatch>
+    <QtyMatch>true</QtyMatch>
+  </InvoiceDetail>
+</NewDataSet>

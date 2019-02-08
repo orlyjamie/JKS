@@ -1,0 +1,201 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+    <title></title>
+    <meta content="Microsoft Visual Studio .NET 7.1" name="GENERATOR">
+    <meta content="VisualStudio.HTML" name="ProgId">
+    <meta content="Microsoft Visual Studio .NET 7.1" name="Originator">
+</head>
+<body bottommargin="1" bgcolor="#d4d0c8" leftmargin="2" topmargin="2" rightmargin="1">
+    <script language="javascript">
+
+
+        function onunload() {
+            //				window.alert("closing toolbar");
+
+        }
+
+        function imgMouseClick(x, y) {
+            Form1.tbMouse.value = y + ", " + x;
+        }
+        function rotateImg(deg) {
+            //window.alert('Rotate function not yet supported');
+            if (deg == 0)
+                window.parent.frames('ImgPopNew').mydiv.style.filter = 'progid:DXImageTransform.Microsoft.BasicImage(rotation=0)';
+            if (deg == 90)
+                window.parent.frames('ImgPopNew').mydiv.style.filter = 'progid:DXImageTransform.Microsoft.BasicImage(rotation=1)';
+            if (deg == 180)
+                window.parent.frames('ImgPopNew').mydiv.style.filter = 'progid:DXImageTransform.Microsoft.BasicImage(rotation=2)';
+            if (deg == 270)
+                window.parent.frames('ImgPopNew').mydiv.style.filter = 'progid:DXImageTransform.Microsoft.BasicImage(rotation=3)';
+        }
+
+
+
+
+
+
+
+        function selectInvValidationDlg() {
+            //			window.alert("about to call showModalDialog");
+
+            var retVal = window.showModalDialog("VendorSelectionValid.aspx", window, "dialogHeight: 300px; dialogWidth: 500px; dialogTop: 100px; dialogLeft: 100px; edge: Raised; center: Yes; dialogHide: Yes; help: No; resizable: Yes; status: No;");
+            //			if (retVal)
+            //				setValidation(retVal);
+        }
+
+
+
+        function update_tots_item_inserts() {
+            window.parent.Invoice.update_tots_item_inserts();
+        }
+
+        function changePage(mode) {
+            switch (mode) {
+                case 1:
+                    window.parent.selectPage(1);
+                    break;
+                case 2:
+                    window.parent.selectPage(parseInt(Form1.tbPageNo.value) - 1);
+                    break;
+                case 3:
+                    window.parent.selectPage(parseInt(Form1.tbPageNo.value));
+                    break;
+                case 4:
+
+                    window.parent.selectPage(parseInt(Form1.tbPageNo.value) + 1);
+                    break;
+                case 5:
+                    window.parent.selectPage(999999);
+                    break;
+            }
+        }
+
+        function ZoomIn() {
+            //				window.alert("ZoomIn");
+            if (Form1.lbScale.selectedIndex < 8)
+                Form1.lbScale.selectedIndex++;
+            //window.parent.frames("ImgForm").scaleImage();
+            window.parent.frames("ImgPopNew").scaleImage();
+        }
+        function ZoomOut() {
+            //				window.alert("ZoomOout");
+
+            if (Form1.lbScale.selectedIndex > 0)
+                Form1.lbScale.selectedIndex--;
+            //window.parent.frames("ImgForm").scaleImage();
+
+            window.parent.frames("ImgPopNew").scaleImage();
+        }
+        function Select() {
+        }
+
+        var downObj = null;
+        function ImgBarMouseDown() {
+            var obj = window.event.srcElement;
+
+            var prefix = obj.id.substr(0, 2);
+            if (prefix == "pb") {
+                downObj = obj;
+                downObj.style.height = 22;
+                downObj.style.width = 22;
+                downObj.style.borderWidth = 1;
+                downObj.style.borderStyle = "Inset";
+            }
+        }
+        function ImgBarMouseUp() {
+            if (downObj != null) {
+                downObj.style.borderWidth = 0;
+                downObj.style.borderStyle = "None";
+                downObj.style.height = 24;
+                downObj.style.width = 24;
+            }
+        }
+        function ImgBarOut() {
+            if (downObj != null)
+                ImgBarMouseUp();
+        }
+
+    </script>
+    <form id="Form1">
+    <div onmouseup="ImgBarMouseUp();" onmousedown="ImgBarMouseDown();" onmouseout="ImgBarOut();"
+        align="left" nowrap>
+        <table id="TABLE1" height="24" cellspacing="0" cellpadding="0" width="800" border="0"
+            ms_1d_layout="TRUE">
+            <tr>
+                <td width="800" height="20">
+                    <img class="toolbarButton" id="pbOpen" title="Open Invoice" onclick="window.parent.selectInvDlg();"
+                        alt="Open" src="bits\Open.png" style="display: none">&nbsp;
+                    <img class="toolbarButton" id="pbXml" title="View Source XML" onclick="window.parent.viewInvXml();"
+                        alt="View XML" src="bits\XML.png" style="display: none">&nbsp;
+                    <img class="toolbarButton" id="Img1" title="View Formatted Text from OCR" onclick="window.parent.viewInvTxt();"
+                        alt="View XML" src="bits\TXT.png" style="display: none">&nbsp;
+                    <img class="toolbarButton" id="pbZoomIn" title="Zoom in" onclick="ZoomIn();" alt="Zoom In"
+                        src="bits\zoom_in.gif">
+                    <img class="toolbarButton" id="pbZoomOut" title="Zoom out" onclick="ZoomOut();" alt="Zoom Out"
+                        src="bits\zoom_out.gif"><select id="lbScale" title="Image scale" style="width: 59px"
+                            align="top" onchange="window.parent.frames('ImgForm').scaleImage();" name="lbScale"
+                            style="display: none">
+                            <option value="25">25%</option>
+                            <option value="50">50%</option>
+                            <option value="75">75%</option>
+                            <option value="100" selected>100%</option>
+                            <option value="150">150%</option>
+                            <option value="200">200%</option>
+                            <option value="250">250%</option>
+                            <option value="300">300%</option>
+                            <option value="400">400%</option>
+                        </select>
+                    <img class="toolbarButton" id="pbStretchNormal" title="Normal display" onclick='window.parent.frames("ImgPopNew").setStretchMode(0);'
+                        alt="Normal Display" src="bits\bg.gif">
+                    <img class="toolbarButton" id="pbStretchWidth" title="Size to width" onclick='window.parent.frames("ImgPopNew").setStretchMode(1);'
+                        alt="Size to width" src="bits\horizontal_arrow.gif">
+                    <img class="toolbarButton" id="pbStretchHeight" title="Size to height" onclick='window.parent.frames("ImgPopNew").setStretchMode(2);'
+                        alt="Size to height" src="bits\vertical_arrow.gif">
+                    <img class="toolbarButton" id="pbStretchBoth" title="Size to fit" onclick='window.parent.frames("ImgPopNew").setStretchMode(4);'
+                        alt="Size to fit" src="bits\scale.gif">&nbsp;
+                    <img class="toolbarButton" id="pbPageFirst" title="First Page" onclick="changePage(1);"
+                        alt="First Page" src="bits\rewind.gif">
+                    <img class="toolbarButton" id="pbPagePrevious" title="Previous Page" onclick="changePage(2);"
+                        alt="Previous Page" src="bits\play_reverse.gif">
+                    <input id="tbPageNo" title="Page No." type="text" maxlength="3" onchange="changePage(3);"
+                        size="1" style="width: 40px; height: 27px" align="top" name="tbPage">
+                    <img class="toolbarButton" id="pbPageNext" title="Next Page" onclick="changePage(4);"
+                        alt="Next Page" src="bits\play.gif">
+                    <img class="toolbarButton" id="pbPageLast" title="Last Page" onclick="changePage(5);"
+                        alt="Last Page" src="bits\rewind_reverse.gif">
+                    <img class="toolbarButton" id="Img4" title="Rotate 0 degree" onclick="rotateImg(0);"
+                        alt="Rotate 0 degree" src="bits\degree0.gif">
+                    <img class="toolbarButton" id="pbTurnLeft" title="Rotate 90 degree" onclick="rotateImg(90);"
+                        alt="Rotate 90 degree" src="bits\degree90.gif">
+                    <img class="toolbarButton" id="Img2" title="Rotate 180 degree" onclick="rotateImg(180);"
+                        alt="Rotate 180 degree" src="bits\degree180.gif">
+                    <img class="toolbarButton" id="Img3" title="Rotate 270 degree" onclick="rotateImg(270);"
+                        alt="Rotate 270 degree" src="bits\degree270.gif">
+                    <img class="toolbarButton" id="pbZoomView" title="Zoom View" onclick="window.parent.showZoom=true;window.parent.zoomSelect();"
+                        alt="Zoom View" src="bits\Tools.png">
+                    <img class="toolbarButton" id="pbOptions" title="Options" onclick="window.parent.viewOptionsDlg();"
+                        alt="Validations setting" src="bits\Tools.png" style="display: none">
+                    <img class="toolbarButton" id="pbExtr" title="Set up Extraction Thresholds for QC Treatment"
+                        onclick="selectInvValidationDlg();" alt="Save Changes" hspace="1" src="bits\PageBlank2.png"
+                        style="display: none">
+                    <input type="hidden" id="tbMouse" disabled size="1" name="tbMouse" align="top">&nbsp;
+                    <img class="toolbarButton" id="pbUpdate1" title="Update Totals and Insert/Delete Items"
+                        onclick="update_tots_item_inserts();" alt="Save Changes" hspace="1" src="bits\PageBlank3.png"
+                        style="display: none">&nbsp;<img class="toolbarButton" id="pbSave" title="Save Changes"
+                            onclick="window.parent.Invoice.save();" alt="JCB2" hspace="1" src="bits\Save.png"
+                            style="display: none">&nbsp;
+                    <img class="toolbarButton" id="pbPermanentSave" title="Save Changes to Permanent Repository"
+                        onclick="window.parent.Invoice.save_permanently();" alt="JCB3" hspace="1" src="bits\Save2.png"
+                        style="display: none">&nbsp;&nbsp;<img class="toolbarButton" id="pbDelete" title="Delete Invoice"
+                            onclick="window.parent.Invoice.delete_invoice();" alt="JCB3" hspace="1" src="bits\del.png"
+                            style="display: none">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <img class="toolbarButton" id="pbDiscard" title="Discard Invoice" onclick="window.parent.Invoice.discard_invoice();"
+                        alt="JCB3" hspace="1" src="bits\discard.png" style="display: none">
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>

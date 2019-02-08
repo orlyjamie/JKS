@@ -1,0 +1,41 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <InvoiceID>3347924</InvoiceID>
+    <InvoiceNo>1212a</InvoiceNo>
+    <SupplierCompanyID>150892</SupplierCompanyID>
+    <BuyerCompanyID>148054</BuyerCompanyID>
+    <InvoiceDate>2017-12-01T00:00:00+00:00</InvoiceDate>
+    <CurrencyTypeID>22</CurrencyTypeID>
+    <SellerVATNo />
+    <SupplierAddress1 />
+    <SupplierAddress2 />
+    <SupplierAddress3 />
+    <SupplierAddress4 />
+    <SupplierAddress5 />
+    <SupplierZIP />
+    <SupplierCountry />
+    <NetTotal>1324.22</NetTotal>
+    <VATAmt>264.84</VATAmt>
+    <TotalAmt>1589.06</TotalAmt>
+    <ModDate>2018-10-01T11:32:13.67+01:00</ModDate>
+    <ModStamp>AAAAAAgghtA=</ModStamp>
+    <ModUserId>40756</ModUserId>
+    <StatusId>6</StatusId>
+    <Comment />
+    <DepartmentID>1930</DepartmentID>
+    <TaxPointDate>2017-12-01T00:00:00+00:00</TaxPointDate>
+    <Approved1>false</Approved1>
+    <Approved1SB1>false</Approved1SB1>
+    <Approved1SB2>false</Approved1SB2>
+    <Approved2_1>false</Approved2_1>
+    <Approved2_2>false</Approved2_2>
+    <Approved2SB1>false</Approved2SB1>
+    <Approved2SB2>false</Approved2SB2>
+    <ApprovedCEO>false</ApprovedCEO>
+    <PreviousStatusID>21</PreviousStatusID>
+    <StatusID1>6</StatusID1>
+    <NetTotal1>1324.22</NetTotal1>
+    <New_DocumentType>INV</New_DocumentType>
+  </Table>
+</NewDataSet>

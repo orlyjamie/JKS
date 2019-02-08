@@ -1,0 +1,1302 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CBSDataAccess2</name>
+    </assembly>
+    <members>
+        <member name="T:CBSolutions.Architecture.Data.CBSDASql">
+            <summary>
+            Summary description for Class1.
+            </summary>
+        </member>
+        <member name="T:CBSolutions.Architecture.Data.CBSDataAccessBase">
+            <summary>
+            The  base abstract class to be used with CBSDataAccess clases 
+            as well as actual implementation classes
+            </summary>
+        </member>
+        <member name="F:CBSolutions.Architecture.Data.CBSDataAccessBase.connection">
+            <summary>
+            values to hold the current connection object
+            </summary>
+        </member>
+        <member name="F:CBSolutions.Architecture.Data.CBSDataAccessBase.connectionString">
+            <summary>
+            the connection string used for the current connection
+            </summary>
+        </member>
+        <member name="F:CBSolutions.Architecture.Data.CBSDataAccessBase.errorCode">
+            <summary>
+            errorCode that will be returned after an operation
+            </summary>
+        </member>
+        <member name="F:CBSolutions.Architecture.Data.CBSDataAccessBase.errorMessage">
+            <summary>
+            the descriptive error message after an operation
+            </summary>
+        </member>
+        <member name="F:CBSolutions.Architecture.Data.CBSDataAccessBase.keepConnectionOpened">
+            <summary>
+            actually an internal flag to make used in OpenConnection and 
+            other ExecuteQuery functions
+            </summary>
+        </member>
+        <member name="F:CBSolutions.Architecture.Data.CBSDataAccessBase.isBeginTransaction">
+            <summary>
+            an internal flag to indicate if we are already in a transaction mode
+            </summary>
+        </member>
+        <member name="F:CBSolutions.Architecture.Data.CBSDataAccessBase.spReturnValue">
+            <summary>
+            captures return values from insert/update SPs
+            </summary>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.CBSDataAccessBase.#ctor">
+            <summary>
+            no implementation required
+            </summary>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.CBSDataAccessBase.OpenConnection">
+            <summary>
+            the abstract class only checks whether there is a suitable 
+            connection string  provided or not
+            </summary>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.CBSDataAccessBase.CloseConnection">
+            <summary>
+            leave and force implementation to the derived classes
+            </summary>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.CBSDataAccessBase.BeginTransaction">
+            <summary>
+            leave and force implementation to the derived classes
+            </summary>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.CBSDataAccessBase.CommitTransaction">
+            <summary>
+            leave and force implementation to the derived classes
+            </summary>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.CBSDataAccessBase.RollbackTransaction">
+            <summary>
+            leave and force implementation to the derived classes
+            </summary>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.CBSDataAccessBase.GetServerDateTime">
+            <summary>
+            if the data provider doesn't support server time concept,
+            return the client machine datetime only
+            </summary>
+            <returns>Server date in System.DateTime format</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.CBSDataAccessBase.ExecuteQuery(System.String)">
+            <summary>
+            ExecuteQuery
+            </summary>
+            <param name="tableName">tablename or view name</param>
+            <returns>recordset or null in case of error</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.CBSDataAccessBase.ExecuteQuery(System.String,System.String)">
+            <summary>
+            ExecuteQuery
+            </summary>
+            <param name="tableName">table or view name</param>
+            <param name="whereClause">fully qualified filter clause</param>
+            <returns>recordset or null in case of error</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.CBSDataAccessBase.ExecuteQuery(System.String,System.String,System.String)">
+            <summary>
+            ExecuteQuery
+            </summary>
+            <param name="tableName">tablename or view</param>
+            <param name="whereClause">fully qualified filter clause</param>
+            <param name="OrderBy">ORDER BY clause</param>
+            <returns>recordset or null in case of error</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.CBSDataAccessBase.ExecuteQuery(System.String,System.String,System.String,System.Collections.ArrayList)">
+            <summary>
+            
+            </summary>
+            <param name="tableName"></param>
+            <param name="whereClause"></param>
+            <param name="OrderBy"></param>
+            <param name="columnList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.CBSDataAccessBase.ExecuteQuery(System.String,System.String,System.Collections.ArrayList)">
+            <summary>
+            ExecuteQuery
+            </summary>
+            <param name="tableName">name of the table or view</param>
+            <param name="whereClause">the fully qualified filter string</param>
+            <param name="columnList">comma separated list of columns</param>
+            <returns>recordset object or null in case of error</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.CBSDataAccessBase.ExecuteReader(System.String,System.Object[])">
+            <summary>
+            ExecuteReader
+            </summary>
+            <param name="spName">name of the stored procedure</param>
+            <param name="parameterValues">comman separated value list</param>
+            <returns>data reader object or null</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.CBSDataAccessBase.ExecuteReader(System.String,System.Data.IDataParameter[])">
+            <summary>
+            ExecuteReader
+            </summary>
+            <param name="spName">name of the stored procedure</param>
+            <param name="commandParameters">array of command parameters</param>
+            <returns></returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.CBSDataAccessBase.ExecuteNonQuery(System.String,System.Object[])">
+            <summary>
+            ExecuteNonQuery
+            </summary>
+            <param name="spName">name of the stored procedure</param>
+            <param name="parameterValues">comma separated parameter values</param>
+            <returns>returns SPReturnValue</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.CBSDataAccessBase.ExecuteSP(System.String,System.Object[])">
+            <summary>
+            ExecuteSP
+            </summary>
+            <param name="spName">name of the stored procedure</param>
+            <param name="parameterValues">comma separated list of parameter values</param>
+            <returns>recordset object or null in case of error</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.CBSDataAccessBase.ExecuteSP(System.String)">
+            <summary>
+            ExecuteNonQuery
+            </summary>
+            <param name="spName">name of the store procedure</param>
+            <returns>recordset or null in case of error</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.CBSDataAccessBase.ExecuteSP(System.String,System.Data.IDataParameter[])">
+            <summary>
+            ExecuteNonQuery
+            </summary>
+            <param name="spName">name of the stored procedure</param>
+            <param name="commandParameters">array of command parameters</param>
+            <returns>recordset or null in case of error</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.CBSDataAccessBase.ExecuteSP(System.Data.IDbTransaction,System.String)">
+            <summary>
+            ExecuteNonQuery
+            </summary>
+            <param name="transaction">the transaction context under which the stored procedure will execute</param>
+            <param name="spName">name of the stored procedure</param>
+            <returns>recordset or null in case of error</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.CBSDataAccessBase.ExecuteSP(System.Data.IDbTransaction,System.String,System.Object[])">
+            <summary>
+            ExecuteNonQuery
+            </summary>
+            <param name="transaction">the transaction context under which the stored procedure will execute</param>
+            <param name="spName">name of the stored procedure</param>
+            <param name="parameterValues">comma separated list of parameter values</param>
+            <returns>recordset or null in case of error</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.CBSDataAccessBase.ExecuteSP(System.Data.IDbTransaction,System.String,System.Data.IDataParameter[])">
+            <summary>
+            ExecuteNonQuery
+            </summary>
+            <param name="transaction">the transaction context under which the stored procedure will execute</param>
+            <param name="spName">name of the procedure</param>
+            <param name="commandParameters">array of command parameters</param>
+            <returns>recordset or null in case of error</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.CBSDataAccessBase.CreateInsertBuffer(System.String)">
+            <summary>
+            Creates an empty recordset buffer to facilitate the InsertRow operation
+            </summary>
+            <remarks>
+            
+            e.g.:  
+             RecordSet rs = CreateInsertBuffer( "Members");
+            </remarks>
+            <param name="tableName">the name of the table to insert</param>
+            <returns>a Recordset object containing the data</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.CBSDataAccessBase.InsertRow(CBSolutions.Architecture.Data.RecordSet,System.Int32@)">
+            <summary>
+            Inserts a single row from the specified recordset buffer 
+            </summary>
+            <remarks>
+            
+            e.g.:  
+             InsertRow( membersRS, ref NewMemberId);
+            </remarks>
+            <param name="recordSet">recordset object holding the new row</param>
+            <param name="PrimaryID">an output parameter from SQL Server reflecting the new PrimaryKey</param>
+            <returns>success/failure (boolean)</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.CBSDataAccessBase.UpdateRow(CBSolutions.Architecture.Data.RecordSet,System.Boolean)">
+            <summary>
+            UpdateRow overload with the option to update single or multiple rows
+            </summary>
+            <param name="recordSet">recordset containing data to update</param>
+            <param name="updateAllRows">if true, updates all rows in the recordset</param>
+            <returns>returns success as true</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.CBSDataAccessBase.UpdateRow(CBSolutions.Architecture.Data.RecordSet)">
+            <summary>
+            Updates a single row in the database, tackling concurrency issue automatically
+            </summary>
+            <remarks>
+            
+            e.g.:  
+             RecordSet rs = UpdateRow( ref recordSet);
+            </remarks>
+            <param name="recordSet">recordSet object containing the modified data</param>
+            <returns>success/failure (boolean)</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.CBSDataAccessBase.DeleteRow(System.String,System.Int32)">
+            <summary>
+            Deletes a given row from a given table
+            </summary>
+            <param name="tableName"></param>
+            <param name="rowPrimaryKeyId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.CBSDataAccessBase.DeleteRow(CBSolutions.Architecture.Data.RecordSet)">
+            <summary>
+            Deletes a single (current) row from the recordset
+            </summary>
+            <param name="rs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.CBSDataAccessBase.DeleteRow(CBSolutions.Architecture.Data.RecordSet,System.Boolean)">
+            <summary>
+            Deletes as many rows as the passed recordset contains
+            </summary>
+            <param name="rs"></param>
+            <param name="deleteAllRows"></param>
+            <returns></returns>
+        </member>
+        <member name="P:CBSolutions.Architecture.Data.CBSDataAccessBase.Connection">
+            <summary>
+            gets/sets active connection
+            </summary>
+        </member>
+        <member name="P:CBSolutions.Architecture.Data.CBSDataAccessBase.KeepConnectionOpened">
+            <summary>
+            gets/sets the flag whether to keep the connection alive or not
+            after the execution of commands like ExecuteSP etc
+            </summary>
+        </member>
+        <member name="P:CBSolutions.Architecture.Data.CBSDataAccessBase.ConnectionString">
+            <summary>
+            property to get/set a valid connection string used 
+            for opening a SqlConnection
+            </summary>
+        </member>
+        <member name="P:CBSolutions.Architecture.Data.CBSDataAccessBase.SPReturnValue">
+            <summary>
+            gets the @Return_Value parameter from the running SP (only for insert/update)
+            </summary>
+        </member>
+        <member name="P:CBSolutions.Architecture.Data.CBSDataAccessBase.ErrorCode">
+            <summary>
+            A read-only property returning immediate custom error codes
+            through DataAccessError enumerator
+            </summary>
+        </member>
+        <member name="P:CBSolutions.Architecture.Data.CBSDataAccessBase.ErrorMessage">
+            <summary>
+            Read-only property returning verbose error messages
+            </summary>
+            <remarks>
+            Note that only of severe errors, a message is returned. 
+            Therefore, you should normally check ErrorCode property.
+            </remarks>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.CBSDASql.#ctor">
+            <summary>
+            constructor
+            </summary>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.CBSDASql.ExecuteReader(System.String,System.Object[])">
+            <summary>
+            ExecuteReader
+            </summary>
+            <param name="spName">name of the stored procedure</param>
+            <param name="parameterValues">comma separated list of parameter values</param>
+            <returns>data reader object or null in case of error</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.CBSDASql.ExecuteReader(System.String,System.Data.IDataParameter[])">
+            <summary>
+            ExecuteReader
+            </summary>
+            <param name="spName">name of the procedure</param>
+            <param name="commandParameters">array of command parameters</param>
+            <returns>datareader or null in case of error</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.CBSDASql.ExecuteSP(System.String,System.Data.IDataParameter[])">
+            <summary>
+            ExecuteSP
+            </summary>
+            <param name="spName">stored procedure name</param>
+            <param name="commandParameters">array of command parameters</param>
+            <returns>recordset or null in case of error</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.CBSDASql.ExecuteSP(System.Data.IDbTransaction,System.String)">
+            <summary>
+            ExecuteSP
+            </summary>
+            <param name="transaction">trasnaction context under which the SP will execute</param>
+            <param name="spName">name of the stored procedure</param>
+            <returns>recordset or null in case of error</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.CBSDASql.ExecuteSP(System.Data.IDbTransaction,System.String,System.Object[])">
+            <summary>
+            ExecuteSP
+            </summary>
+            <param name="transaction">transaction context under which the sp will execute</param>
+            <param name="spName">name of the stored procedure</param>
+            <param name="parameterValues">comma separated parameter values</param>
+            <returns>recordset object or null in case of error</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.CBSDASql.ExecuteSP(System.Data.IDbTransaction,System.String,System.Data.IDataParameter[])">
+            <summary>
+            ExecuteSP
+            </summary>
+            <param name="transaction"></param>
+            <param name="spName"></param>
+            <param name="commandParameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.CBSDASql.OpenConnection">
+            <summary>
+            Open connection if not already opened
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.CBSDASql.CloseConnection">
+            <summary>
+            CLose connection if except when KeepConnectionOpen is requested
+            </summary>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.CBSDASql.BeginTransaction">
+            <summary>
+            issue a database BEGIN TRANSACTION command
+            </summary>
+            <returns>success</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.CBSDASql.CommitTransaction">
+            <summary>
+            Commit database TRANSACTION
+            </summary>
+            <returns>success</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.CBSDASql.RollbackTransaction">
+            <summary>
+            Rollback database TRANSACTION
+            </summary>
+            <returns>success</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.CBSDASql.AttachParameters(System.Data.SqlClient.SqlCommand,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            This method is used to attach array of SqlParameters to a SqlCommand.
+            
+            This method will assign a value of DbNull to any parameter with a direction of
+            InputOutput and a value of null.  
+            
+            This behavior will prevent default values from being used, but
+            this will be the less common case than an intended pure output parameter (derived as InputOutput)
+            where the user provided no input value.
+            </summary>
+            <param name="command">The command to which the parameters will be added</param>
+            <param name="commandParameters">an array of SqlParameters tho be added to command</param>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.CBSDASql.AssignParameterValues(System.Data.SqlClient.SqlParameter[],System.Object[])">
+            <summary>
+            This method assigns an array of values to an array of SqlParameters.
+            </summary>
+            <param name="commandParameters">array of SqlParameters to be assigned values</param>
+            <param name="parameterValues">array of objects holding the values to be assigned</param>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.CBSDASql.PrepareCommand(System.Data.SqlClient.SqlCommand,System.Data.SqlClient.SqlTransaction,System.String,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            This method opens (if necessary) and assigns a sqlConnection, transaction, command type and parameters 
+            to the provided command.
+            </summary>
+            <remarks>Assumes sqlConnection is already open</remarks>
+            <param name="command">the SqlCommand to be prepared</param>
+            <param name="transaction">a valid SqlTransaction, or 'null'</param>
+            <param name="commandText">the stored procedure name or T-SQL command</param>
+            <param name="commandParameters">an array of SqlParameters to be associated with the command or 'null' if no parameters are required</param>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.CBSDASql.ExecuteSP(System.String)">
+            <summary>
+            Execute a SqlCommand  
+            </summary>
+            <remarks>
+            e.g.:  
+             RecordSet rs = ExecuteSP("PublishOrders");
+            </remarks>
+            <param name="spName">the name of the stored procedure</param>
+            <returns>an int representing the number of rows affected by the command</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.CBSDASql.ExecuteSP(System.String,System.Object[])">
+            <summary>
+            Execute a stored procedure via a SqlCommand against the specified SqlConnection 
+            using the provided parameter values.  This method will query the database to discover the parameters for the 
+            stored procedure (the first time each stored procedure is called), and assign the values based on parameter order.
+            </summary>
+            <remarks>
+            This method provides no access to output parameters or the stored procedure's return value parameter.
+            
+            e.g.:  
+             RecordSet rs = ExecuteSP("PublishOrders", 24, 36);
+            </remarks>
+            <param name="spName">the name of the stored procedure</param>
+            <param name="parameterValues">an array of objects to be assigned as the input values of the stored procedure</param>
+            <returns>a Recordset object containing the data</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.CBSDASql.ExecuteSP(System.String,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            Execute a SqlCommand against the specified SqlConnection 
+            using the provided parameters.
+            </summary>
+            <remarks>
+            This method provides no access to output parameters or the stored procedure's return value parameter.
+            e.g.:  
+             RecordSet rs = ExecuteSP("PublishOrders", new SqlParameter("@prodid", 24));
+            </remarks>
+            <param name="spName">name of the Stored Procedure</param>
+            <param name="commandParameters">an array of SqlParamters used to execute the command</param>
+            <returns>a RecordSet object containing data</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.CBSDASql.ExecuteNonQuery(System.String,System.Object[])">
+            <summary>
+            Call this function to execute a stored procedure which doesn't
+            return a recordset. However, the values from the RETURN statement inside
+            the SPs may be captured
+            </summary>
+            <param name="spName">name of the stored procedure</param>
+            <param name="parameterValues">comma separated parameter values</param>
+            <returns>Return Value (int) from the stored procedure</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.CBSDASql.ExecuteQuery(System.String)">
+            <summary>
+            Execute a Select Query using TableName or ViewName 
+            This method will form the correct SQL and query the database
+            </summary>
+            <remarks>
+            
+            e.g.:  
+             RecordSet rs = ExecuteSP("Members");
+            </remarks>
+            <param name="tableName">the name of the table or view</param>
+            <returns>a Recordset object containing the data</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.CBSDASql.ExecuteQuery(System.String,System.String)">
+            <summary>
+            Execute a Select Query using TableName or ViewName and optionally, a whereclause
+            This method will form the correct SQL and query the database
+            </summary>
+            <remarks>
+            
+            e.g.:  
+             RecordSet rs = ExecuteSP("Members", "Age>"");
+             RecordSet rs = ExecuteSP("Members", "");
+            </remarks>
+            <param name="tableName">the name of the table or view</param>
+            <param name="whereClause">the SQL WhereClause</param>
+            <returns>a Recordset object containing the data</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.CBSDASql.ExecuteQuery(System.String,System.String,System.Collections.ArrayList)">
+            <summary>
+            Execute a Select Query using TableName or ViewName a whereclause
+            and an optional set of fieldnames
+            This method will form the correct SQL and query the database
+            </summary>
+            <remarks>
+            
+            e.g.:  
+             RecordSet rs = ExecuteSP("Members", "Age>"","MemberId", "Age", "Education");
+             RecordSet rs = ExecuteSP("Members", "", "MemberId", "Name");
+            </remarks>
+            <param name="tableName">the name of the table or view</param>
+            <param name="whereClause">the SQL WhereClause</param>
+            <param name="columnList">name of the columns to return</param>
+            <returns>a Recordset object containing the data</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.CBSDASql.ExecuteQuery(System.String,System.String,System.String,System.Collections.ArrayList)">
+            <summary>
+            
+            </summary>
+            <param name="tableName"></param>
+            <param name="whereClause"></param>
+            <param name="OrderBy"></param>
+            <param name="columnList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.CBSDASql.ExecuteQuery(System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="tableName"></param>
+            <param name="whereClause"></param>
+            <param name="orderBy"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.CBSDASql.GetServerDateTime">
+            <summary>
+            returns the sql server
+            </summary>
+            <returns>DateTime</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.CBSDASql.CreateInsertBuffer(System.String)">
+            <summary>
+            Creates an empty recordset buffer to facilitate the InsertRow operation
+            </summary>
+            <remarks>
+            
+            e.g.:  
+             RecordSet rs = CreateInsertBuffer( "Members");
+            </remarks>
+            <param name="tableName">the name of the table to insert</param>
+            <returns>a Recordset object containing the data</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.CBSDASql.InsertRow(CBSolutions.Architecture.Data.RecordSet,System.Int32@)">
+            <summary>
+            Inserts a single row from the specified recordset buffer 
+            </summary>
+            <remarks>
+            
+            e.g.:  
+             InsertRow( membersRS, ref NewMemberId);
+            </remarks>
+            <param name="recordSet">recordset object holding the new row</param>
+            <param name="PrimaryID">an output parameter from SQL Server reflecting the new PrimaryKey</param>
+            <returns>success/failure (boolean)</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.CBSDASql.UpdateRow(CBSolutions.Architecture.Data.RecordSet,System.Boolean)">
+            <summary>
+            UpdateRow overload with the option to update single or multiple rows
+            </summary>
+            <param name="recordSet">recordset containing data to update</param>
+            <param name="updateAllRows">if true, updates all rows in the recordset</param>
+            <returns>returns success as true</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.CBSDASql.UpdateRow(CBSolutions.Architecture.Data.RecordSet)">
+            <summary>
+            Updates a single row in the database, tackling concurrency issue automatically
+            </summary>
+            <remarks>
+            
+            e.g.:  
+             RecordSet rs = UpdateRow( ref recordSet);
+            </remarks>
+            <param name="recordSet">recordSet object containing the modified data</param>
+            <returns>success/failure (boolean)</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.CBSDASql.DeleteRow(System.String,System.Int32)">
+            <summary>
+            Deletes a given row from a given table
+            </summary>
+            <param name="tableName"></param>
+            <param name="rowPrimaryKeyId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.CBSDASql.DeleteRow(CBSolutions.Architecture.Data.RecordSet)">
+            <summary>
+            Deletes a single row from the current recordset
+            </summary>
+            <param name="rs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.CBSDASql.DeleteRow(CBSolutions.Architecture.Data.RecordSet,System.Boolean)">
+            <summary>
+            Deletes all or a single row from the recordset
+            </summary>
+            <param name="rs"></param>
+            <param name="deleteAllRows"></param>
+            <returns></returns>
+        </member>
+        <member name="P:CBSolutions.Architecture.Data.CBSDASql.KeepConnectionOpened">
+            <summary>
+            Flag
+            </summary>
+        </member>
+        <member name="P:CBSolutions.Architecture.Data.CBSDASql.Connection">
+            <summary>
+            gets/sets database connection
+            </summary>
+        </member>
+        <member name="T:CBSolutions.Architecture.Data.SqlParameterCache">
+            <summary>
+            SqlParameterCache provides functions to leverage a static cache of procedure parameters, and the
+            ability to discover parameters for stored procedures at run-time.
+            </summary>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.SqlParameterCache.DiscoverSpParameterSet(System.Data.SqlClient.SqlConnection,System.String,System.Boolean)">
+            <summary>
+            resolve at run time the appropriate set of SqlParameters for a stored procedure
+            </summary>
+            <param name="sqlConnection">a valid and open SqlConnection object</param>
+            <param name="spName">the name of the stored procedure</param>
+            <param name="includeReturnValueParameter">whether or not to include their return value parameter</param>
+            <returns></returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.SqlParameterCache.CacheParameterSet(System.String,System.String,System.Data.SqlClient.SqlParameter[])">
+            <summary>
+            add parameter array to the cache
+            </summary>
+            <param name="connectionString">a valid connection string for a SqlConnection</param>
+            <param name="spName">the stored procedure name</param>
+            <param name="commandParameters">an array of SqlParamters to be cached</param>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.SqlParameterCache.GetCachedParameterSet(System.String,System.String)">
+            <summary>
+            retrieve a parameter array from the cache
+            </summary>
+            <param name="connectionString">a valid connection string for a SqlConnection</param>
+            <param name="spName">the stored procedure name</param>
+            <returns>an array of SqlParamters</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.SqlParameterCache.GetSpParameterSet(System.Data.SqlClient.SqlConnection,System.String)">
+            <summary>
+            Retrieves the set of SqlParameters appropriate for the stored procedure
+            </summary>
+            <remarks>
+            This method will query the database for this information, and then store it in a cache for future requests.
+            </remarks>
+            <param name="sqlConnection">a valid and open SqlConnection object</param>
+            <param name="spName">the name of the stored procedure</param>
+            <returns>an array of SqlParameters</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.SqlParameterCache.GetSpParameterSet(System.Data.SqlClient.SqlConnection,System.String,System.Boolean)">
+            <summary>
+            Retrieves the set of SqlParameters appropriate for the stored procedure
+            </summary>
+            <remarks>
+            This method will query the database for this information, and then store it in a cache for future requests.
+            </remarks>
+            <param name="sqlConnection">a valid and open SqlConnection object</param>
+            <param name="spName">the name of the stored procedure</param>
+            <param name="includeReturnValueParameter">a bool value indicating whether the return value parameter should be included in the results</param>
+            <returns>an array of SqlParameters</returns>
+        </member>
+        <member name="T:CBSolutions.Architecture.Data.DataAccessErrors">
+            <summary>
+            generic enumerations for all dataaccess errors
+            </summary>
+        </member>
+        <member name="F:CBSolutions.Architecture.Data.DataAccessErrors.Successful">
+            <summary>
+            Generic Successful status
+            </summary>
+        </member>
+        <member name="F:CBSolutions.Architecture.Data.DataAccessErrors.Failed">
+            <summary>
+            Generic Failure status
+            </summary>
+        </member>
+        <member name="F:CBSolutions.Architecture.Data.DataAccessErrors.ConnectionOpenFailure">
+            <summary>
+            SqlConnection cannot be opened
+            </summary>
+        </member>
+        <member name="F:CBSolutions.Architecture.Data.DataAccessErrors.ConnectionAlreadyOpened">
+            <summary>
+            attempt to open a new connection failed as it is already open
+            </summary>
+        </member>
+        <member name="F:CBSolutions.Architecture.Data.DataAccessErrors.DataFetchFailure">
+            <summary>
+            generic data fetch failure
+            </summary>
+        </member>
+        <member name="F:CBSolutions.Architecture.Data.DataAccessErrors.DataInsertFailure">
+            <summary>
+            generic data insert failure
+            </summary>
+        </member>
+        <member name="F:CBSolutions.Architecture.Data.DataAccessErrors.DataUpdateFailure">
+            <summary>
+            generic data update failure
+            </summary>
+        </member>
+        <member name="F:CBSolutions.Architecture.Data.DataAccessErrors.DataDeleteFailure">
+            <summary>
+            generic data delete failure
+            </summary>
+        </member>
+        <member name="F:CBSolutions.Architecture.Data.DataAccessErrors.ConcurrencyError">
+            <summary>
+            a concurrency failure has occured
+            </summary>
+        </member>
+        <member name="F:CBSolutions.Architecture.Data.DataAccessErrors.AddNewFailure">
+            <summary>
+            attempting to set AddNew property failed
+            </summary>
+        </member>
+        <member name="F:CBSolutions.Architecture.Data.DataAccessErrors.AllowNewFailure">
+            <summary>
+            attempting to set AllowNew property failed
+            </summary>
+        </member>
+        <member name="F:CBSolutions.Architecture.Data.DataAccessErrors.RecordMovementfailed">
+            <summary>
+            generic recordset navigation failure
+            </summary>
+        </member>
+        <member name="F:CBSolutions.Architecture.Data.DataAccessErrors.BusinessValidationError">
+            <summary>
+            indicates that the business object 
+            </summary>
+        </member>
+        <member name="F:CBSolutions.Architecture.Data.DataAccessErrors.DuplicateDataError">
+            <summary>
+            Duplicate data entered
+            </summary>
+        </member>
+        <member name="T:CBSolutions.Architecture.Data.RecordSet">
+            <summary>
+            A generic object emulating the ADO recordset object. Many ADO properties and 
+            Methods are emulated here giving old VB/VC programmers a familiar way to work 
+            inside the .Net Framework
+            </summary>
+            <remarks>This recordset object is capable of handling with only
+            one Table at any time</remarks>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.RecordSet.#ctor">
+            <summary>
+            empty constructor
+            </summary>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.RecordSet.#ctor(System.Data.DataSet)">
+            <summary>
+            there is only constructor, which accepts a dataSet object and wraps 
+            it with ADO RecordSet methods/properties
+            </summary>
+            <param name="dataSet">a valid dataSet object</param>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.RecordSet.#ctor(System.Data.DataSet,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="dataSet"></param>
+            <param name="tableIndex"></param>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.RecordSet.AddNew">
+            <summary>
+            Adds a new row to the recordset object. Cannot add a row if either Allownew is false
+            or Filter is set
+            </summary>
+            <remarks>
+            e.g.:  
+             membersRS.AddNew();
+            </remarks>
+            <returns>success or failure (Boolean)</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.RecordSet.MoveFirst">
+            <summary>
+            moves the record pointer to the first record
+            </summary>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.RecordSet.MoveLast">
+            <summary>
+            Moves the record pointer to the last record
+            </summary>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.RecordSet.MoveNext">
+            <summary>
+            Moves the record pointer to the next record
+            </summary>
+            <returns>returns success or failure (Boolean)</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.RecordSet.MovePrevious">
+            <summary>
+            Moves the record pointer to the first record
+            </summary>
+            <returns>returns success or failure (Boolean)</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.RecordSet.EOF">
+            <summary>
+            checks if the record pointer is at the end
+            </summary>
+            <returns>returns true if EOF reached</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.RecordSet.BOF">
+            <summary>
+            checks if the record pointer is at the beginning
+            </summary>
+            <returns>returns true if BOF reached</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.RecordSet.GetString">
+            <summary>
+            forms a complete string of column values separated by comma
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.RecordSet.GetString(System.Int32)">
+            <summary>
+            forms a complete string of column values separated by comma
+            rows are delimited by NewLine character
+            </summary>
+            <returns>string</returns>
+            <param name="numRows">Number of rows to return</param>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.RecordSet.GetString(System.Int32,System.String)">
+            <summary>
+            forms a complete string of column values 
+            columns are separated by specified columnDelimiter
+            rows are delimited by NewLine character
+            </summary>
+            <returns>string</returns>
+            <param name="numRows">Number of rows to return</param>
+            <param name="columnDelimiter">the character to delimit the columns</param>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.RecordSet.GetString(System.Int32,System.String,System.String)">
+            <summary>
+            forms a complete string of column values 
+            columns are separated by specified columnDelimiter
+            rows are delimited by specified row delimter
+            </summary>
+            <returns>string</returns>
+            <param name="numRows">Number of rows to return</param>
+            <param name="columnDelimiter">the character to delimit the columns with</param>
+            <param name="rowDelimiter">the character to delimit the rows with</param>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.RecordSet.GetString(System.Int32,System.String,System.String,System.String)">
+            <summary>
+            forms a complete string of column values 
+            columns are separated by specified columnDelimiter
+            rows are delimited by specified row delimter
+            Additionally, you may specify how to represent null values
+            </summary>
+            <returns>string</returns>
+            <param name="numRows">Number of rows to return</param>
+            <param name="columnDelimiter">the character to delimit the columns with</param>
+            <param name="rowDelimiter">the character to delimit the rows with</param>
+            <param name="nullExpression">The expression to replace database nulls with </param>
+        </member>
+        <member name="P:CBSolutions.Architecture.Data.RecordSet.BusinessObject">
+            <summary>
+            gets/sets reference to the business object
+            </summary>
+        </member>
+        <member name="P:CBSolutions.Architecture.Data.RecordSet.ErrorCode">
+            <summary>
+            A read-only property returning immediate custom error codes
+            through DataAccessError enumerator
+            </summary>
+        </member>
+        <member name="P:CBSolutions.Architecture.Data.RecordSet.ErrorMessage">
+            <summary>
+            Read-only property returning verbose error messages
+            </summary>
+            <remarks>
+            Note that only of severe errors, a message is returned. 
+            Therefore, you should normally check ErrorCode property.
+            </remarks>
+        </member>
+        <member name="P:CBSolutions.Architecture.Data.RecordSet.ColumnCount">
+            <summary>
+            read-only property returning no of columns of the current view
+            </summary>
+        </member>
+        <member name="P:CBSolutions.Architecture.Data.RecordSet.AllowNew">
+            <summary>
+            allows adding new records to the existing recordset object
+            </summary>
+        </member>
+        <member name="P:CBSolutions.Architecture.Data.RecordSet.AllowEdit">
+            <summary>
+            allows editing current recordset
+            </summary>
+        </member>
+        <member name="P:CBSolutions.Architecture.Data.RecordSet.Columns">
+            <summary>
+            read-only property returning the collection of DataColumns
+            </summary>
+        </member>
+        <member name="P:CBSolutions.Architecture.Data.RecordSet.ParentDataSet">
+            <summary>
+            read-only property returning the underlying DataSet object
+            </summary>
+        </member>
+        <member name="P:CBSolutions.Architecture.Data.RecordSet.ParentTable">
+            <summary>
+            read-only property returning the underlying DataTable object
+            </summary>
+        </member>
+        <member name="P:CBSolutions.Architecture.Data.RecordSet.AbsolutePosition">
+            <summary>
+            read-only property returning the current record pointer position
+            </summary>
+        </member>
+        <member name="P:CBSolutions.Architecture.Data.RecordSet.RecordCount">
+            <summary>
+            readonly property returning the count of total records
+            </summary>
+        </member>
+        <member name="P:CBSolutions.Architecture.Data.RecordSet.Filter">
+            <summary>
+            property through which off-line filter may be set on the records
+            </summary>
+        </member>
+        <member name="P:CBSolutions.Architecture.Data.RecordSet.Item(System.Int32)">
+            <summary>
+            returns the value of the i-th column from the recordset
+            </summary>
+        </member>
+        <member name="P:CBSolutions.Architecture.Data.RecordSet.Item(System.String)">
+            <summary>
+            returns the value of the column specified in the columnName
+            </summary>
+        </member>
+        <member name="T:CBSolutions.Architecture.Data.CBSBizObjectInterface">
+            <summary>
+            Interface to be implemented by all middle-tier business classes
+            </summary>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.CBSBizObjectInterface.Validate(CBSolutions.Architecture.Data.RecordSet)">
+            <summary>
+            the public function to fire the validate process
+            </summary>
+            <param name="rs">the recordset to validate</param>
+            <returns></returns>
+        </member>
+        <member name="P:CBSolutions.Architecture.Data.CBSBizObjectInterface.ValidationOK">
+            <summary>
+            gets/sets ValidationOK when the business object validates
+            </summary>
+        </member>
+        <member name="P:CBSolutions.Architecture.Data.CBSBizObjectInterface.ValidationMessage">
+            <summary>
+            in case of any validation failure, the message comes here
+            </summary>
+        </member>
+        <member name="T:CBSolutions.Architecture.Data.SupportedDatabases">
+            <summary>
+            Enumerations of supported databases
+            </summary>
+        </member>
+        <member name="F:CBSolutions.Architecture.Data.SupportedDatabases.SQLServer">
+            <summary>
+            SQL Server 2000
+            </summary>
+        </member>
+        <member name="F:CBSolutions.Architecture.Data.SupportedDatabases.Access">
+            <summary>
+            MS-Access- not implemented yet
+            </summary>
+        </member>
+        <member name="F:CBSolutions.Architecture.Data.SupportedDatabases.Oracle">
+            <summary>
+            Oracle - not implemented yet
+            </summary>
+        </member>
+        <member name="F:CBSolutions.Architecture.Data.SupportedDatabases.GenericOldDB">
+            <summary>
+            generic oledb - not implemented yet
+            </summary>
+        </member>
+        <member name="T:CBSolutions.Architecture.Data.DataAccess">
+            <summary>
+            this is the polymorphic DataAccess class
+            </summary>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.DataAccess.ExecuteReader(System.String,System.Object[])">
+            <summary>
+            ExecuteReader
+            </summary>
+            <param name="spName">Stored Procedure</param>
+            <param name="parameterValues">command separated list of parameters</param>
+            <returns>DataReader or null in case of error</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.DataAccess.ExecuteReader(System.String,System.Data.IDataParameter[])">
+            <summary>
+            ExecuteReader
+            </summary>
+            <param name="spName">stored procedure</param>
+            <param name="commandParameters">array of command parameters</param>
+            <returns>datareader or null in case of error</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.DataAccess.ExecuteSP(System.String)">
+            <summary>
+            ExecuteSP
+            </summary>
+            <param name="spName">name of the procedure</param>
+            <returns>recordset or null in case of error</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.DataAccess.ExecuteSP(System.String,System.Object[])">
+            <summary>
+            ExecuteSP
+            </summary>
+            <param name="spName">name of the procedure</param>
+            <param name="parameterValues">comma separated list of column names</param>
+            <returns>recordset or null in case of error</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.DataAccess.ExecuteSP(System.String,System.Data.IDataParameter[])">
+            <summary>
+            ExecuteSP
+            </summary>
+            <param name="spName">name of the procedure</param>
+            <param name="commandParameters">array of parameters</param>
+            <returns>recordset or null in case of error</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.DataAccess.ExecuteSP(System.Data.IDbTransaction,System.String)">
+            <summary>
+            ExecuteSP
+            </summary>
+            <param name="transaction">transaction context under which this will execute</param>
+            <param name="spName">name of the procedure</param>
+            <returns>recordset or null in case of error</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.DataAccess.ExecuteSP(System.Data.IDbTransaction,System.String,System.Object[])">
+            <summary>
+            ExecuteSP
+            </summary>
+            <param name="transaction">transaction context under which this will execute
+            </param>
+            <param name="spName">name of the procedure</param>
+            <param name="parameterValues">comma separated list of values</param>
+            <returns>recordset or null in case of error</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.DataAccess.ExecuteSP(System.Data.IDbTransaction,System.String,System.Data.IDataParameter[])">
+            <summary>
+            ExecuteSP
+            </summary>
+            <param name="transaction">transaction context under which this will execute</param>
+            <param name="spName">name of the procedure</param>
+            <param name="commandParameters">array of parameters</param>
+            <returns>recordset or null in case of error</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.DataAccess.ExecuteNonQuery(System.String,System.Object[])">
+            <summary>
+            executes a SP which returns an INT
+            </summary>
+            <param name="spName"></param>
+            <param name="parameterValues"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.DataAccess.ExecuteQuery(System.String)">
+            <summary>
+            ExecuteQuery
+            </summary>
+            <param name="tableName">table or view name</param>
+            <returns>recordset or null in case of error</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.DataAccess.ExecuteQuery(System.String,System.String)">
+            <summary>
+            ExecuteQuery
+            </summary>
+            <param name="tableName">table or view name </param>
+            <param name="whereClause">fully qualified filter string</param>
+            <returns>recordset or null in case of error</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.DataAccess.ExecuteQuery(System.String,System.String,System.Collections.ArrayList)">
+            <summary>
+            ExecuteQuery
+            </summary>
+            <param name="tableName">table or viewname</param>
+            <param name="whereClause">fully qualified filter string</param>
+            <param name="columnList">comma separated list of columns</param>
+            <returns>recordset or null in case of error</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.DataAccess.ExecuteQuery(System.String,System.String,System.String,System.Collections.ArrayList)">
+            <summary>
+            
+            </summary>
+            <param name="tableName"></param>
+            <param name="whereClause"></param>
+            <param name="OrderBy"></param>
+            <param name="columnList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.DataAccess.ExecuteQuery(System.String,System.String,System.String)">
+            <summary>
+            ExecuteQuery
+            </summary>
+            <param name="tableName">table or view name</param>
+            <param name="whereClause">fully qualified filter string</param>
+            <param name="OrderBy">ORDER BY clause</param>
+            <returns>recordset or null in case of error</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.DataAccess.#ctor">
+            <summary>
+            This is a no parameter constructor is useful when we don't want to open
+            a SqlConnection when this class is created
+            </summary>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.DataAccess.#ctor(System.Object)">
+            <summary>
+            Constructor which accepts a SqlConnection object
+            </summary>
+            <param name="connection">a valid and open object</param>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.DataAccess.#ctor(System.String)">
+            <summary>
+            Constructor accepting a valid connectionString
+            </summary>
+            <param name="connectionString">a SQL connection string</param>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.DataAccess.#ctor(CBSolutions.Architecture.Data.SupportedDatabases)">
+            <summary>
+             This is a no parameter constructor is useful when we don't want to open
+             a SqlConnection when this class is created
+             </summary>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.DataAccess.#ctor(System.Object,CBSolutions.Architecture.Data.SupportedDatabases)">
+            <summary>
+            
+            </summary>
+            <param name="connection"></param>
+            <param name="databaseType"></param>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.DataAccess.#ctor(System.String,CBSolutions.Architecture.Data.SupportedDatabases)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="connectionString"></param>
+            <param name="databaseType"></param>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.DataAccess.Finalize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.DataAccess.OpenConnection">
+            <summary>
+            Opens a database connection if not already opened
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.DataAccess.CloseConnection">
+            <summary>
+            closes a database connection if not already closed AND
+            KeepConnectionAlive is not active
+            </summary>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.DataAccess.GetServerDateTime">
+            <summary>
+            returns the server datetime, if the feature is not available
+            with the underlying DBMS, it returns system.datetime.now
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.DataAccess.BeginTransaction">
+            <summary>
+            Start a database BEGIN TRANS
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.DataAccess.CommitTransaction">
+            <summary>
+            Do a Database COMMIT TRANS
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.DataAccess.RollbackTransaction">
+            <summary>
+            Do a database ROLLBACK
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.DataAccess.CreateInsertBuffer(System.String)">
+            <summary>
+            Creates an empty recordset buffer to facilitate the InsertRow operation
+            </summary>
+            <remarks>
+            
+            e.g.:  
+             RecordSet rs = CreateInsertBuffer( "Members");
+            </remarks>
+            <param name="tableName">the name of the table to insert</param>
+            <returns>a Recordset object containing the data</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.DataAccess.InsertRow(CBSolutions.Architecture.Data.RecordSet,System.Int32@)">
+            <summary>
+            Inserts a single row from the specified recordset buffer 
+            </summary>
+            <remarks>
+            
+            e.g.:  
+             InsertRow( membersRS, ref NewMemberId);
+            </remarks>
+            <param name="recordSet">recordset object holding the new row</param>
+            <param name="PrimaryID">an output parameter from SQL Server reflecting the new PrimaryKey</param>
+            <returns>success/failure (boolean)</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.DataAccess.UpdateRow(CBSolutions.Architecture.Data.RecordSet,System.Boolean)">
+            <summary>
+            UpdateRow overload with the option to update single or multiple rows
+            </summary>
+            <param name="recordSet">recordset containing data to update</param>
+            <param name="updateAllRows">if true, updates all rows in the recordset</param>
+            <returns>returns success as true</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.DataAccess.UpdateRow(CBSolutions.Architecture.Data.RecordSet)">
+            <summary>
+            Updates a single row in the database, tackling concurrency issue automatically
+            </summary>
+            <remarks>
+            
+            e.g.:  
+             RecordSet rs = UpdateRow( ref recordSet);
+            </remarks>
+            <param name="recordSet">recordSet object containing the modified data</param>
+            <returns>success/failure (boolean)</returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.DataAccess.DeleteRow(System.String,System.Int32)">
+            <summary>
+            Deletes a given row from a given table
+            </summary>
+            <param name="tableName"></param>
+            <param name="rowPrimaryKeyId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.DataAccess.DeleteRow(CBSolutions.Architecture.Data.RecordSet)">
+            <summary>
+            Deletes a current row from the recordset
+            </summary>
+            <param name="rs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CBSolutions.Architecture.Data.DataAccess.DeleteRow(CBSolutions.Architecture.Data.RecordSet,System.Boolean)">
+            <summary>
+            Deletes all rows from the current recordset
+            </summary>
+            <param name="rs"></param>
+            <param name="deleteAllRows"></param>
+            <returns></returns>
+        </member>
+        <member name="P:CBSolutions.Architecture.Data.DataAccess.Connection">
+            <summary>
+            gets/sets database connection objects
+            </summary>
+        </member>
+        <member name="P:CBSolutions.Architecture.Data.DataAccess.KeepConnectionOpened">
+            <summary>
+            flag to keep database connection opened even after 
+            queries are executed
+            </summary>
+        </member>
+        <member name="P:CBSolutions.Architecture.Data.DataAccess.SPErrorCode">
+            <summary>
+            gets the @Return_Value parameter from the running SP (only for insert/update)
+            </summary>
+        </member>
+        <member name="P:CBSolutions.Architecture.Data.DataAccess.ErrorCode">
+            <summary>
+            A read-only property returning immediate custom error codes
+            through DataAccessError enumerator
+            </summary>
+        </member>
+        <member name="P:CBSolutions.Architecture.Data.DataAccess.ErrorMessage">
+            <summary>
+            Read-only property returning verbose error messages
+            </summary>
+            <remarks>
+            Note that only of severe errors, a message is returned. 
+            Therefore, you should normally check ErrorCode property.
+            </remarks>
+        </member>
+    </members>
+</doc>

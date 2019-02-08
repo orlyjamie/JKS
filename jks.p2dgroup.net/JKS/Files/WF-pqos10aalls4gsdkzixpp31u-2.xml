@@ -1,0 +1,46 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <InvoiceDetail>
+    <InvoiceDetailID>4797551</InvoiceDetailID>
+    <InvoiceID>3347926</InvoiceID>
+    <SerialNo>1</SerialNo>
+    <Description>Net Amount</Description>
+    <Quantity>1.00</Quantity>
+    <Rate>20.00</Rate>
+    <VATRate>20.00</VATRate>
+    <VATAmt>4.00</VATAmt>
+    <GrossAmt>20.00</GrossAmt>
+    <TotalAmt>24.00</TotalAmt>
+    <PurOrderNo>0000040890</PurOrderNo>
+    <PurOrderLineNo>1</PurOrderLineNo>
+    <BuyersProdCode>Buyer Code</BuyersProdCode>
+    <ModDate>2018-07-03T14:16:46.993+01:00</ModDate>
+    <ModStamp>AAAAAAgVD+I=</ModStamp>
+    <New_NettValue>20.00</New_NettValue>
+  </InvoiceDetail>
+  <InvoiceDetail>
+    <InvoiceDetailID>5052082</InvoiceDetailID>
+    <InvoiceID>3347926</InvoiceID>
+    <SerialNo>2</SerialNo>
+    <Description />
+    <Quantity>1.00</Quantity>
+    <Rate>10.00</Rate>
+    <VATTypeID>10</VATTypeID>
+    <VATRate>0.00</VATRate>
+    <VATAmt>0.00</VATAmt>
+    <UOM />
+    <GrossAmt>10.00</GrossAmt>
+    <Discount>0.00</Discount>
+    <TotalAmt>10.00</TotalAmt>
+    <PurOrderNo />
+    <PurOrderLineNo>2</PurOrderLineNo>
+    <BuyersProdCode />
+    <ModDate>2018-09-07T16:33:58.39+01:00</ModDate>
+    <ModStamp>AAAAAAgVD+M=</ModStamp>
+    <New_Type />
+    <New_DiscountPercent2>0.00</New_DiscountPercent2>
+    <New_NettValue>10.00</New_NettValue>
+    <New_PostDiscountValue>0.00</New_PostDiscountValue>
+    <New_TaxCode>S</New_TaxCode>
+  </InvoiceDetail>
+</NewDataSet>

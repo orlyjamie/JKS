@@ -1,0 +1,60 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CreditNoteDetail">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CreditNoteDetailID" type="xs:int" minOccurs="0" />
+              <xs:element name="CreditNoteID" type="xs:int" minOccurs="0" />
+              <xs:element name="SerialNo" type="xs:int" minOccurs="0" />
+              <xs:element name="Description" type="xs:string" minOccurs="0" />
+              <xs:element name="Quantity" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Rate" type="xs:decimal" minOccurs="0" />
+              <xs:element name="VATTypeID" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="VATRate" type="xs:decimal" minOccurs="0" />
+              <xs:element name="VATAmt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="UOM" type="xs:string" minOccurs="0" />
+              <xs:element name="GrossAmt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Discount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TotalAmt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PurOrderNo" type="xs:string" minOccurs="0" />
+              <xs:element name="PurOrderLineNo" type="xs:int" minOccurs="0" />
+              <xs:element name="PurOrderDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="SuppliersProdCode" type="xs:string" minOccurs="0" />
+              <xs:element name="BuyersProdCode" type="xs:string" minOccurs="0" />
+              <xs:element name="ModDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ModStamp" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="ModUserId" type="xs:int" minOccurs="0" />
+              <xs:element name="New_Type" type="xs:string" minOccurs="0" />
+              <xs:element name="New_Definable1" type="xs:string" minOccurs="0" />
+              <xs:element name="New_Definable2" type="xs:string" minOccurs="0" />
+              <xs:element name="New_DiscountValue1" type="xs:decimal" minOccurs="0" />
+              <xs:element name="New_DiscountPercent2" type="xs:decimal" minOccurs="0" />
+              <xs:element name="New_DiscountValue2" type="xs:decimal" minOccurs="0" />
+              <xs:element name="New_OverAllDiscountValue" type="xs:decimal" minOccurs="0" />
+              <xs:element name="New_NettValue" type="xs:decimal" minOccurs="0" />
+              <xs:element name="New_ModeOfTransport" type="xs:int" minOccurs="0" />
+              <xs:element name="New_NatureOfTransaction" type="xs:int" minOccurs="0" />
+              <xs:element name="New_TermsOfDelivery" type="xs:string" minOccurs="0" />
+              <xs:element name="New_CountryOfOrigin" type="xs:string" minOccurs="0" />
+              <xs:element name="New_CommodityCode" type="xs:int" minOccurs="0" />
+              <xs:element name="New_SupplementaryUnits" type="xs:string" minOccurs="0" />
+              <xs:element name="New_NettMass" type="xs:decimal" minOccurs="0" />
+              <xs:element name="New_DespatchNoteNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="New_DespatchDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="New_PostDiscountValue" type="xs:decimal" minOccurs="0" />
+              <xs:element name="New_TaxCode" type="xs:string" minOccurs="0" />
+              <xs:element name="New_AccountingUnit" type="xs:string" minOccurs="0" />
+              <xs:element name="New_GLCompanyID" type="xs:int" minOccurs="0" />
+              <xs:element name="New_InvoiceSubAccount" type="xs:string" minOccurs="0" />
+              <xs:element name="New_Account" type="xs:string" minOccurs="0" />
+              <xs:element name="VATCode" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,44 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <CreditNoteDetail>
+    <CreditNoteDetailID>144300</CreditNoteDetailID>
+    <CreditNoteID>109647</CreditNoteID>
+    <SerialNo>1</SerialNo>
+    <Description />
+    <Quantity>1.00</Quantity>
+    <Rate>419.78</Rate>
+    <VATRate>0.00</VATRate>
+    <VATAmt>230.00</VATAmt>
+    <GrossAmt>420.00</GrossAmt>
+    <TotalAmt>419.78</TotalAmt>
+    <PurOrderNo />
+    <BuyersProdCode />
+    <ModDate>2018-07-27T14:23:40.74+01:00</ModDate>
+    <ModStamp>AAAAAAggtzg=</ModStamp>
+    <New_NettValue>419.78</New_NettValue>
+  </CreditNoteDetail>
+  <CreditNoteDetail>
+    <CreditNoteDetailID>150006</CreditNoteDetailID>
+    <CreditNoteID>109647</CreditNoteID>
+    <SerialNo>2</SerialNo>
+    <Description />
+    <Quantity>0.00</Quantity>
+    <Rate>0.00</Rate>
+    <VATTypeID>10</VATTypeID>
+    <VATRate>15.00</VATRate>
+    <VATAmt>0.00</VATAmt>
+    <UOM />
+    <GrossAmt>0.00</GrossAmt>
+    <Discount>0.00</Discount>
+    <TotalAmt>0.00</TotalAmt>
+    <PurOrderNo />
+    <BuyersProdCode />
+    <ModDate>2018-09-19T07:31:20.203+01:00</ModDate>
+    <ModStamp>AAAAAAggtzk=</ModStamp>
+    <New_Type />
+    <New_DiscountPercent2>0.00</New_DiscountPercent2>
+    <New_NettValue>0.00</New_NettValue>
+    <New_PostDiscountValue>0.00</New_PostDiscountValue>
+    <New_TaxCode>S</New_TaxCode>
+  </CreditNoteDetail>
+</NewDataSet>

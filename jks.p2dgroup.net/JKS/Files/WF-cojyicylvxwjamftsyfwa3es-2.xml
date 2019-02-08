@@ -1,0 +1,89 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <InvoiceDetail>
+    <InvoiceDetailID>4791606</InvoiceDetailID>
+    <InvoiceID>3344304</InvoiceID>
+    <SerialNo>1</SerialNo>
+    <Description>Polyamide balaclava (pack of 10) - white</Description>
+    <Quantity>80.00</Quantity>
+    <Rate>4.00</Rate>
+    <VATRate>0.00</VATRate>
+    <VATAmt>0.00</VATAmt>
+    <GrossAmt>320.00</GrossAmt>
+    <TotalAmt>320.00</TotalAmt>
+    <PurOrderNo>53905a</PurOrderNo>
+    <PurOrderLineNo>1</PurOrderLineNo>
+    <BuyersProdCode>F51-055-WH</BuyersProdCode>
+    <ModDate>2018-07-02T16:23:27.623+01:00</ModDate>
+    <ModStamp>AAAAAAgUjmA=</ModStamp>
+    <New_NettValue>320.00</New_NettValue>
+  </InvoiceDetail>
+  <InvoiceDetail>
+    <InvoiceDetailID>4791607</InvoiceDetailID>
+    <InvoiceID>3344304</InvoiceID>
+    <SerialNo>2</SerialNo>
+    <Description>Beard net (pack of 36)</Description>
+    <Quantity>40.00</Quantity>
+    <Rate>3.45</Rate>
+    <VATRate>0.00</VATRate>
+    <VATAmt>0.00</VATAmt>
+    <GrossAmt>138.00</GrossAmt>
+    <TotalAmt>138.00</TotalAmt>
+    <PurOrderNo>53905a</PurOrderNo>
+    <PurOrderLineNo>1</PurOrderLineNo>
+    <BuyersProdCode>F51-078-BL</BuyersProdCode>
+    <ModDate>2018-07-02T16:23:27.64+01:00</ModDate>
+    <ModStamp>AAAAAAgUjmE=</ModStamp>
+    <New_NettValue>138.00</New_NettValue>
+  </InvoiceDetail>
+  <InvoiceDetail>
+    <InvoiceDetailID>5052092</InvoiceDetailID>
+    <InvoiceID>3344304</InvoiceID>
+    <SerialNo>4</SerialNo>
+    <Description />
+    <Quantity>1.00</Quantity>
+    <Rate>1.00</Rate>
+    <VATTypeID>10</VATTypeID>
+    <VATRate>15.00</VATRate>
+    <VATAmt>0.15</VATAmt>
+    <UOM />
+    <GrossAmt>1.00</GrossAmt>
+    <Discount>0.00</Discount>
+    <TotalAmt>1.15</TotalAmt>
+    <PurOrderNo />
+    <PurOrderLineNo>1</PurOrderLineNo>
+    <BuyersProdCode />
+    <ModDate>2018-09-07T16:49:30.673+01:00</ModDate>
+    <ModStamp>AAAAAAgUjmI=</ModStamp>
+    <New_Type />
+    <New_DiscountPercent2>0.00</New_DiscountPercent2>
+    <New_NettValue>1.00</New_NettValue>
+    <New_PostDiscountValue>0.00</New_PostDiscountValue>
+    <New_TaxCode>S</New_TaxCode>
+  </InvoiceDetail>
+  <InvoiceDetail>
+    <InvoiceDetailID>5052095</InvoiceDetailID>
+    <InvoiceID>3344304</InvoiceID>
+    <SerialNo>5</SerialNo>
+    <Description />
+    <Quantity>33.00</Quantity>
+    <Rate>33.00</Rate>
+    <VATTypeID>10</VATTypeID>
+    <VATRate>15.00</VATRate>
+    <VATAmt>0.00</VATAmt>
+    <UOM />
+    <GrossAmt>0.00</GrossAmt>
+    <Discount>0.00</Discount>
+    <TotalAmt>0.00</TotalAmt>
+    <PurOrderNo />
+    <PurOrderLineNo>1</PurOrderLineNo>
+    <BuyersProdCode />
+    <ModDate>2018-09-07T16:51:57.05+01:00</ModDate>
+    <ModStamp>AAAAAAgUjmY=</ModStamp>
+    <New_Type />
+    <New_DiscountPercent2>0.00</New_DiscountPercent2>
+    <New_NettValue>33.00</New_NettValue>
+    <New_PostDiscountValue>0.00</New_PostDiscountValue>
+    <New_TaxCode>S</New_TaxCode>
+  </InvoiceDetail>
+</NewDataSet>

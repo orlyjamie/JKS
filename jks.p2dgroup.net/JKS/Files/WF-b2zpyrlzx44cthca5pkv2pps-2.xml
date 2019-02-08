@@ -1,0 +1,22 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <InvoiceDetail>
+    <InvoiceDetailID>5397576</InvoiceDetailID>
+    <InvoiceID>3708944</InvoiceID>
+    <SerialNo>1</SerialNo>
+    <Description>Concur usage fees 2017/18</Description>
+    <Quantity>1.00</Quantity>
+    <Rate>20000.00</Rate>
+    <VATRate>0.00</VATRate>
+    <VATAmt>0.00</VATAmt>
+    <TotalAmt>0.00</TotalAmt>
+    <PurOrderNo>4500000076</PurOrderNo>
+    <PurOrderLineNo>10</PurOrderLineNo>
+    <BuyersProdCode />
+    <ModDate>2018-12-08T11:26:57.07+00:00</ModDate>
+    <ModStamp>AAAAAAhd6WI=</ModStamp>
+    <New_NettValue>20000.00</New_NettValue>
+    <PriceMatch>false</PriceMatch>
+    <QtyMatch>true</QtyMatch>
+  </InvoiceDetail>
+</NewDataSet>

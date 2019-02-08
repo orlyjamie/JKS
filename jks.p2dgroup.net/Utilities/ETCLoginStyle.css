@@ -1,0 +1,266 @@
+
+/*=========================================================================*/
+
+	/* [Font Styles] */
+	
+	@font-face {
+		font-family: 'franklin_gothic_bookregular';
+		src: url('../dist/fonts/frabk-webfont.eot');
+		src: url('../dist/fonts/frabk-webfont.eot?#iefix') format('embedded-opentype'),
+			 url('../dist/fonts/frabk-webfont.woff') format('woff'),
+			 url('../dist/fonts/frabk-webfont.ttf') format('truetype'),
+			 url('../dist/fonts/frabk-webfont.svg#franklin_gothic_bookregular') format('svg');
+		font-weight: normal;
+		font-style: normal;
+	
+	}
+	@font-face {
+		font-family: 'franklin_gothic_medium_condRg';
+		src: url('../dist/fonts/framdcn-webfont.eot');
+		src: url('../dist/fonts/framdcn-webfont.eot?#iefix') format('embedded-opentype'),
+			 url('../dist/fonts/framdcn-webfont.woff') format('woff'),
+			 url('../dist/fonts/framdcn-webfont.ttf') format('truetype'),
+			 url('../dist/fonts/framdcn-webfont.svg#franklin_gothic_medium_condRg') format('svg');
+		font-weight: normal;
+		font-style: normal;
+	
+	}
+	
+	@font-face {
+		font-family: 'franklin_gothic_bookregular';
+		src: url('../dist/fonts/frabk-webfont.eot');
+		src: url('../dist/fonts/frabk-webfont.eot?#iefix') format('embedded-opentype'),
+			 url('../dist/fonts/frabk-webfont.woff') format('woff'),
+			 url('../dist/fonts/frabk-webfont.ttf') format('truetype'),
+			 url('../dist/fonts/frabk-webfont.svg#franklin_gothic_bookregular') format('svg');
+		font-weight: normal;
+		font-style: normal;
+	}
+	
+	
+	@media screen and (-webkit-min-device-pixel-ratio:0) {
+		@font-face {
+			font-family: 'franklin_gothic_bookregular';
+			src: url('../dist/fonts/frabk-webfont.svg') format('svg');
+		}
+		@font-face {
+			font-family: 'franklin_gothic_medium_condRg';
+			src: url('../dist/fonts/framdcn-webfont.svg') format('svg');
+		}
+		@font-face {
+			font-family: 'franklin_gothic_bookregular';
+			src: url('../dist/fonts/frabk-webfont.svg') format('svg');
+		}
+	}
+
+
+
+
+*
+{
+	margin: 0;
+	padding: 0;
+}
+.spacer
+{
+	display: block;
+	clear: both;
+	line-height: 0;
+	overflow: hidden;
+}
+.error
+{
+	font-size: 12px;
+	font-weight: normal;
+	color: #ff0000;
+	display: block;
+	clear: both;
+	text-align: center;
+}
+.login_bg
+{
+	background: url(../images/EtcLoginBackground.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	position: relative;
+}
+.login_box
+{
+	width: 300px;
+	margin: 100px auto;
+	background-color: #fff;
+	border-radius: 30px;
+	padding: 45px 50px 30px 50px;
+	font-family: 'Lato' , sans-serif;
+	text-align: left;
+	clear: both;
+	display: block;
+	overflow: hidden;
+}
+.login_box p
+{
+	text-align: left;
+	font-size: 18px;
+	font-weight:700;
+	color: #3366ff;
+	margin-bottom: 20px;
+	margin-top:10px;
+	text-transform: uppercase;
+	font-family:"Lato",sans-serif;
+}
+.form_sect
+{
+	float: left;
+	margin-bottom: 5px;
+	display: block;
+	clear: both;
+	width: 100%;
+}
+.form_sect label
+{
+	width: 100px;
+	float: left;
+	line-height: 20px;
+	text-align: left;
+	font-size: 16px;
+	color: #3366ff;
+	font-family:"Lato",sans-serif;
+	font-weight:700;
+}
+.form_sect input
+{
+	line-height: 20px;
+	height: 20px;
+	width: 175px;
+	background-color: #ccc;
+	border: none;
+	border: 0;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+.fp
+{
+	display: block;
+	clear: both;
+	width: 100%;
+	float: left;
+	margin:0 0 20px 0;
+}
+.fp a
+{
+	float: left;
+	font-size: 13px;
+	color: #3366ff;
+	text-decoration: underline;
+}
+.fp a:hover
+{
+	text-decoration: none;
+}
+.fp input.login_btn
+{
+	background-color: #428bca;
+	border-color: #357ebd;
+	color: #fff;
+	font-size: 16px;
+	padding: 6px 30px;
+	border: none;
+	border: 0;
+	cursor: pointer;
+	float: right;
+	text-transform: uppercase;
+	font-weight: 400;
+	font-family:"franklin_gothic_medium_condRg";
+	margin-right:26px;
+}
+.fp input.login_btn:hover
+{
+	background-color: #3276b1;
+	border-color: #285e8e;
+	color: #fff;
+}
+.foot_logo
+{
+	position: fixed;
+	right: 0;
+	background-color: #fff;
+	padding: 15px 20px;
+	bottom: 0;
+}
+@media (max-width: 767px)
+{
+	
+	.login_box
+	{
+		width: 80%;
+		padding: 3%;
+		margin: 10% auto 20% auto;
+	}
+	.form_sect label
+	{
+		display: block;
+		clear: both;
+		width: 90%;
+	}
+	.form_sect input
+	{
+		display: block;
+		clear: both;
+		width: 90%;
+	}
+	.fp
+	{
+		width: 90%;
+	}
+	.foot_logo
+	{
+	}
+	.foot_logo img
+	{
+		width: 100%;
+	}
+	.foot_logo
+	{
+		padding: 5px 10px;
+		position: absolute;
+	}
+	.fp input.login_btn
+	{
+		margin-right:0;
+		}
+}
+@media (max-width: 360px)
+{
+	.fp
+	{
+		margin:0 0 20px 0;
+		}
+	.fp a
+	{
+		display:block;
+		clear:both;
+		}
+	.fp input.login_btn
+	{
+		margin-right:0;
+		float:left;
+		margin-top:10px;
+		display:block;
+		clear:both;
+		}
+	.login_box
+	{
+		margin-bottom: 30%;
+	}
+	.foot_logo
+	{
+		padding: 5px 10px;
+		position: absolute;
+	}
+	.login_box img
+	{
+		width: 100%;
+	}
+}

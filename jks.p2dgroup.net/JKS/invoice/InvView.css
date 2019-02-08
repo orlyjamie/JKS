@@ -1,0 +1,30 @@
+body
+{
+	font-size: 10pt;
+	font-family: Arial;
+}
+.generalText
+{
+	font-size: 10pt;
+	font-family: Arial;
+}
+INPUT
+{
+	font-size: 10pt;
+	font-family: Arial;
+}
+SELECT
+{
+	font-size: 10pt;
+	font-family: Arial;
+}
+.toolbarButton
+{
+	width:24; height:24; vertical-align:bottom;
+}
+.tblHeadRow
+{
+	background-color: LightBlue; font-family: MS Sans Serif; font-size: 10pt; font-weight: lighter;} // JCB Jan 20 09 font-size: 8pt; font-style: italic; font-family: MS Sans Serif;
+.tblHeadCell
+{
+	text-align: center; }

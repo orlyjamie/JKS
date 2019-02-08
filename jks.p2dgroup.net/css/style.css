@@ -1,0 +1,153 @@
+.SelectedThumb
+{
+    border: 2px solid red;
+    cursor: default;
+}
+
+.UnSelectedThumb
+{
+    border: 0px none;
+}
+
+.CheckedThumb
+{
+    border: 2px dashed green;
+}
+
+.thumbimg
+{
+    border-right: solid 2px grey;
+    border-bottom: solid 2px grey;
+    margin: 10px 0 10px 25px;
+    float: left;
+}
+
+#divThumb
+{
+    border: solid 1px #DCDCDC;
+    padding: 5px;
+    overflow: auto;
+}
+
+.ThumbCheckbox
+{
+    position: relative;
+    margin-top: -15px;
+    width: 100%; /* If you want to hide the check boxes:    visibility: hidden; */
+}
+
+.ThumbCheckboxChecked
+{
+    position: relative;
+    margin-top: -15px;
+    width: 100%;
+}
+
+#nav, #nav ul
+{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    list-style-position: outside;
+    position: relative;
+    background-color: #3399cc;
+    float: left;
+    width: 100%;
+}
+
+#AnnSelect
+{
+    display: block;
+    padding: 0px 5px;
+    border: 1px solid gray;
+    color: #000;
+    text-decoration: none;
+    font-size: 12px;
+    width: 145px;
+}
+
+#nav a
+{
+    display: block;
+    padding: 0px 2px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 30px;
+}
+
+#nav img
+{
+    float: left;
+    margin-top: 3px;
+    margin-right: 3px;
+}
+
+#nav a:hover
+{
+    background-color: #CCC;
+    color: #fff;
+}
+
+#nav li
+{
+    float: left;
+    position: relative;
+    margin-right: 10px;
+}
+
+#nav ul
+{
+    position: absolute;
+    display: none;
+    width: 12em;
+    top: 30px;
+}
+#nav li ul
+{
+    background-color: #ccc;
+}
+
+#nav li ul a
+{
+    color: #000;
+    float: left;
+    height: auto;
+    padding: 0;
+    width: 12em;
+}
+
+#nav ul ul
+{
+    top: auto;
+}
+
+#nav li ul ul
+{
+    left: 12em;
+    margin: 10px 0 0 10px;
+}
+
+#nav li:hover ul ul, #nav li:hover ul ul ul, #nav li:hover ul ul ul ul
+{
+    display: none;
+}
+#nav li:hover ul, #nav li li:hover ul, #nav li li li:hover ul, #nav li li li li:hover ul
+{
+    display: block;
+    z-index: 9999;
+}
+
+.cursor_grabbing
+{
+    cursor: url(grabbing.cur);
+}
+
+.cursor_grab
+{
+    cursor: url(grab.cur);
+}
+.splitbarV
+{
+    border: none !important;
+}

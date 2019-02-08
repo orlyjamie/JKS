@@ -1,0 +1,351 @@
+/*1189052934845*/.gSAPBody
+{
+    background-color: #000;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-size: x-small;
+    color: #FFF;
+    scrollbar-3dlight-color: #FFF;
+    scrollbar-arrow-color: #FFF;
+    scrollbar-base-color: #666;
+    scrollbar-darkshadow-color: #666;
+    scrollbar-face-color: #000;
+    scrollbar-highlight-color: #000;
+    scrollbar-shadow-color: #FFF;
+    scrollbar-track-color: #666;
+}
+.gSAPP
+{
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-size: x-small;
+    color: #FFF;
+}
+.gSAPH1
+{
+    font-size: large;
+    font-weight: bold;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    color: #FFF;
+    font-style: normal;
+}
+.gSAPH2
+{
+    font-size: small;
+    font-weight: bold;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    color: #FFF;
+    font-style: normal;
+}
+.gSAPH3
+{
+    font-size: x-small;
+    font-weight: bold;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    color: #FFF;
+    font-style: normal;
+}
+.gSAPB
+{
+    font-weight: bold;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-size: x-small;
+    color: #FFF;
+}
+.gSAPStrong
+{
+    font-weight: bold;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-size: x-small;
+    color: #FFF;
+}
+.gSAPI
+{
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    color: #FFF;
+}
+.gSAPEm
+{
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-size: x-small;
+    font-style: italic;
+    color: #FFF;
+}
+.gSAPA:link
+{
+    color: #00FFFF;
+    text-decoration: none;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-size: x-small;
+}
+.gSAPA:visited
+{
+    color: #00FFFF;
+    text-decoration: none;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-size: x-small;
+}
+.gSAPA:hover
+{
+    color: #00FFFF;
+    text-decoration: underline;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-size: x-small;
+}
+.gSAPOl
+{
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-size: x-small;
+}
+.gSAPUl
+{
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-size: x-small;
+    list-style-image: url(../common/listlayout/ico4x8_listcube.gif?7.0.13.0.0);
+}
+.gSAPDt
+{
+    font-weight: bold;
+    color: #FFF;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-size: x-small;
+    font-style: italic;
+}
+.gSAPDd
+{
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-size: x-small;
+    color: #FFF;
+}
+.gSAPPre
+{
+    font-size: x-small;
+    font-family: Lucida Console,monospace;
+    line-height: 120%;
+}
+.gSAPTt
+{
+    font-size: x-small;
+    font-family: Lucida Console,monospace;
+    line-height: 120%;
+}
+.gSAPTable
+{
+    font-size: x-small;
+    color: #FFF;
+}
+.gSAPTHead
+{
+    color: #FFF;
+    font-size: x-small;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    background-color: #000 !important;
+    height: 17px;
+    padding: 3px 4px 2px 4px;
+    border-color: #666;
+    border-width: 1px;
+    border-style: solid;
+}
+.gSAPTh
+{
+    color: #FFF;
+    font-size: x-small;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-weight: bold;
+    background-color: #333;
+    height: 17px;
+    padding: 3px 4px 2px 4px;
+    border-color: #666;
+    border-width: 1px;
+    border-style: solid;
+}
+.gSAPThNoBorder
+{
+    color: #FFF;
+    font-size: x-small;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-weight: bold;
+    background-color: #333;
+    height: 17px;
+    padding: 3px 4px 2px 4px;
+}
+.gSAPTr
+{
+    color: #FFF;
+}
+.gSAPTd
+{
+    font-size: x-small;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    color: #FFF;
+    background-color: #000;
+    height: 17px;
+    padding: 3px 4px 2px 4px;
+    border-color: #666;
+    border-width: 1px;
+    border-style: solid;
+}
+.gSAPTdNoBorder
+{
+    font-size: x-small;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    color: #FFF;
+    background-color: #000;
+    height: 17px;
+    padding: 3px 4px 2px 4px;
+}
+.gSAPGroup
+{
+    background-color: #000;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-size: x-small;
+    color: #FFF;
+    padding: 5px;
+}
+.gSAPTextArea
+{
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-size: x-small;
+    color: #FFF;
+    background-color: #000;
+    border-color: #FFF;
+    border-style: solid;
+    border-width: 1px;
+    padding: 0 2px 0 2px;
+}
+.gSAPSelect
+{
+    font-size: 1.65ex;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    color: #FFF;
+    background-color: #000;
+}
+.gSAPOption
+{
+    font-size: 1.65ex;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    color: #FFF;
+}
+.gSAPInputRadio
+{
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-size: x-small;
+    color: #FFF;
+}
+.gSAPInputCheckbox
+{
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-size: x-small;
+    color: #FFF;
+}
+.gSAPInputText
+{
+    background-color: #000;
+    color: #FFF;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    height: 2.85ex;
+    padding: 0 2px 0 2px;
+    font-size: 1.65ex;
+    border-color: #FFF;
+    border-style: solid;
+    border-width: 1px;
+}
+.gSAPInputButton
+{
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-size: x-small;
+    color: #FFF;
+    background-color: #000;
+    text-decoration: none;
+    cursor: hand;
+    white-space: nowrap;
+    padding: 0 4px 0 5px;
+}
+.gSAPHr
+{
+    margin: 30px 0 30px 0;
+    height: 2px;
+    width: 80%;
+}
+.gSAPNorgieOpen
+{
+    background-image: url(images/norgie-open.gif?7.0.13.0.0);
+    height: 11px;
+    width: 11px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.gSAPNorgieClose
+{
+    background-image: url(images/norgie-close.gif?7.0.13.0.0);
+    height: 11px;
+    width: 11px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.gSAPAsel
+{
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-size: x-small;
+    font-weight: bold;
+    color: #0000CC;
+    text-decoration: none;
+}
+.gSAPAsel:link
+{
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-size: x-small;
+    font-weight: bold;
+    color: #0000CC;
+    text-decoration: none;
+}
+.gSAPAsel:visited
+{
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-size: x-small;
+    font-weight: bold;
+    color: #0000CC;
+    text-decoration: none;
+}
+.gSAPAsel:hover
+{
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-size: x-small;
+    font-weight: bold;
+    color: #0000CC;
+    text-decoration: none;
+}
+.gSAPTitleArea
+{
+    background-color: #FFF;
+    border-bottom: 1px solid #000;
+}
+.gSAPNavArea
+{
+    background-color: #FFF;
+    border-right: 1px solid #000;
+}
+.gSAPGroupHeader
+{
+    padding: 3px 5px 3px 6px;
+    vertical-align: top;
+    height: 19px;
+    font-weight: bold;
+    background-color: #0000FF;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-size: x-small;
+    color: #FFF;
+}
+.gSAPGroupBody
+{
+    padding: 5px;
+    background-color: #000;
+}
+.gSAPDialogWhl
+{
+    background-color: #000;
+}
+.gSAPTxtReq
+{
+    color: #FFFF00;
+}

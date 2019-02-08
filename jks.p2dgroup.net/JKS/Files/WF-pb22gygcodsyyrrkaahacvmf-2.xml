@@ -1,0 +1,18 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <InvoiceDetail>
+    <InvoiceDetailID>5264712</InvoiceDetailID>
+    <InvoiceID>3631863</InvoiceID>
+    <SerialNo>1</SerialNo>
+    <Description>Music for shops</Description>
+    <Quantity>2.00</Quantity>
+    <Rate>2000.00</Rate>
+    <VATAmt>0.00</VATAmt>
+    <PurOrderNo>4500003153</PurOrderNo>
+    <PurOrderLineNo>10</PurOrderLineNo>
+    <BuyersProdCode />
+    <ModDate>2018-11-05T17:19:48.59+00:00</ModDate>
+    <ModStamp>AAAAAAg8+Mg=</ModStamp>
+    <New_NettValue>4000.00</New_NettValue>
+  </InvoiceDetail>
+</NewDataSet>

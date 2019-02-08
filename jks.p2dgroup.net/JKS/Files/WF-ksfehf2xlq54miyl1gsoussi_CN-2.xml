@@ -1,0 +1,16 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <CreditNoteDetail>
+    <CreditNoteDetailID>31310</CreditNoteDetailID>
+    <CreditNoteID>20457</CreditNoteID>
+    <SerialNo>1</SerialNo>
+    <Description>Chicken thighs boneless</Description>
+    <Quantity>5.00</Quantity>
+    <Rate>3.58</Rate>
+    <VATAmt>0.00</VATAmt>
+    <PurOrderNo />
+    <ModDate>2013-12-24T09:56:33.16+05:30</ModDate>
+    <ModStamp>AAAAAAKB0tM=</ModStamp>
+    <New_NettValue>17.90</New_NettValue>
+  </CreditNoteDetail>
+</NewDataSet>

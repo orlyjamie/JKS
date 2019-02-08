@@ -1,0 +1,20 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <InvoiceDetail>
+    <InvoiceDetailID>4896422</InvoiceDetailID>
+    <InvoiceID>3406156</InvoiceID>
+    <SerialNo>1</SerialNo>
+    <Description>Miss R Smyth sales support</Description>
+    <Quantity>38.00</Quantity>
+    <Rate>18.06</Rate>
+    <VATRate>0.00</VATRate>
+    <VATAmt>0.00</VATAmt>
+    <TotalAmt>0.00</TotalAmt>
+    <PurOrderNo>53905</PurOrderNo>
+    <PurOrderLineNo>1</PurOrderLineNo>
+    <BuyersProdCode />
+    <ModDate>2018-07-27T14:23:41.7+01:00</ModDate>
+    <ModStamp>AAAAAAgIdqc=</ModStamp>
+    <New_NettValue>686.28</New_NettValue>
+  </InvoiceDetail>
+</NewDataSet>

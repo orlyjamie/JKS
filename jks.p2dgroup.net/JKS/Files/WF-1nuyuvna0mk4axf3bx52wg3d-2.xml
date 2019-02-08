@@ -1,0 +1,17 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <InvoiceDetail>
+    <InvoiceDetailID>4733256</InvoiceDetailID>
+    <InvoiceID>3311428</InvoiceID>
+    <SerialNo>1</SerialNo>
+    <Description>The Trolley</Description>
+    <Quantity>3000.00</Quantity>
+    <Rate>4.80</Rate>
+    <VATAmt>0.00</VATAmt>
+    <PurOrderNo>PO7040</PurOrderNo>
+    <BuyersProdCode>932</BuyersProdCode>
+    <ModDate>2018-06-15T10:58:16.203+01:00</ModDate>
+    <ModStamp>AAAAAAfeBMA=</ModStamp>
+    <New_NettValue>14400.00</New_NettValue>
+  </InvoiceDetail>
+</NewDataSet>

@@ -1,0 +1,27 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <LineItems>
+    <PurOrderNo>4500003278</PurOrderNo>
+    <BuyersProdCode />
+    <Description>Cleaning</Description>
+    <Quantity>1.00</Quantity>
+    <Rate>143.75</Rate>
+    <New_NettValue>143.75</New_NettValue>
+    <VATRate>0.00</VATRate>
+    <VATAmt>0.00</VATAmt>
+    <TotalAmt>143.75</TotalAmt>
+    <PurOrderLineNo>10</PurOrderLineNo>
+  </LineItems>
+  <LineItems>
+    <PurOrderNo>4500003278</PurOrderNo>
+    <BuyersProdCode />
+    <Description>Cleaning</Description>
+    <Quantity>0.00</Quantity>
+    <Rate>143.75</Rate>
+    <New_NettValue>0.00</New_NettValue>
+    <VATRate>0.00</VATRate>
+    <VATAmt>0.00000</VATAmt>
+    <TotalAmt>0.00000</TotalAmt>
+    <PurOrderLineNo>10</PurOrderLineNo>
+  </LineItems>
+</NewDataSet>

@@ -1,0 +1,19 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <CreditNoteDetail>
+    <CreditNoteDetailID>144300</CreditNoteDetailID>
+    <CreditNoteID>109647</CreditNoteID>
+    <SerialNo>1</SerialNo>
+    <Description />
+    <Quantity>1.00</Quantity>
+    <Rate>419.78</Rate>
+    <VATRate>0.00</VATRate>
+    <VATAmt>0.00</VATAmt>
+    <TotalAmt>0.00</TotalAmt>
+    <PurOrderNo />
+    <BuyersProdCode />
+    <ModDate>2018-07-27T14:23:40.74+01:00</ModDate>
+    <ModStamp>AAAAAAgVF08=</ModStamp>
+    <New_NettValue>419.78</New_NettValue>
+  </CreditNoteDetail>
+</NewDataSet>

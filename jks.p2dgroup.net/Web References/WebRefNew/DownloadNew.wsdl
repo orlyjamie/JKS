@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="RemoveFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RemoveFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RemoveFileResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DownloadFileResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strFileName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="objFile" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="strReturn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UploadFileResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadFileNew">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strFileName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="objFile" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="strReturn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strChildBuyer" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadFileNewResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UploadFileNewResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strFileName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strChildBuyer" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CheckFileResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MoveFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sFileName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dFileName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MoveFileResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="MoveFileCoop">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sFileName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dFileName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MoveFileCoopResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MoveFileCoopResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MoveFileNL">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sFileName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dFileName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MoveFileNLResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GKRFiles">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strGKRFolderPath" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GKRFilesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GKRFilesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetImageStream">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sFileName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetImageStreamResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetImageStreamResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllPagesInBytes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sFileName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllPagesInBytesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllPagesInBytesResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllPagesNew">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="file" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllPagesNewResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllPagesNewResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMultiPages">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sfile" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="iIndex" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMultiPagesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMultiPagesResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPageCount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="file" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPageCountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetPageCountResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="RemoveFileSoapIn">
+    <wsdl:part name="parameters" element="tns:RemoveFile" />
+  </wsdl:message>
+  <wsdl:message name="RemoveFileSoapOut">
+    <wsdl:part name="parameters" element="tns:RemoveFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="DownloadFileSoapIn">
+    <wsdl:part name="parameters" element="tns:DownloadFile" />
+  </wsdl:message>
+  <wsdl:message name="DownloadFileSoapOut">
+    <wsdl:part name="parameters" element="tns:DownloadFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadFileSoapIn">
+    <wsdl:part name="parameters" element="tns:UploadFile" />
+  </wsdl:message>
+  <wsdl:message name="UploadFileSoapOut">
+    <wsdl:part name="parameters" element="tns:UploadFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadFileNewSoapIn">
+    <wsdl:part name="parameters" element="tns:UploadFileNew" />
+  </wsdl:message>
+  <wsdl:message name="UploadFileNewSoapOut">
+    <wsdl:part name="parameters" element="tns:UploadFileNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckFileSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckFile" />
+  </wsdl:message>
+  <wsdl:message name="CheckFileSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="MoveFileSoapIn">
+    <wsdl:part name="parameters" element="tns:MoveFile" />
+  </wsdl:message>
+  <wsdl:message name="MoveFileSoapOut">
+    <wsdl:part name="parameters" element="tns:MoveFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="MoveFileCoopSoapIn">
+    <wsdl:part name="parameters" element="tns:MoveFileCoop" />
+  </wsdl:message>
+  <wsdl:message name="MoveFileCoopSoapOut">
+    <wsdl:part name="parameters" element="tns:MoveFileCoopResponse" />
+  </wsdl:message>
+  <wsdl:message name="MoveFileNLSoapIn">
+    <wsdl:part name="parameters" element="tns:MoveFileNL" />
+  </wsdl:message>
+  <wsdl:message name="MoveFileNLSoapOut">
+    <wsdl:part name="parameters" element="tns:MoveFileNLResponse" />
+  </wsdl:message>
+  <wsdl:message name="GKRFilesSoapIn">
+    <wsdl:part name="parameters" element="tns:GKRFiles" />
+  </wsdl:message>
+  <wsdl:message name="GKRFilesSoapOut">
+    <wsdl:part name="parameters" element="tns:GKRFilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetImageStreamSoapIn">
+    <wsdl:part name="parameters" element="tns:GetImageStream" />
+  </wsdl:message>
+  <wsdl:message name="GetImageStreamSoapOut">
+    <wsdl:part name="parameters" element="tns:GetImageStreamResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllPagesInBytesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllPagesInBytes" />
+  </wsdl:message>
+  <wsdl:message name="GetAllPagesInBytesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllPagesInBytesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllPagesNewSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllPagesNew" />
+  </wsdl:message>
+  <wsdl:message name="GetAllPagesNewSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllPagesNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMultiPagesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMultiPages" />
+  </wsdl:message>
+  <wsdl:message name="GetMultiPagesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMultiPagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPageCountSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPageCount" />
+  </wsdl:message>
+  <wsdl:message name="GetPageCountSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPageCountResponse" />
+  </wsdl:message>
+  <wsdl:portType name="DownloadNewSoap">
+    <wsdl:operation name="RemoveFile">
+      <wsdl:input message="tns:RemoveFileSoapIn" />
+      <wsdl:output message="tns:RemoveFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFile">
+      <wsdl:input message="tns:DownloadFileSoapIn" />
+      <wsdl:output message="tns:DownloadFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadFile">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">File Upload Webservice</documentation>
+      <wsdl:input message="tns:UploadFileSoapIn" />
+      <wsdl:output message="tns:UploadFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadFileNew">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">New File Upload Webservice</documentation>
+      <wsdl:input message="tns:UploadFileNewSoapIn" />
+      <wsdl:output message="tns:UploadFileNewSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckFile">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">CheckFile</documentation>
+      <wsdl:input message="tns:CheckFileSoapIn" />
+      <wsdl:output message="tns:CheckFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MoveFile">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">MoveFile</documentation>
+      <wsdl:input message="tns:MoveFileSoapIn" />
+      <wsdl:output message="tns:MoveFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MoveFileCoop">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">MoveFile</documentation>
+      <wsdl:input message="tns:MoveFileCoopSoapIn" />
+      <wsdl:output message="tns:MoveFileCoopSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MoveFileNL">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">MoveFileNL</documentation>
+      <wsdl:input message="tns:MoveFileNLSoapIn" />
+      <wsdl:output message="tns:MoveFileNLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GKRFiles">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">GKRFiles</documentation>
+      <wsdl:input message="tns:GKRFilesSoapIn" />
+      <wsdl:output message="tns:GKRFilesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetImageStream">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">GetImageStream</documentation>
+      <wsdl:input message="tns:GetImageStreamSoapIn" />
+      <wsdl:output message="tns:GetImageStreamSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPagesInBytes">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">GetAllPagesInBytes</documentation>
+      <wsdl:input message="tns:GetAllPagesInBytesSoapIn" />
+      <wsdl:output message="tns:GetAllPagesInBytesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPagesNew">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">GetAllPagesNew</documentation>
+      <wsdl:input message="tns:GetAllPagesNewSoapIn" />
+      <wsdl:output message="tns:GetAllPagesNewSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMultiPages">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">GetMultiPages</documentation>
+      <wsdl:input message="tns:GetMultiPagesSoapIn" />
+      <wsdl:output message="tns:GetMultiPagesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPageCount">
+      <documentation xmlns="http://schemas.xmlsoap.org/wsdl/">GetPageCount</documentation>
+      <wsdl:input message="tns:GetPageCountSoapIn" />
+      <wsdl:output message="tns:GetPageCountSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="DownloadNewSoap" type="tns:DownloadNewSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="RemoveFile">
+      <soap:operation soapAction="http://tempuri.org/RemoveFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFile">
+      <soap:operation soapAction="http://tempuri.org/DownloadFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadFile">
+      <soap:operation soapAction="http://tempuri.org/UploadFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadFileNew">
+      <soap:operation soapAction="http://tempuri.org/UploadFileNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckFile">
+      <soap:operation soapAction="http://tempuri.org/CheckFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MoveFile">
+      <soap:operation soapAction="http://tempuri.org/MoveFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MoveFileCoop">
+      <soap:operation soapAction="http://tempuri.org/MoveFileCoop" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MoveFileNL">
+      <soap:operation soapAction="http://tempuri.org/MoveFileNL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GKRFiles">
+      <soap:operation soapAction="http://tempuri.org/GKRFiles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetImageStream">
+      <soap:operation soapAction="http://tempuri.org/GetImageStream" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPagesInBytes">
+      <soap:operation soapAction="http://tempuri.org/GetAllPagesInBytes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPagesNew">
+      <soap:operation soapAction="http://tempuri.org/GetAllPagesNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMultiPages">
+      <soap:operation soapAction="http://tempuri.org/GetMultiPages" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPageCount">
+      <soap:operation soapAction="http://tempuri.org/GetPageCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DownloadNew">
+    <documentation xmlns="http://schemas.xmlsoap.org/wsdl/" />
+    <wsdl:port name="DownloadNewSoap" binding="tns:DownloadNewSoap">
+      <soap:address location="http://localhost/WebServiceDownloadNew/DownloadNew.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

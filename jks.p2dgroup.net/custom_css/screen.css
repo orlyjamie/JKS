@@ -1,0 +1,769 @@
+/*==========================================================================
+
+	Screen Elements Stylesheet
+	____________________________________________________________
+
+	Client:		P2D Paper 2 Data
+	Date:		27th March 2014
+	Author:		VNS &amp; Solutions
+	Website:	www.vnsinfo.com.au
+	Version:	3.3
+
+===========================================================================*/
+
+	/* [Import Stylesheets] */
+	
+	@import url(structure.css);
+	@import url(templates.css);
+	@import url(formelements.css);
+
+/*=========================================================================*/
+
+	/* [CSS Reset Styles] */
+	
+	*{padding:0; margin:0; }
+	
+	
+	/*html, body, div, span, applet, object, iframe,
+	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+	a, abbr, acronym, address, big, cite, code,
+	del, dfn, em, font, img, ins, kbd, q, s, samp,
+	strike, strong, sub, sup, tt, var,
+	b, u, i, center,
+	dl, dt, dd,
+	fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		outline: 0;
+		font-size: 100%;
+		background: transparent;
+	}
+	
+	body
+	{
+		line-height: 1;
+	}*/
+	
+	blockquote
+	{
+		padding: 0 0 5px;
+		margin:0;
+		
+		background:url(../images/comma.gif) 0 2px no-repeat;
+	}
+	
+	q
+	{
+		quotes: inherit;
+		padding: 0;
+	}
+	
+	/*blockquote:before, q:before, q:after
+	{
+		content:url(../images/comma.gif);
+	}*/
+	
+	:focus 
+	{
+		outline: 0;
+	}
+	
+	ins
+	{
+		text-decoration: none;
+	}
+	
+	del
+	{
+		text-decoration: line-through;
+	}
+	
+	
+	header,footer,section,article,aside,hgroup,figure{
+	/* Giving a display value to the HTML5 rendered elements: */
+	display:block;
+	overflow:hidden;
+	
+	position:relative;
+	}
+	
+	nav{display:block; }
+	
+
+
+/*=========================================================================*/
+
+	/* [no Styles] */
+
+	.noborder{border:none!important; } 
+	.nobg{background:none!important; }
+	
+	.nomargin{margin:0!important; }
+	.nomarginLft{margin-left:0!important; }
+	.nomarginRgt{margin-right:0!important; }
+	.nomarginTop{margin-top:0!important; }
+	.nomarginBottom{margin-bottom:0!important; }
+	
+	.nopadding{padding:0!important; }
+	.nopaddingLft{padding-left:0!important; }
+	.nopaddingRgt{padding-right:0!important; }
+	.nopaddingTop{padding-top:0!important; }
+	.nopaddingBottom{padding-bottom:0!important; }
+	
+	
+	
+	.divider_line{
+		width:100%;
+		height:1px;
+		border-bottom:#b7b7b7 solid 1px;
+		}
+	
+
+/*=========================================================================*/
+
+	/* [move Styles] */
+	.move_top5{margin-top:4%!important; }
+	
+	.move_lft5{margin-left: 5px!important; }
+	.move_lft10{margin-left: 10px!important; }
+	.move_lft15{margin-left: 15px!important; }
+	.move_lft20{margin-left: 20px!important; }
+	.move_lft25{margin-left: 25px!important; }
+	.move_lft30{margin-left: 30px!important; }
+	
+	.move_rgt5{margin-right:5px!important; }
+	
+	.move_bottom5{margin-bottom: 5px!important; }
+	.move_bottom10{margin-bottom: 10px!important; }
+	.move_bottom15{margin-bottom: 15px!important; }
+	.move_bottom20{margin-bottom: 20px!important; }
+	.move_bottom25{margin-bottom: 25px!important; }
+	.move_bottom30{margin-bottom: 30px!important; }
+	
+	
+	
+/*=========================================================================*/
+
+	/* [Global Styles] */	
+	.height_justified{
+		padding-bottom: 1000px!important;
+		margin-bottom: -1000px!important;
+		}
+		
+	.pad_inner{
+		padding: 15px!important;
+		}
+		
+		
+	.affix_600{
+		width: 600px !important;
+		}
+		
+	
+
+/*=========================================================================*/
+
+	/* [Font Styles] */
+	
+	@font-face {
+		font-family: 'franklin_gothic_bookregular';
+		src: url('../dist/fonts/frabk-webfont.eot');
+		src: url('../dist/fonts/frabk-webfont.eot?#iefix') format('embedded-opentype'),
+			 url('../dist/fonts/frabk-webfont.woff') format('woff'),
+			 url('../dist/fonts/frabk-webfont.ttf') format('truetype'),
+			 url('../dist/fonts/frabk-webfont.svg#franklin_gothic_bookregular') format('svg');
+		font-weight: normal;
+		font-style: normal;
+	
+	}
+	@font-face {
+		font-family: 'franklin_gothic_medium_condRg';
+		src: url('../dist/fonts/framdcn-webfont.eot');
+		src: url('../dist/fonts/framdcn-webfont.eot?#iefix') format('embedded-opentype'),
+			 url('../dist/fonts/framdcn-webfont.woff') format('woff'),
+			 url('../dist/fonts/framdcn-webfont.ttf') format('truetype'),
+			 url('../dist/fonts/framdcn-webfont.svg#franklin_gothic_medium_condRg') format('svg');
+		font-weight: normal;
+		font-style: normal;
+	
+	}
+	
+	@font-face {
+		font-family: 'franklin_gothic_bookregular';
+		src: url('../dist/fonts/frabk-webfont.eot');
+		src: url('../dist/fonts/frabk-webfont.eot?#iefix') format('embedded-opentype'),
+			 url('../dist/fonts/frabk-webfont.woff') format('woff'),
+			 url('../dist/fonts/frabk-webfont.ttf') format('truetype'),
+			 url('../dist/fonts/frabk-webfont.svg#franklin_gothic_bookregular') format('svg');
+		font-weight: normal;
+		font-style: normal;
+	}
+	
+	
+	@media screen and (-webkit-min-device-pixel-ratio:0) {
+		@font-face {
+			font-family: 'franklin_gothic_bookregular';
+			src: url('../dist/fonts/frabk-webfont.svg') format('svg');
+		}
+		@font-face {
+			font-family: 'franklin_gothic_medium_condRg';
+			src: url('../dist/fonts/framdcn-webfont.svg') format('svg');
+		}
+		@font-face {
+			font-family: 'franklin_gothic_bookregular';
+			src: url('../dist/fonts/frabk-webfont.svg') format('svg');
+		}
+	}
+
+
+/*=========================================================================*/
+
+	/* [HTML Body Styles] */
+	/*html{
+		background: url(../assets/img/bg_main.jpg) 0 100% no-repeat;
+		background-size: cover;
+		}*/
+	
+	body
+	{
+		margin: 0;
+		padding: 0;
+		
+		/*font-family: 'franklin_gothic_bookregular';*/
+		/*font-family:Arial, Helvetica, sans-serif;*/
+		font-family: 'Lato', sans-serif;
+		font-size: 14px /*10.5pt*/;
+		font-weight: 400;
+		color: #4d4e53;
+		line-height: 24px;
+		letter-spacing: normal;
+		
+		/*background: url(../assets/img/mainbg_shadow.png) 50% 0 repeat-y;*/
+		/*background:#1c68b4 url(../assets/img/bg_main.jpg) 0 0 no-repeat;
+		background-size: cover;*/
+		
+		/*background-attachment: fixed;
+		background-color: transparent #1c68b4;
+		background-image: url(../assets/img/bg_main.jpg); 
+		background-position: 50% auto; 
+		background-repeat: no-repeat;
+		background-size: cover;
+		-moz-background-size: cover;
+		-webkit-background-size: cover;*/
+		
+		background: url(../assets/img/bg_main.jpg) no-repeat 0 0 fixed; 
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+
+/*=========================================================================*/
+
+	/* [Heading Styles] */
+	
+	h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+		font-family: 'franklin_gothic_medium_condRg';
+		color:#2491cf;
+		}
+	
+	h1
+	{
+		margin: 0 0 18px 0;
+		
+		font-size: /*36px*/ 225%;
+		font-weight: 400;
+		color: #1f244a;
+		line-height: 42px;
+		text-align:left;
+		text-transform:none;
+	}
+		
+	h2
+	{
+		margin: 0 0 16px 0;
+		padding: 0;
+		
+		font-size: /*32px*/ 200%;
+		font-weight:400;
+		text-align:left;
+		text-transform:uppercase;
+		color: #fff;
+	}
+	
+	h3
+	{
+		margin: 0 0 2%;
+		padding: 0;
+		
+		font-size: /*26px*/ 160%;
+		font-weight: 400;
+		color: #2491cf;
+		line-height: 30px;
+	}
+		h3 .glyphicon{
+			margin-right:6px;
+			
+			font-size: 80%;
+			font-weight:400;
+			}
+	
+	h4
+	{
+		margin: 0 0 16px 0;
+		padding: 0;
+		
+		font-size: 112.5%;
+		font-weight: 400;
+		color: #000;
+		line-height: 18x;
+	}
+	
+	
+	/*strong, b{
+		font-family: 'franklin_gothic_medium_condRg';
+		}*/
+	
+
+/*=========================================================================*/
+
+	/* [Paragraph Styles] */
+	
+	p
+	{
+		margin: 0 0 10px 0;
+		position: relative;
+	}
+	
+	.spacer{
+		display:block;
+		height: 50px;
+		}
+	
+
+/*=========================================================================*/
+
+	/* [List Styles] */
+	
+	ul
+	{
+		padding:0; margin:0;
+	}
+	
+	/*li
+	{
+		margin-bottom:5px;
+	}*/
+	
+/*=========================================================================*/
+
+	/* [hr Styles] */
+	
+	hr 
+	{
+		clear: both;
+		/*visibility: hidden;*/
+		height: 1px;
+		/*margin: 0 0 1%;
+		padding: 0;*/
+		border-top: #b7b7b7 solid 1px;
+	}
+
+/*=========================================================================*/
+
+	/* [Acronym Styles] */
+	
+	acronym
+	{
+		border-bottom: 1px dashed #aaa;
+		cursor: help;
+	}
+
+/*=========================================================================*/
+
+	/* [Link Styles] */
+	
+	a
+	{
+		color: #777;
+		text-decoration:none;
+	}
+
+	/*a:link
+	{
+		color: #777;
+		text-decoration:none;
+	}*/
+	
+	/*a:visited
+	{
+		color: #777;
+		text-decoration:underline;
+	}*/
+	
+	a:hover
+	{
+		color: #2491cf;
+		text-decoration: none;
+	}
+	
+	a img
+	{
+		border: 0 none;
+		outline:none;
+	}
+
+/*=========================================================================*/
+
+	/* [Float Styles] */
+	
+	.fleft
+	{
+		float: left;
+	}
+	
+	.fright
+	{
+		float: right;
+	}
+
+/*=========================================================================*/
+
+	/* [Clear Styles] */
+	
+	.cleft
+	{
+		clear: left;
+	}
+	
+	.cright
+	{
+		clear: right;
+	}
+	
+	.cboth
+	{
+		clear: both;
+	}
+
+/*=========================================================================*/
+
+	/* [Alignment Styles] */
+	
+	.aleft
+	{
+		text-align: left;
+	}
+	
+	.aright
+	{
+		text-align: right;
+	}
+	
+	.acenter
+	{
+		text-align: center;
+	}
+
+/*=========================================================================*/
+
+	/* [Image Styles] */
+	
+	img
+	{
+		border:none;
+		outline:none;
+	}
+		
+	img.fleft
+	{
+		margin-right: 10px;
+		margin-bottom: 2px;
+	}
+	
+	img.fright
+	{
+		margin-left: 10px;
+		margin-bottom: 2px;
+	}
+
+/*=========================================================================*/
+
+	/* [Sub Columns Styles] */
+	
+	.colsub-left
+	{
+		float: left;
+		width: 48%;
+	}
+
+	.colsub-right
+	{
+		float: right;
+		width: 48%;
+	}
+
+/*=========================================================================*/
+
+	/* [Definition Lists Styles] */
+	
+	dl.half
+	{
+		clear: both;
+		height: 1%;
+		margin: 10px auto;
+		padding: 0;
+	}
+		dl.half dt
+		{
+			float: left;
+			clear: both;
+			width: 25%;
+			margin: 0 0 3px 0;
+			padding: 0 0 3px 0;
+			
+			font-weight: bold;
+		}
+		
+		dl.half dd
+		{
+			width: 73%;
+			margin: 0 0 3px 25%;
+			padding: 0 0 3px 0;
+		}
+					
+		dl.half dl
+		{
+			clear: none;
+			margin: 0;
+		}
+		
+		dl.half dl dt,
+		dl.half dl dd
+		{
+			clear: none;
+			margin-bottom: 0;				
+			padding-bottom: 0;				
+		}
+	
+	dl.full dt,
+	dl dt.full
+	{
+		float: none;
+		width: auto;
+		margin-bottom: 0;
+	}
+	
+	dl.full dd,
+	dl dd.full
+	{
+		width: auto;
+		margin-left: 0;
+	}
+
+/*=========================================================================*/
+
+	/* [Grey Box Styles] */
+	
+	.box
+	{
+		padding: 8px;
+		background-color: #f8f8f8;
+		border: 1px solid #ddd;
+	}
+	
+/*=========================================================================*/
+
+	/* [Hide Element Styles] */
+
+	.offleft
+	{
+		position: absolute;
+		left: -5000px;
+		width: 4000px;
+	}
+
+/*=========================================================================*/
+
+	/* [Container Styles] */
+	
+	#article{
+		margin-bottom:8px;
+		padding: 12px 28px 15px 30px;
+		background:url(../images/bg_article.png) 0 0 repeat; 
+	}
+	
+	#aside{
+		width:255px; 
+		float:left; 
+		
+		margin-bottom:16px;
+		margin-right:44px;
+	}
+	
+	/*.container{background:#fff; padding:15px 24px; }*/
+
+
+
+/*=========================================================================*/
+
+	/* [Table Styles] */
+	
+	table.table
+	{
+		width: 100%;
+		
+		background: none repeat scroll 0 0 ;
+		border-collapse: collapse;
+		
+		font-family: Arial,Sans-Serif;
+		font-size: 12px;
+		text-align: left;
+	}
+	
+		table.table th
+		{
+			padding: 10px 8px;
+			
+			border-bottom: 1px solid #cccccc;
+			color: #5F5252;
+			font-size: 14px;
+			font-weight: bold;
+		}
+		
+		table.table td	
+		{
+			padding: 6px 8px;
+			
+			border-bottom: 1px solid #eeeeee;
+			color: #5F5252;
+		}
+		
+	
+	
+	
+/*=========================================================================*/
+
+	/* [Animation Styles] */
+
+	.om-animation-enabled .omsc-animation {
+		opacity:0;
+	}
+	
+	.om-animation-enabled .omsc-animation.omsc-animation-start {
+		opacity:1;
+	}
+	
+	.om-animation-enabled .omsc-animation.omsc-effect-fade-ltr.omsc-animation-start {
+		-webkit-animation: om-ltr 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+		-moz-animation: om-ltr 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+		-o-animation: om-ltr 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+		animation: om-ltr 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+	}
+	
+	.om-animation-enabled .omsc-animation.omsc-effect-fade-rtl.omsc-animation-start {
+		-webkit-animation: om-rtl 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+		-moz-animation: om-rtl 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+		-o-animation: om-rtl 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+		animation: om-rtl 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+	}
+	
+	.om-animation-enabled .omsc-animation.omsc-effect-fade-ttb.omsc-animation-start {
+		-webkit-animation: om-ttb 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+		-moz-animation: om-ttb 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+		-o-animation: om-ttb 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+		animation: om-ttb 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+	}
+	
+	.om-animation-enabled .omsc-animation.omsc-effect-fade-btt.omsc-animation-start {
+		-webkit-animation: om-btt 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+		-moz-animation: om-btt 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+		-o-animation: om-btt 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+		animation: om-btt 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+	}
+	
+	.om-animation-enabled .omsc-animation.omsc-effect-zoom-in.omsc-animation-start {
+		-webkit-animation: om-zoom-in 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+		-moz-animation: om-zoom-in 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+		-o-animation: om-zoom-in 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+		animation: om-zoom-in 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+	}
+	
+	.om-animation-enabled .omsc-animation.omsc-effect-zoom-out.omsc-animation-start {
+		-webkit-animation: om-zoom-out 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+		-moz-animation: om-zoom-out 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+		-o-animation: om-zoom-out 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+		animation: om-zoom-out 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+	}
+	
+	.om-animation-enabled .omsc-animation.omsc-effect-pop-out.omsc-animation-start {
+		-webkit-animation: om-zoom-in 0.4s cubic-bezier(.17,.89,.45,1.47) forwards;
+		-moz-animation: om-zoom-in 0.4s cubic-bezier(.17,.89,.45,1.47) forwards;
+		-o-animation: om-zoom-in 0.4s cubic-bezier(.17,.89,.45,1.47) forwards;
+		animation: om-zoom-in 0.4s cubic-bezier(.17,.89,.45,1.47) forwards;
+	}
+	
+	.om-animation-enabled .omsc-animation.omsc-effect-spin.omsc-animation-start {
+		-webkit-animation: om-spin 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+		-moz-animation: om-spin 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+		-o-animation: om-spin 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+		animation: om-spin 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+	}
+	
+	.om-animation-enabled .omsc-animation.omsc-effect-spin-lt {
+		-webkit-transform-origin:0 0;
+		-moz-transform-origin:0 0;
+		-o-transform-origin:0 0;
+		transform-origin:0 0;
+	}
+	
+	.om-animation-enabled .omsc-animation.omsc-effect-spin-lt.omsc-animation-start {
+		-webkit-animation: om-spin-lt 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+		-moz-animation: om-spin-lt 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+		-o-animation: om-spin-lt 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+		animation: om-spin-lt 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+	}
+	
+	.om-animation-enabled .omsc-animation.omsc-effect-spin-rt {
+		-webkit-transform-origin:100% 0;
+		-moz-transform-origin:100% 0;
+		-o-transform-origin:100% 0;
+		transform-origin:100% 0;
+	}
+	
+	.om-animation-enabled .omsc-animation.omsc-effect-spin-rt.omsc-animation-start {
+		-webkit-animation: om-spin-rt 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+		-moz-animation: om-spin-rt 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+		-o-animation: om-spin-rt 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+		animation: om-spin-rt 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+	}
+	
+	.om-animation-enabled .omsc-animation.omsc-effect-flip-x.omsc-animation-start {
+		-webkit-animation: om-flip-x 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+		-moz-animation: om-flip-x 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+		-o-animation: om-flip-x 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+		animation: om-flip-x 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+	}
+	
+	.om-animation-enabled .omsc-animation.omsc-effect-flip-y.omsc-animation-start {
+		-webkit-animation: om-flip-y 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+		-moz-animation: om-flip-y 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+		-o-animation: om-flip-y 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+		animation: om-flip-y 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+	}
+	
+	.om-animation-enabled .omsc-animation.omsc-effect-flip {
+		-webkit-transform-origin:50% 0;
+		-moz-transform-origin:50% 0;
+		-o-transform-origin:50% 0;
+		transform-origin:50% 0;
+	}
+	
+	.om-animation-enabled .omsc-animation.omsc-effect-flip.omsc-animation-start {
+		-webkit-animation: om-flip 0.7s cubic-bezier(1, 0, 0, 1) forwards;
+		-moz-animation: om-flip 0.7s cubic-bezier(1, 0, 0, 1) forwards;
+		-o-animation: om-flip 0.7s cubic-bezier(1, 0, 0, 1) forwards;
+		animation: om-flip 0.7s cubic-bezier(1, 0, 0, 1) forwards;
+	}

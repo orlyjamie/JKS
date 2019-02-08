@@ -1,0 +1,44 @@
+﻿<?xml version="1.0"?>
+<Invoice>
+  <DocFilePath></DocFilePath>
+  <ArchiveFilePath></ArchiveFilePath>
+  <BatchTypeName></BatchTypeName>
+  <BatchTypeId></BatchTypeId>
+  <CompanyID></CompanyID>
+  <BatchDocType></BatchDocType>
+  <DocumentType></DocumentType>
+  <Supplier></Supplier>
+  <Date></Date>
+  <TaxPoint></TaxPoint>
+  <InvoiceNumber></InvoiceNumber>
+  <PurchaseOrder></PurchaseOrder>
+  <VATRegistrationNo></VATRegistrationNo>
+  <Currency></Currency>
+  <VendorReference></VendorReference>
+  <Error></Error>
+  <ErrorMessage></ErrorMessage>
+  <FilePath>
+  </FilePath>
+  <NOTES>
+    <InvoiceTotal></InvoiceTotal>
+    <InvoiceSubtotal></InvoiceSubtotal>
+    <Discount>
+    </Discount>
+    <InvoiceVatTotal></InvoiceVatTotal>
+  </NOTES>
+  <Resolution>
+    <Page Number="0" height="0" width="0">
+      <ItemDetail>
+        <ItemValue></ItemValue>
+        <ItemVat></ItemVat>
+        <ItemPoNumber></ItemPoNumber>
+        <ItemCurrency></ItemCurrency>
+        <ItemDescription></ItemDescription>
+        <ItemQty></ItemQty>
+        <ItemUnitPrice></ItemUnitPrice>
+      </ItemDetail>
+    </Page>
+  </Resolution>
+  <InvoiceStatus validate="yes" doctype="yes" vendor="no" date="no" taxpoint="no" invnumber="no" vatreg="yes" resolved="no" total="no" subtotal="no" vattotal="no" rates="yes" descs="yes" ponFlag="no" ponItemFlag="no" pCurrencyFlag="yes">
+  </InvoiceStatus>
+</Invoice>

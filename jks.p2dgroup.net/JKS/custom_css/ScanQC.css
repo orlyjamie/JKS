@@ -1,0 +1,744 @@
+﻿/*Dependend Styles*/
+.container
+{
+    width: 100%;
+    overflow: hidden;
+    margin-top: 5px;
+    height: auto;
+}
+.container .content
+{
+    width: 100%;
+    margin-bottom: 2%;
+}
+.container .content .scan-qc
+{
+    background-color: #3399cc;
+    color: white;
+    font-size: 10pt;
+    font-weight: bolder;
+    text-transform: capitalize;
+    height: 25px;
+    padding-left: 2px;
+    padding-top: 5px;
+    width: 101%;
+}
+.container .content .table_cont
+{
+    font-size: 10px;
+    margin-top: 2%;
+}
+.container .content .table_cont table
+{
+    height: auto;
+    width: 100%;
+}
+.container .content .table_cont table .label
+{
+    height: 20px;
+    font-weight: bold;
+    width: 15%;
+}
+.container .content .table_cont table .field
+{
+    height: 20px;
+    vertical-align: middle;
+    width: 35%;
+}
+.container .content .table_cont table .field span
+{
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    width: 99%;
+}
+.container .content .table_cont table .field .ddlBatchType
+{
+    width: 99%;
+    border: 1px solid #ccc !important;
+    color: Red !important;
+    font-size: 15px;
+    height: 22px;
+    font-weight: bold;
+}
+.container .content .table_cont table .field .ddlCompany
+{
+    width: 99%;
+    border: 1px solid #ccc !important;
+    color: #666666 !important;
+    font-size: 11px;
+    height: 22px;
+}
+.container .content .table_cont table .link
+{
+    padding-right: 4px;
+    text-align: right;
+    vertical-align: middle;
+}
+.container .content .table_cont table .link a
+{
+    line-height: 2px;
+}
+.container .content .table-menu
+{
+    color: white;
+    font-size: 10pt;
+    font-weight: bolder;
+    height: 25px;
+    width: 100%;
+}
+.container .content .table-menu td
+{
+    width: 50%;
+}
+.container .content .table-menu .tab
+{
+    color: white;
+    font-size: 10pt;
+    font-weight: bolder;
+    text-transform: capitalize;
+    height: 25px;
+    width: 100%;
+    display: inline-block;
+    cursor: pointer;
+    padding-left: 2px;
+    padding-top: 5px;
+}
+.container .content .table-menu .tab:hover
+{
+    background-color: #3399cc;
+}
+.container .content .table-menu .selected
+{
+    background-color: #3399cc;
+}
+.container .content .table-menu .not_selected
+{
+    background-color: #68c6e9;
+}
+
+
+.container .content #divHeader
+{
+    width: 100%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.container .content #divHeader table
+{
+    height: auto;
+    width: 100%;
+}
+.container .content #divHeader table .label
+{
+    font-weight: bold;
+    width: 15%;
+    font-size: 10px;
+    height: 20px;
+}
+.container .content #divHeader table .field1
+{
+    width: 30%;
+    font-size: 10px;
+    height: 20px;
+}
+.container .content #divHeader table .field1 input[type="text"]
+{
+    border: 1px solid #ccc !important;
+    color: #666666 !important;
+    font-size: 11px;
+    height: 18px;
+    padding-left: 4px;
+    padding-right: 4px;
+    width: 97%;
+}
+.container .content #divHeader table .field2
+{
+    width: 30%;
+    font-size: 10px;
+    height: 20px;
+}
+.container .content #divHeader table .field2 input[type="text"]
+{
+    border: 1px solid #ccc !important;
+    color: #666666 !important;
+    font-size: 11px;
+    height: 18px;
+    padding-left: 4px;
+    padding-right: 4px;
+    width: 92.5%;
+}
+.container .content #divHeader table .field2 select
+{
+    width: 99%;
+    border: 1px solid #ccc !important;
+    color: #666666 !important;
+    font-size: 11px;
+    height: 22px;
+}
+.container .content #divHeader table .tail
+{
+    width: 10%;
+    font-size: 10px;
+    height: 20px;
+    text-align: center;
+}
+.container .content #divHeader table .tail input[type="button"]
+{
+    background-color: yellow;
+    border: 0 none;
+    cursor: pointer;
+    font-size: 9px;
+    height: 100%;
+    width: 80%;
+}
+.container .content #divHeader table .cur
+{
+    font-size: 11px;
+    font-style: italic;
+}
+.container .content #divHeader table .cur-same
+{
+    color: blue !important;
+    font-size: 10px;
+    font-weight: bold;
+}
+.container .content #divHeader table .cur-diff
+{
+    color: red !important;
+    font-size: 10px;
+    font-weight: bold;
+}
+.container .content #divHeader .buttons
+{
+    width: 100%;
+    height: auto;
+}
+.container .content #divHeader .buttons table
+{
+    width: 100%;
+    height: auto;
+}
+.container .content #divHeader .buttons table tr
+{
+    width: 100%;
+    height: 18px;
+}
+.container .content #divHeader .buttons table tr td
+{
+    width: 25%;
+    text-align: center;
+}
+.container .content #divLineItems
+{
+    width: 100%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.container .content #divLineItems .table-list
+{
+    width: 100%;
+    background-color: #969696;
+    border: 1px solid #ccc;
+}
+.container .content #divLineItems .table-list-header
+{
+    background-color: #3399cc;
+    color: #fff;
+    font: bold 10px Verdana;
+    text-decoration: none;
+}
+.container .content #divLineItems .table-list-header th
+{
+    border-right: 1px solid #ccc;
+}
+.container .content #divLineItems .table-list-item
+{
+    border: 1px solid #ccc;
+    color: #333;
+    font: 10px Verdana;
+    padding: 4px;
+    text-decoration: none;
+    background-color: #ffffff;
+}
+.container .content #divLineItems .table-list-item td
+{
+    border-right: 1px solid #ccc;
+}
+.container .content #divLineItems .table-list-item input[type="text"]
+{
+    border: medium none;
+    font-family: verdana,Tahoma,Arial;
+    font-size: 9px;
+    height: auto;
+    text-align: right;
+    width: 90%;
+}
+.container .content #divLineItems .table-list-item td:nth-child(1) textarea
+{
+    resize: none;
+    text-align: left;
+    height: 100%;
+    border: medium none;
+    font-family: verdana,Tahoma,Arial;
+    font-size: 9px;
+    width: 94%;
+}
+.container .content #divLineItems .table-list-item td:nth-child(2) textarea
+{
+    resize: none;
+    width: 98%;
+    height: 55px;
+    color: #333;
+    font: 10px Verdana;
+    background-color: transparent;
+    border: none;
+}
+.container .content #divLineItems .table-list-item td:nth-child(7)
+{
+    text-align: center !important;
+}
+.container .content #divLineItems .table-list-alt-item
+{
+    border: 1px solid #ccc;
+    color: #333;
+    font: 10px Verdana;
+    padding: 4px;
+    text-decoration: none;
+    background-color: #9dffff;
+}
+.container .content #divLineItems .table-list-alt-item td
+{
+    border-right: 1px solid #ccc;
+}
+.container .content #divLineItems .table-list-alt-item td:nth-child(2) textarea
+{
+    resize: none;
+    width: 98%;
+    min-height: 30px;
+    color: #333;
+    font: 10px Verdana;
+    background-color: transparent;
+    border: none;
+}
+.container .content #divLineItems .table-list-alt-item td:nth-child(7)
+{
+    text-align: center !important;
+}
+.container .content #divLineItems .table-list-footer
+{
+    border: 1px solid #ccc;
+    color: #333;
+    font: 10px Verdana;
+    padding: 4px;
+    text-decoration: none;
+    background-color: #FFFFFF;
+    height: 25px;
+}
+.container .content #divLineItems .table-list-footer td
+{
+    border-right: 1px solid #ccc;
+}
+.container .content #divLineItems .table-list-footer td:nth-child(2)
+{
+    font-weight: bold;
+    border-right: 1px solid #ccc !important;
+}
+.container .content #divLineItems .buttons
+{
+    width: 100%;
+    height: auto;
+}
+.container .content #divLineItems .buttons table
+{
+    width: 100%;
+    height: auto;
+}
+.container .content #divLineItems .buttons table td:nth-child(1)
+{
+    width: 10%;
+    text-align: center;
+}
+.container .content #divLineItems .buttons table td:nth-child(2)
+{
+    width: 26.67%;
+    text-align: center;
+}
+.container .content #divLineItems .buttons table td:nth-child(3)
+{
+    width: 26.67%;
+    text-align: center;
+}
+.container .content #divLineItems .buttons table td:nth-child(4)
+{
+    width: 26.66%;
+    text-align: center;
+}
+.container .content #divLineItems .buttons table td:nth-child(5)
+{
+    width: 10%;
+    text-align: center;
+}
+.container .content .add-lines
+{
+    width: 100%;
+}
+.container .content .add-lines span
+{
+    display: inline-block;
+    width: 20%;
+    font-weight: bold;
+    width: 15%;
+    font-size: 10px;
+}
+.container .content .add-lines select
+{
+    width: 30%;
+}
+.supplier-mapping
+{
+    width: 100%;
+    overflow: hidden;
+    margin-top: 15px;
+    height: auto;
+}
+.supplier-mapping .floater
+{
+    border: 1px solid black;
+    height: auto;
+    margin: auto;
+    width: 50%;
+    padding: 10px 15px 15px;
+}
+.supplier-mapping .floater .topper
+{
+    background-color: #3399cc;
+    color: white;
+    font-size: 10pt;
+    font-weight: bolder;
+    text-transform: capitalize;
+    height: 25px;
+    padding-left: 2px;
+    padding-top: 5px;
+}
+.supplier-mapping .floater .center
+{
+    background-color: transparent;
+    height: 73%;
+    margin-top: 2%;
+    width: 100%;
+}
+.supplier-mapping .floater .center div
+{
+    font-size: 10pt;
+    margin-bottom: 1%;
+}
+.supplier-mapping .floater .center div span:nth-child(1)
+{
+    display: inline-block;
+    font-weight: bold;
+    width: 15%;
+}
+.supplier-mapping .floater .center div span:nth-child(2)
+{
+    display: inline-block;
+    width: 84%;
+}
+.supplier-mapping .floater .center div table
+{
+    width: 100%;
+}
+.supplier-mapping .floater .center div table th:nth-child(1)
+{
+    width: 10%;
+    height: 25px;
+}
+.supplier-mapping .floater .center div table th:nth-child(2)
+{
+    width: 45%;
+    text-align: left;
+}
+.supplier-mapping .floater .center div table th:nth-child(3)
+{
+    width: 45%;
+    text-align: left;
+}
+.supplier-mapping .floater .center div table td:nth-child(1)
+{
+    text-align: center;
+    height: 25px;
+}
+.supplier-mapping .floater .center div table input[type="text"]
+{
+    width: 88%;
+    border: 1px solid black;
+    color: #666666 !important;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.supplier-mapping .floater .bottom
+{
+    background-color: transparent;
+    height: 13%;
+    margin-top: 1%;
+    padding-top: 1%;
+    width: 100%;
+    text-align: center;
+}
+.supplier-mapping .floater .bottom .blocks
+{
+    width: 20%;
+    padding-right: 1%;
+    padding-left: 1%;
+    display: inline-block;
+    text-align: center;
+}
+/*Common Styles*/
+.hidden
+{
+    display: none;
+    visibility: hidden;
+}
+.shown
+{
+    display: block;
+    visibility: visible;
+}
+a
+{
+    color: #0081c5;
+}
+a:hover
+{
+    color: Blue;
+}
+body
+{
+    font-family: verdana,Tahoma,Arial;
+    color: #666666 !important;
+}
+.red-button
+{
+    border: medium none;
+    background-color: #ff0000;
+    height: 35px;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 80%;
+    cursor: pointer;
+
+    font-family: 'franklin_gothic_medium_condRg';
+    font-size: 16px;
+    font-weight: 400;
+}
+.yellow-button
+{
+    border: medium none;
+    background-color: #ffcc00;
+    height: 35px;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 80%;
+    cursor: pointer;
+
+    font-family: 'franklin_gothic_medium_condRg';
+    font-size: 16px;
+    font-weight: 400;
+}
+.blue-button
+{
+    border: medium none;
+    background-color: #0066ff;
+    height: 35px;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 80%;
+    cursor: pointer;
+
+    font-family: 'franklin_gothic_medium_condRg';
+    font-size: 16px;
+    font-weight: 400;
+}
+.green-button
+{
+    border: medium none;
+    background-color: #3cbc3c;
+    height: 35px;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 80%;
+    cursor: pointer;
+
+    font-family: 'franklin_gothic_medium_condRg';
+    font-size: 16px;
+    font-weight: 400;
+}
+.sky-button
+{
+    border: medium none;
+    background-color: #66ccff;
+    height: 35px;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 80%;
+    cursor: pointer;
+
+    font-family: 'franklin_gothic_medium_condRg';
+    font-size: 16px;
+    font-weight: 400;
+}
+.dark-blue-button
+{
+    border: medium none;
+    background-color: #0056b1;
+    height: 35px;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 80%;
+    cursor: pointer;
+
+    font-family: 'franklin_gothic_medium_condRg';
+    font-size: 16px;
+    font-weight: 400;
+}
+.hor-sep
+{
+    width: 100%;
+    height: 15px;
+}
+.cal_img
+{
+    position: relative;
+}
+.cal_img img
+{
+    position: absolute;
+    right: 4%;
+    top: 13%;
+    cursor: pointer;
+}
+/*Scan QC Action Style*/
+#ctlTiff
+{
+    padding: 10px;
+    background-color: #DCDCDC;
+    display: block;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.button
+{
+    border: solid 1px #ccc;
+    padding: 5px;
+    margin-top: 5px;
+}
+body
+{
+    font-family: Verdana;
+    font-size: 12px;
+}
+#divProperties
+{
+    font-size: 11px;
+}
+#divProperties input[type=text]
+{
+    width: 50px;
+    font-size: 10px;
+}
+div.color_picker
+{
+    height: 16px;
+    width: 16px;
+    padding: 0 !important;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    line-height: 16px;
+    float: right;
+}
+div#color_selector
+{
+    width: 110px;
+    position: absolute;
+    border: 1px solid #598FEF;
+    background-color: #EFEFEF;
+    padding: 2px;
+    z-index: 9999;
+}
+div#color_custom
+{
+    width: 100%;
+    float: left;
+}
+div#color_custom label
+{
+    font-size: 95%;
+    color: #2F2F2F;
+    margin: 5px 2px;
+    width: 25%;
+}
+div#color_custom input
+{
+    margin: 5px 2px;
+    padding: 0;
+    font-size: 95%;
+    border: 1px solid #000;
+    width: 65%;
+}
+div.color_swatch
+{
+    height: 12px;
+    width: 12px;
+    border: 1px solid #000;
+    margin: 2px;
+    float: left;
+    cursor: pointer;
+    line-height: 12px;
+}
+div.controlset
+{
+    display: block;
+    padding: 0.25em 0;
+}
+#customAnn a
+{
+    font-size: 10px;
+    white-space: nowrap;
+}
+.selectedAnn
+{
+    background-image: url(../../images/selected.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    border: solid 1px Yellow;
+}
+#divUpload
+{
+    visibility: hidden;
+}
+#nav
+{
+    margin-top: 5px;
+}
+/**/
+.info_icon
+{
+    cursor: pointer;
+}
+.pop_msg
+{
+    position: absolute;
+    background-color: #3399cc;
+    color: white;
+    width: 200px;
+    height: auto;
+    padding: 5px;
+    text-align: justify;
+    font-size: 13px;
+}

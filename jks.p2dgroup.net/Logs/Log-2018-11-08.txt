@@ -1,0 +1,5 @@
+08/Nov/2018 09:00:04 AM: Operation has started., EventID: 4, EventLogType: Information
+08/Nov/2018 09:00:04 AM: BuyerCompanyName: Berry Bros and Rudd, EventID: 9, EventLogType: Information
+08/Nov/2018 09:00:04 AM: BuyerCompanyID: 148054, EventID: 9, EventLogType: Information
+08/Nov/2018 09:00:04 AM: UserID: , EventID: 9, EventLogType: Information
+08/Nov/2018 09:00:04 AM: Operation has ended., EventID: 4, EventLogType: Information

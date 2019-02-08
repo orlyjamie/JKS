@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="https://c1.twinfield.com/webservices/processxml.asmx?wsdl" docRef="https://c1.twinfield.com/webservices/processxml.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="https://c1.twinfield.com/webservices/processxml.asmx" xmlns:q1="http://www.twinfield.com/" binding="q1:ProcessXmlSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="https://c1.twinfield.com/webservices/processxml.asmx" xmlns:q2="http://www.twinfield.com/" binding="q2:ProcessXmlSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

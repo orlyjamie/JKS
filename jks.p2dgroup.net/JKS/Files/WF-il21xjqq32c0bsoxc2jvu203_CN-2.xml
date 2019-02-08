@@ -1,0 +1,78 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <CreditNoteDetail>
+    <CreditNoteDetailID>150140</CreditNoteDetailID>
+    <CreditNoteID>113542</CreditNoteID>
+    <SerialNo>1</SerialNo>
+    <Description>Black U-Power zip-sided lined Rigger boot with steel midsole - 7</Description>
+    <Quantity>10.00</Quantity>
+    <Rate>23.62</Rate>
+    <VATAmt>47.24</VATAmt>
+    <PurOrderNo>0000040909</PurOrderNo>
+    <PurOrderLineNo>3</PurOrderLineNo>
+    <BuyersProdCode>B06-9454-07</BuyersProdCode>
+    <ModDate>2018-09-20T09:57:43.533+01:00</ModDate>
+    <ModStamp>AAAAAAgbc4I=</ModStamp>
+    <New_NettValue>236.20</New_NettValue>
+  </CreditNoteDetail>
+  <CreditNoteDetail>
+    <CreditNoteDetailID>150141</CreditNoteDetailID>
+    <CreditNoteID>113542</CreditNoteID>
+    <SerialNo>2</SerialNo>
+    <Description>Black U-Power zip-sided lined Rigger boot with steel midsole - 8</Description>
+    <Quantity>10.00</Quantity>
+    <Rate>23.62</Rate>
+    <VATAmt>47.24</VATAmt>
+    <PurOrderNo>0000040909</PurOrderNo>
+    <PurOrderLineNo>2</PurOrderLineNo>
+    <BuyersProdCode>B06-9454-08</BuyersProdCode>
+    <ModDate>2018-09-20T09:57:43.55+01:00</ModDate>
+    <ModStamp>AAAAAAgbc4U=</ModStamp>
+    <New_NettValue>236.20</New_NettValue>
+  </CreditNoteDetail>
+  <CreditNoteDetail>
+    <CreditNoteDetailID>150142</CreditNoteDetailID>
+    <CreditNoteID>113542</CreditNoteID>
+    <SerialNo>3</SerialNo>
+    <Description>Black U-Power zip-sided lined Rigger boot with steel midsole - 10</Description>
+    <Quantity>5.00</Quantity>
+    <Rate>23.62</Rate>
+    <VATAmt>23.62</VATAmt>
+    <PurOrderNo>0000040909</PurOrderNo>
+    <PurOrderLineNo>3</PurOrderLineNo>
+    <BuyersProdCode>B06-9454-10</BuyersProdCode>
+    <ModDate>2018-09-20T09:57:43.55+01:00</ModDate>
+    <ModStamp>AAAAAAgbc4g=</ModStamp>
+    <New_NettValue>118.10</New_NettValue>
+  </CreditNoteDetail>
+  <CreditNoteDetail>
+    <CreditNoteDetailID>150143</CreditNoteDetailID>
+    <CreditNoteID>113542</CreditNoteID>
+    <SerialNo>4</SerialNo>
+    <Description>Black full grain leather non-metallic brogue - 10</Description>
+    <Quantity>2.00</Quantity>
+    <Rate>26.91</Rate>
+    <VATAmt>10.76</VATAmt>
+    <PurOrderNo>0000040909</PurOrderNo>
+    <PurOrderLineNo>4</PurOrderLineNo>
+    <BuyersProdCode>B10-1145-10</BuyersProdCode>
+    <ModDate>2018-09-20T09:57:43.553+01:00</ModDate>
+    <ModStamp>AAAAAAgbc4s=</ModStamp>
+    <New_NettValue>53.82</New_NettValue>
+  </CreditNoteDetail>
+  <CreditNoteDetail>
+    <CreditNoteDetailID>150144</CreditNoteDetailID>
+    <CreditNoteID>113542</CreditNoteID>
+    <SerialNo>5</SerialNo>
+    <Description>14/11 jty chasing line 1</Description>
+    <Quantity>10.00</Quantity>
+    <Rate>10.00</Rate>
+    <VATAmt>0.00</VATAmt>
+    <PurOrderNo>0000040909</PurOrderNo>
+    <PurOrderLineNo>5</PurOrderLineNo>
+    <BuyersProdCode>Y-02</BuyersProdCode>
+    <ModDate>2018-09-20T09:57:43.56+01:00</ModDate>
+    <ModStamp>AAAAAAgbc44=</ModStamp>
+    <New_NettValue>100.00</New_NettValue>
+  </CreditNoteDetail>
+</NewDataSet>

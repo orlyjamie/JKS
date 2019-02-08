@@ -1,0 +1,19 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <InvoiceDetail>
+    <InvoiceDetailID>4127467</InvoiceDetailID>
+    <InvoiceID>2936615</InvoiceID>
+    <SerialNo>1</SerialNo>
+    <Description>Net Amount</Description>
+    <Quantity>1.00</Quantity>
+    <Rate>20.02</Rate>
+    <VATRate>0.00</VATRate>
+    <VATAmt>3.90</VATAmt>
+    <TotalAmt>0.00</TotalAmt>
+    <PurOrderNo>0000053176</PurOrderNo>
+    <BuyersProdCode />
+    <ModDate>2017-12-19T18:05:56.65+00:00</ModDate>
+    <ModStamp>AAAAAAd7nvY=</ModStamp>
+    <New_NettValue>20.02</New_NettValue>
+  </InvoiceDetail>
+</NewDataSet>

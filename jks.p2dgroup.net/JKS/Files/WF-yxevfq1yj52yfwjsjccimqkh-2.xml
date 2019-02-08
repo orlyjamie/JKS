@@ -1,0 +1,20 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <InvoiceDetail>
+    <InvoiceDetailID>5207531</InvoiceDetailID>
+    <InvoiceID>3598269</InvoiceID>
+    <SerialNo>1</SerialNo>
+    <Description>repairs to gas fire 3" PP</Description>
+    <Quantity>1.00</Quantity>
+    <Rate>483.00</Rate>
+    <VATRate>0.00</VATRate>
+    <VATAmt>0.00</VATAmt>
+    <TotalAmt>0.00</TotalAmt>
+    <PurOrderNo>4500000597</PurOrderNo>
+    <PurOrderLineNo>1</PurOrderLineNo>
+    <BuyersProdCode />
+    <ModDate>2018-10-22T15:07:54.35+01:00</ModDate>
+    <ModStamp>AAAAAAg1LBc=</ModStamp>
+    <New_NettValue>483.00</New_NettValue>
+  </InvoiceDetail>
+</NewDataSet>

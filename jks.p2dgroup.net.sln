@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "jks.p2dgroup.net", "jks.p2dgroup.net\", "{017B0D7F-499F-494B-90CC-1A0D504173AE}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/jks.p2dgroup.net"
+		Debug.AspNetCompiler.PhysicalPath = "jks.p2dgroup.net\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\jks.p2dgroup.net\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/jks.p2dgroup.net"
+		Release.AspNetCompiler.PhysicalPath = "jks.p2dgroup.net\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\jks.p2dgroup.net\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "5858"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{017B0D7F-499F-494B-90CC-1A0D504173AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{017B0D7F-499F-494B-90CC-1A0D504173AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

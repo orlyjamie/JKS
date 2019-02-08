@@ -1,0 +1,1654 @@
+@font-face
+{
+    font-family: 'franklin_gothic_bookregular';
+    src: url('../dist/fonts/frabk-webfont.eot');
+    src: url('../dist/fonts/frabk-webfont.eot?#iefix') format('embedded-opentype'), url('../dist/fonts/frabk-webfont.woff') format('woff'), url('../dist/fonts/frabk-webfont.ttf') format('truetype'), url('../dist/fonts/frabk-webfont.svg#franklin_gothic_bookregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face
+{
+    font-family: 'franklin_gothic_medium_condRg';
+    src: url('../dist/fonts/framdcn-webfont.eot');
+    src: url('../dist/fonts/framdcn-webfont.eot?#iefix') format('embedded-opentype'), url('../dist/fonts/framdcn-webfont.woff') format('woff'), url('../dist/fonts/framdcn-webfont.ttf') format('truetype'), url('../dist/fonts/framdcn-webfont.svg#franklin_gothic_medium_condRg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: 'franklin_gothic_bookregular';
+    src: url('../dist/fonts/frabk-webfont.eot');
+    src: url('../dist/fonts/frabk-webfont.eot?#iefix') format('embedded-opentype'), url('../dist/fonts/frabk-webfont.woff') format('woff'), url('../dist/fonts/frabk-webfont.ttf') format('truetype'), url('../dist/fonts/frabk-webfont.svg#franklin_gothic_bookregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+body
+{
+    color: #848484;
+    background-color: white;
+    font-family: verdana, Tahoma, Arial;
+    font-size: 11px;
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+}
+.rapper
+{
+    margin: 5px;
+    padding: 5px;
+    position: relative; /*border:solid 1px #999999;*/
+}
+.outerborder
+{
+    /*border:solid 1px #999999;*/
+    padding: 20px;
+}
+.lefttopimage
+{
+    background: url(../images/design_short.gif) 0 0 no-repeat;
+    position: absolute;
+    width: 293px;
+    height: 439px;
+}
+
+.righrimage
+{
+    background-image: url(../images/toprightimage.gif);
+    height: 53px;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+.btnDiv
+{
+    width: 100px;
+    padding: 4px;
+    margin: 0px;
+    float: left;
+    background: #000;
+}
+.inputtxt
+{
+    width: 100px;
+    height: 22px;
+    padding: 1px 0px 2px 0px;
+    margin: 0px auto;
+    border: #FFF solid 1px;
+    background: #000;
+    text-align: center;
+    font-family: Arial;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: bold;
+    letter-spacing: .3px;
+    text-decoration: none;
+    color: #fff;
+}
+/* NEW LOOK GLOBAL CSS CLASSES START*/
+
+.PageHeaderNL
+{
+    font-weight: bolder;
+    font-size: 10pt; /*	color: white;*/
+    color: #000000;
+    font-family: verdana, Tahoma, Arial; /*	background-color: #3399cc;*/
+    background-color: #BED600;
+    font-variant: small-caps;
+}
+.AlternatingGridNL
+{
+    background-color: "#EEEEEE";
+}
+.HeaderGridNL
+{
+    color: "#000000";
+    background-color: "#BED600"; /*	 Color: "White" ; BACKGROUND-COLOR: "#3399CC";*/
+}
+a.aNL
+{
+    color: #000000; /*color:#0081c5;*/
+}
+a:hover.aNL
+{
+    color: #0000FF; /*color:#004d77;*/
+}
+
+a:visited.aNL
+{
+    /*	color:#FF0000;*/
+    color: #993366;
+}
+
+.BannerNL
+{
+    font-size: 8pt;
+    color: #000000; /*	color: #076da1;*/
+    background-color: #dcdcdc;
+}
+.GridCaptionNL
+{
+    font-size: smaller;
+    font-family: Verdana;
+    background-color: #EEEEEE; /*	background-color: lightcyan;*/
+    font-family: verdana, Tahoma, Arial;
+    font-size: 11px;
+}
+.ButtonCssNL
+{
+    cursor: hand;
+    background-color: #BED600;
+    height: 23px;
+    width: 109px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #000000; /*color: #FFFFFF;*/
+    text-decoration: none;
+    font-size: 11px;
+    background-image: url(../images/button_bgNL.gif); /*background-image: url(../images/button_bg.gif);*/
+    background-repeat: no-repeat;
+    background-position: left top;
+    border: none;
+}
+/* NEW LOOK GLOBAL CSS CLASSES END */
+
+a
+{
+    color: #0081c5;
+}
+a:hover
+{
+    color: #004d77;
+}
+a:visited
+{
+    color: #660066;
+}
+.ErrMsg
+{
+    color: red;
+    background-color: white;
+    font-family: verdana, Tahoma, Arial;
+    font-size: 11px;
+}
+
+
+.NormalBody
+{
+    color: #848484;
+    font-family: verdana, Tahoma, Arial;
+    font-size: 11px;
+}
+
+.NormalBodylink
+{
+    color: #143D51;
+    font-family: verdana, Tahoma, Arial;
+    font-size: 10px;
+    text-decoration: underline;
+}
+.buttoncssnew1
+{
+    cursor: hand;
+    background-color: #ff0033;
+    height: 23px;
+    width: 109px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 11px;
+    background-image: url(../images/button_bg_red.gif);
+    background-repeat: no-repeat;
+    background-position: left top;
+    border: none;
+}
+.buttoncssnew2
+{
+    cursor: hand;
+    background-color: #4bacc6;
+    height: 23px;
+    width: 100px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 11px;
+    background-image: url(../images/button_bg_lightblued.gif);
+    background-repeat: no-repeat;
+    background-position: left top;
+    border: none;
+}
+.NormalBodylink:hover
+{
+    color: #297BA3;
+    text-decoration: none;
+}
+.Banner
+{
+    font-size: 8pt;
+    color: #076da1;
+    background-color: #dcdcdc;
+}
+.SelectButton
+{
+    background-image: url(../images/Select.jpg);
+}
+
+.SubmitButton
+{
+    width: 100px;
+    height: 23px;
+    float: left;
+    background-image: url(../images/Submit.jpg);
+    border: none;
+}
+
+
+
+.SubmitButton_ETC_CMS
+{
+    width: 100px;
+    height: 23px;
+    background-image: url(../images/Submit.jpg);
+    border: none;
+}
+
+.SubmitLine
+{
+    background-image: url(../images/submitline.gif);
+}
+.SubmitLine_2
+{
+    cursor: hand;
+    background-color: #0081C5;
+    height: 24px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 11px;
+    background-repeat: no-repeat;
+    background-position: left top;
+    border: none;
+    width: 85px;
+    background-image: url(../images/submitline_2.gif);
+}
+.DownloadButton
+{
+    cursor: hand;
+    background-color: #0081C5;
+    height: 24px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 11px;
+    background-repeat: no-repeat;
+    background-position: left top;
+    border: none;
+    width: 81px;
+    background-image: url(../images/download.gif);
+}
+.ContinueButton
+{
+    background-image: url(../images/Continue.jpg);
+}
+.ContinueButton_2
+{
+    cursor: hand;
+    background-color: #0081C5;
+    height: 24px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 11px;
+    background-repeat: no-repeat;
+    background-position: left top;
+    border: none;
+    width: 85px;
+    background-image: url(../images/continue_2.gif);
+}
+.ProceedButton
+{
+    background-image: url(../images/Proceed.gif);
+}
+
+.ContinueDisableButton
+{
+    background-image: url(../images/ContinueD.jpg);
+}
+.ContinueDisableButton_2
+{
+    cursor: hand;
+    background-color: #0081C5;
+    height: 24px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 11px;
+    background-repeat: no-repeat;
+    background-position: left top;
+    border: none;
+    width: 85px;
+    background-image: url(../images/ContinueD_2.gif);
+}
+.BackButton
+{
+    background-image: url(../images/Back.jpg);
+}
+
+.ConfirmInvoice
+{
+    background-image: url(../images/ConfirmInvoice.jpg);
+}
+
+.ConfirmCreditNote
+{
+    background-image: url(../images/confirmcreditnote.gif);
+}
+.DeleteButton
+{
+    background-image: url(../images/delete.gif);
+}
+.SearchButton
+{
+    background-image: url(../images/search.gif);
+}
+.DeleteArchiveButton
+{
+    background-image: url(../images/deletearchive.gif);
+}
+.ReopenButton
+{
+    background-image: url(../images/reopen.gif);
+}
+.RejectButton
+{
+    background-image: url(../images/reject.gif);
+}
+.ApproveButton
+{
+    background-image: url(../images/approve.gif);
+}
+.GeneratePDF
+{
+    background-image: url(../images/GeneratePDF.jpg);
+}
+.ConfirmInvoice_2
+{
+    cursor: hand;
+    background-color: #0081C5;
+    height: 23px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 11px;
+    background-repeat: no-repeat;
+    background-position: left top;
+    border: none;
+    width: 139px;
+    background-image: url(../images/confirminvoice_2.gif);
+}
+
+.ConfirmCreditNote_2
+{
+    background-image: url(../images/confirmcredit_2.gif);
+}
+
+.GeneratePDF_2
+{
+    cursor: hand;
+    background-color: #0081C5;
+    height: 23px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 11px;
+    background-repeat: no-repeat;
+    background-position: left top;
+    border: none;
+    width: 139px;
+    background-image: url(../images/generatepdf_2.gif);
+    border: none;
+    cursor: default;
+}
+
+input, textarea
+{
+    border: #000 1px solid;
+    font-family: verdana, Tahoma, Arial;
+    font-size: 11px;
+    border: none\9;
+}
+.noborder
+{
+    border: none !important;
+}
+select
+{
+    font-family: verdana, Tahoma, Arial;
+    font-size: 11px;
+}
+checkbox
+{
+    border: none;
+}
+.MYINPUT
+{
+    border-right: 1px solid;
+    border-top: 1px solid;
+    border-left: 1px solid;
+    border-bottom: 1px solid;
+    font-family: verdana, Tahoma, Arial;
+    font-size: 11px;
+}
+
+.MYINPUTFORVAT
+{
+    border-right: 1px solid;
+    border-top: 1px solid;
+    border-left: 1px solid;
+    border-bottom: 1px solid;
+    font-family: verdana, Tahoma, Arial;
+    font-size: 11px;
+    text-align: right;
+}
+.GridCaption
+{
+    font-size: smaller;
+    font-family: Verdana;
+    background-color: lightcyan;
+    font-family: verdana, Tahoma, Arial;
+    font-size: 11px;
+}
+
+.GridCaptionBold
+{
+    font-style: normal;
+    font-size: medium;
+    font-family: Verdana;
+    background-color: lightcyan;
+    font-family: verdana, Tahoma, Arial;
+    font-size: 11px;
+}
+
+.BorderLessInput
+{
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;
+    border-bottom-style: none;
+}
+.PageHeader
+{
+    font-weight: bolder;
+    font-size: 10pt;
+    color: white;
+    font-family: verdana, Tahoma, Arial;
+    background-color: #3399cc;
+    text-transform: capitalize;
+}
+.BlueHeading
+{
+    text-align: justify;
+    font-family: Verdana;
+    font-size: 10pt;
+    color: blue;
+    font-weight: bolder;
+    margin-left: 19px;
+}
+.graybody
+{
+    text-align: justify;
+    font-family: Verdana;
+    font-size: 10pt;
+    color: #848484;
+    font-weight: normal;
+    margin-left: 39px;
+    margin-right: 0px;
+}
+.ConfirmCreditNote
+{
+    cursor: hand;
+    background-color: #0081C5;
+    height: 23px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 11px;
+    background-image: url(../images/button_bg.gif);
+    background-repeat: no-repeat;
+    background-position: left top;
+    border: none;
+    width: 139px;
+}
+.ButtonCss
+{
+    cursor: hand;
+    background-color: #0081C5;
+    height: 23px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 11px;
+    background-image: url(../images/button_bg.gif);
+    background-repeat: no-repeat;
+    background-position: left top;
+    border: none;
+    width: 109px;
+}
+.buttoncss:hover
+{
+    color: #00FF01;
+    background-image: url(../images/button_bg_m.gif);
+    background-repeat: repeat-x;
+}
+.ButtonCssNewAkkeron
+{
+    cursor: hand;
+    background-color: #0081C5;
+    height: 23px;
+    width: 109px;
+    margin-right: 10px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 11px;
+    background-image: url(../images/button_bg.gif);
+    background-repeat: no-repeat;
+    background-position: left top;
+    border: none;
+}
+
+.ButtonCssNew
+{
+    cursor: hand;
+    background-color: #0081C5;
+    height: 23px;
+    width: 109px;
+    float: left; /*margin-right:10px;*/
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 11px;
+    background-image: url(../images/button_bg.gif);
+    background-repeat: no-repeat;
+    background-position: left top;
+    border: none;
+}
+.ButtonCssNew:hover
+{
+    color: #00FF01 !important;
+    background-image: url(../images/button_bg_m.gif) !important;
+    background-repeat: repeat-x;
+}
+.ButtonCssNew:active
+{
+    color: #00FF01 !important;
+    background-image: url(../images/button_bg_m.gif) !important;
+    background-repeat: repeat-x;
+}
+
+
+#divPrint
+{
+}
+@media print
+{
+    #divPrint
+    {
+        display: none;
+    }
+}
+
+#divPrint1
+{
+}
+@media print
+{
+    #divPrint1
+    {
+        display: none;
+    }
+}
+
+.tlbborder
+{
+    /*border-top: 1px  solid #468CB7;  border-right:1px  solid #468CB7; border-bottom: 1px  solid #468CB7; border-left: 1px   solid #468CB7;	*/
+}
+
+.create_credit
+{
+    background-image: url(../images/create-credit.gif);
+    width: 139px;
+    height: 23px;
+}
+.create_invoice
+{
+    background-image: url(../images/create-invoice.gif);
+    width: 139px;
+    height: 23px;
+}
+/*========Sourayan24-11-2008(Start)========*/
+.edit_data
+{
+    width: 130px;
+    height: 23px;
+    float: left;
+    margin-right: 10px;
+    background-image: url(../images/editdata.gif);
+    border: none;
+    cursor: default;
+}
+.delete_lines
+{
+    width: 130px;
+    height: 23px;
+    float: left;
+    background-image: url(../images/deletelines.gif);
+    border: none;
+}
+.add_newline
+{
+    width: 130px;
+    height: 23px;
+    float: left;
+    background-image: url(../images/addnewline.gif);
+    border: none;
+}
+.save
+{
+    width: 130px;
+    height: 23px;
+    background-image: url(../images/save.gif);
+    border: none;
+}
+.cancel_new
+{
+    width: 130px;
+    height: 23px;
+    background-image: url(../images/cancel_new.gif);
+    border: none;
+}
+.for_back
+{
+    background-image: url(../images/back_new_2.gif);
+    border: none;
+}
+.for_calculate
+{
+    width: 130px;
+    height: 23px;
+    background-image: url(../images/calculate.gif);
+    border: none;
+}
+.EditGrid
+{
+    color: #848484;
+    font-family: verdana, Tahoma, Arial;
+    font-size: 10px;
+    text-decoration: none;
+    border-collapse: collapse;
+}
+/*========Sourayan24-11-2008(End)========*/
+
+.buttonnew
+{
+    cursor: hand;
+    background-color: #0081C5;
+    height: 23px;
+    width: 109px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 11px;
+    background-image: url(../images/button.gif);
+    background-repeat: no-repeat;
+    background-position: left top;
+    border: none;
+}
+.leveltext
+{
+    color: #848484;
+    font: bold 11px Verdana;
+    text-align: right;
+    padding-right: 28px;
+}
+.smallheading
+{
+    font-size: smaller;
+    font-family: Verdana;
+    background-color: lightcyan;
+    font-family: verdana, Tahoma, Arial;
+    font-size: 11px;
+    display: block;
+    width: 110px;
+    float: left;
+    text-align: center;
+}
+.longheading
+{
+    font-size: smaller;
+    font-family: Verdana;
+    background-color: lightcyan;
+    font-family: verdana, Tahoma, Arial;
+    font-size: 11px;
+    display: block;
+    width: 150px;
+    float: left;
+    text-align: center;
+}
+.dropBox
+{
+    height: 18px;
+    width: 110px;
+    color: #848484;
+    font-family: verdana, Tahoma, Arial;
+    font-size: 11px;
+    text-decoration: none;
+}
+
+.inputbox1
+{
+    margin-right: 10px;
+    padding: 2px;
+    height: 18px;
+    width: 200px;
+    border: #000 solid 1px;
+    font: normal 11px/18px Arial;
+    text-align: left;
+    color: #848484;
+}
+.inputbox_date
+{
+    margin-right: 5px;
+    padding: 2px;
+    height: 18px;
+    width: 180px;
+    border: #000 solid 1px;
+    float: left;
+    font: normal 11px/18px Arial;
+    text-align: left;
+    color: #848484;
+}
+.dropBox1
+{
+    height: 18px;
+    width: 200px;
+    color: #848484;
+    border: #000 solid 1px;
+    font: normal 11px/18px Arial;
+    text-align: left;
+    color: #848484;
+}
+.txtarea1
+{
+    margin-right: 10px;
+    padding: 2px;
+    height: 80px;
+    width: 375px; /*border:#000 solid 1px;*/
+    font: normal 11px/18px Arial;
+    text-align: left;
+    color: #848484;
+}
+.txtarea2
+{
+    margin-right: 10px;
+    padding: 2px;
+    height: 80px;
+    width: 200px; /*border:#000 solid 1px;*/
+    font: normal 11px/18px Arial;
+    text-align: left;
+    color: #848484;
+}
+.txtComments
+{
+    width: 45%;
+    padding: 0 10px 0 0;
+    font: normal 11px Verdana;
+    text-align: left;
+    color: #848484;
+}
+
+.nobg
+{
+    background: none !important;
+}
+.topBdr
+{
+    border-top: 1px solid #999;
+}
+
+.bottomBdr
+{
+    border-bottom: 1px solid #999;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+}
+
+
+/*edited by Indrani 20/12/11*/
+table.listingArea
+{
+    /*width:73.5%;*/
+    border: #ccc solid 1px;
+    display: block;
+}
+
+table.listingArea .tableHd, table.listingArea .tableHd a, table.listingArea .tableHd td, table.listingArea .tableHd th /*------Added By Rimi on 18th Nov 2015 [table.listingArea .tableHd th]--------*/
+{
+    background-color: #3399CC;
+    font: bold 11px Verdana;
+    font-size: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+table.listingArea td, table.listingArea tr.redcolor td
+{
+    padding: 4px;
+    font: normal 10px Verdana;
+    color: #333;
+    text-decoration: none;
+    border-right: #ccc solid 1px;
+}
+
+table.listingArea tr.redcolor td
+{
+    color: Red !important;
+}
+
+
+
+table.listingArea02
+{
+    width: 99%;
+    border: none;
+}
+
+/*------Added By Rimi on 17th Nov 2015--------*/
+table.listingArea tr.tableHd th
+{
+    padding: 4px;
+    border-right: #ccc solid 1px;
+}
+
+table.listingArea02 .PageHeader, table.listingArea02 .PageHeader a, table.listingArea02 .PageHeader td
+{
+    padding: 5px;
+    background-color: #3399CC;
+    font: bold 10px Verdana;
+    color: #fff;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+table.listingArea02 td
+{
+    padding: 8px 5px 0 5px;
+    font: normal 10px Verdana;
+    font-size: 10px;
+    color: #333;
+    text-decoration: none;
+}
+
+.nopadding
+{
+    padding: 0 !important;
+}
+.noBorder
+{
+    border: none !important;
+}
+
+/*edited by Indrani 20/12/11*/
+
+/*edited by rinku 16-05-2012*/
+table.listingArea_NL
+{
+    width: 99%;
+    border: #ccc solid 1px;
+}
+
+table.listingArea_NL .tableHd, table.listingArea_NL .tableHd a, table.listingArea_NL .tableHd td
+{
+    background-color: #BED600;
+    font: bold 11px Verdana;
+    font-size: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+table.listingArea_NL td, table.listingArea_NL tr.redcolor td
+{
+    padding: 5px;
+    font: normal 10px Verdana;
+    color: #333;
+    text-decoration: none;
+    border-right: #ccc solid 1px;
+}
+
+.nopadding
+{
+    padding: 0 !important;
+}
+.noBorder
+{
+    border: none !important;
+}
+
+/*edited by rinku 16-05-2012*/
+
+
+/*start Listing Area*/
+
+.useradd
+{
+    width: 30px;
+    margin: 0 auto;
+}
+
+.useradd ul
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.useradd ul li
+{
+    margin: 0;
+    padding: 0;
+    margin: 3px;
+    list-style: none;
+    width: 30px;
+    height: 31px;
+    line-height: 31px;
+}
+
+.useradd ul li a
+{
+    width: 30px;
+    height: 31px;
+    background: url(../images/btn_bg.png) no-repeat;
+    display: block;
+}
+
+
+
+
+.useradd ul li a:hover
+{
+    background: url(../images/btn_bg_hover.png) no-repeat;
+}
+
+
+
+.btnNext
+{
+    background: url(../images/btnNext01.png) no-repeat;
+    width: 30px;
+    height: 31px;
+    border: 0;
+}
+.btnNextAll
+{
+    background: url(../images/btnNext02.png) no-repeat;
+    width: 30px;
+    height: 31px;
+    border: 0;
+}
+
+.btnPrev
+{
+    background: url(../images/btnPrev01.png) no-repeat;
+    width: 30px;
+    height: 31px;
+    border: 0;
+}
+.btnPrevAll
+{
+    background: url(../images/btnPrev02.png) no-repeat;
+    width: 30px;
+    height: 31px;
+    border: 0;
+}
+/*
+.ListBox_CMS
+{
+Z-INDEX: 0; 
+BORDER-BOTTOM: #3399cc 1px solid;
+BORDER-LEFT: #3399cc 1px solid; 
+BORDER-TOP: #3399cc 1px solid; 
+BORDER-RIGHT: #3399cc 1px solid;
+Width:200;
+Height:200;"
+}	
+*/
+/*start Listing Area*/
+
+/* Added By Sougata on 31st December 2012*/
+.noborder
+{
+    border: none !important;
+}
+
+/* Added By Sougata on 14 Jan 2012*/
+.ButtonCsssm
+{
+    cursor: pointer;
+    background-color: #0081C5;
+    height: 23px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 11px;
+    background-image: url(../images/button_bg.gif);
+    background-repeat: no-repeat;
+    background-position: left top;
+    border: none;
+    width: 109px;
+}
+.buttoncsssm:hover
+{
+    padding-top: 1px;
+}
+
+.NormalBody_test a
+{
+    text-decoration: none;
+    color: #fff;
+}
+
+
+/* Added By Mrinal on 22nd January 2013*/
+
+.AddAttachment
+{
+    cursor: hand;
+    background-color: #0081C5;
+    height: 23px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 11px;
+    background-repeat: no-repeat;
+    background-position: left top;
+    border: none;
+    width: 139px;
+    background-image: url(../images/Attachments.gif);
+    border: none;
+    cursor: default;
+}
+
+.CreateNewInvoice
+{
+    cursor: hand;
+    background-color: #0081C5;
+    height: 23px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 11px;
+    background-repeat: no-repeat;
+    background-position: left top;
+    border: none;
+    width: 139px;
+    background-image: url(../images/CreateNewInvoice.gif);
+    border: none;
+    cursor: default;
+}
+
+.CreateNewCredit
+{
+    cursor: hand;
+    background-color: #0081C5;
+    height: 23px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 11px;
+    background-repeat: no-repeat;
+    background-position: left top;
+    border: none;
+    width: 139px;
+    background-image: url(../images/CreateNewCredit.gif);
+    border: none;
+    cursor: default;
+}
+
+/* Added By Sougata on 23rd January 2013 */
+.ConfirmCREDIT_2
+{
+    cursor: hand;
+    background-color: #0081C5;
+    height: 23px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 11px;
+    background-repeat: no-repeat;
+    background-position: left top;
+    border: none;
+    width: 139px;
+    background-image: url(../images/confirmCredit_2_2.gif);
+}
+
+
+.ButtonCss_akkeron
+{
+    background-color: #0081C5;
+    height: 23px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 11px;
+    background-image: url(../images/aqillaInvoiceexport.gif);
+    background-repeat: no-repeat;
+    background-position: left top;
+    border: none;
+    width: 109px;
+    cursor: pointer;
+}
+.ButtonCss_akkeron:hover
+{
+    color: #00FF01;
+    background-image: url(../images/aqillaInvoiceexport_h.gif);
+    background-repeat: repeat-x;
+}
+
+/* Added By Mrinal on 15th May 2014*/
+.no_border
+{
+    border: none !important;
+}
+
+/* Added By Mrinal on 1st September 2014*/
+.repeaterItem
+{
+    float: left;
+    margin: 0 5px 5px 0;
+    background: none;
+    border: none;
+    font: 10px Verdana;
+    color: #0081c5;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.repeaterItem:hover
+{
+    color: #000;
+}
+
+.Width110
+{
+    width: 110px;
+}
+
+/*------------------------- START New style for Invoice Html on 28th October 2014 ---------------------------*/
+.customTable td
+{
+    padding: 3px 0;
+}
+
+.custom_listingArea
+{
+    border: 1px solid #ccc;
+}
+.custom_listingArea th
+{
+    background-color: #3399cc;
+    padding: 5px 0;
+    font: bold 12px Verdana, Geneva, sans-serif;
+    text-decoration: none;
+    color: #fff;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+
+/*-------------------------Start jaydeb ---------------------------*/
+
+.colored
+{
+    background: #CCF2FB;
+    padding: 0 2px;
+}
+.textfields
+{
+    border: 1px solid #ccc;
+    box-shadow: none;
+    height: 20px;
+    width: 100%;
+    color: #848484;
+}
+.textfields-Reopen
+{
+    border: 1px solid #ccc;
+    box-shadow: none;
+    height: 20px;
+    width: 100%;
+    color: #848484;
+}
+.textarea
+{
+    border: 1px solid #ccc;
+    box-shadow: none;
+    height: 90px;
+    width: 100%;
+}
+.textfields1
+{
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: medium none;
+    box-shadow: none;
+    height: 30px;
+    padding: 0 10px;
+    text-align: left;
+    width: 100%;
+}
+.textfields2
+{
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: medium none;
+    box-shadow: none;
+    height: 30px;
+    padding: 0 10px;
+    text-align: right;
+    width: 100%;
+}
+
+
+.textfields-option
+{
+    border: 1px solid #ccc;
+    box-shadow: none;
+    height: 20px;
+    width: 94%;
+    color: #848484;
+}
+.textfields-value
+{
+    border: 1px solid #ccc;
+    box-shadow: none;
+    height: 20px;
+}
+.rowset td
+{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 2px;
+    padding-right: 2px;
+    text-align: left;
+}
+
+.warning
+{
+    color: #F00;
+}
+.bottomborder, .bottomborder td
+{
+    border-bottom: 1px solid #666;
+}
+.color-cell
+{
+    background: #CCF2FB;
+}
+.btn-area
+{
+    height: 50px;
+}
+.btn
+{
+    background: #30CAF1;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.fl-right
+{
+    float: right;
+}
+.border
+{
+    border: 1px solid #ddd;
+}
+.custom_listingArea2
+{
+    border: 1px solid #ccc;
+    margin-top: 5px;
+}
+
+.custom_listingArea2 th
+{
+    background-color: #3399cc;
+    padding: 5px 0;
+    font: bold 12px Verdana, Geneva, sans-serif;
+    text-decoration: none;
+    color: #fff;
+    word-wrap: break-word;
+    white-space: normal;
+}
+.file-attch
+{
+    border: medium none;
+    margin: 5px 0;
+    text-align: center;
+    width: 50%;
+}
+.td-pad
+{
+    padding-left: 10px !important;
+}
+/*--------------end------------------*/
+/*------------------------- END New style for Invoice Html ---------------------------*/
+
+
+.repon-chk
+{
+    width: 30%;
+}
+.col-left
+{
+    float: left;
+    width: 50%;
+}
+
+.col-right
+{
+    float: left;
+    width: 50%;
+}
+.col-right label
+{
+    color: Red;
+    font-weight: bold;
+    font-size: 12px;
+}
+.head-box
+{
+    border: 1px solid #70b8db;
+    background-color: #3399cc;
+    color: #fff;
+    padding: 0;
+    font-size: 11px;
+    height: 25px;
+}
+.head-box th
+{
+    border-left: none; /*border-right: 1px solid #70b8db;	 */
+    border-top: none;
+    border-bottom: none;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+.head-box th:last-child
+{
+    border-right: none;
+}
+.head-box th:last-child
+{
+    border-left: none;
+}
+.tablebox
+{
+    /*border:1px solid #666;*/
+}
+
+.gbp
+{
+    font-weight: 600;
+    padding: 5px;
+}
+.dupval
+{
+    font-weight: 600;
+    font-size: 12px;
+    color: #f00;
+    padding: 5px;
+}
+.value
+{
+    font-size: 11px;
+    font-weight: 600;
+    color: #848484;
+}
+.coding
+{
+    font-size: 11px;
+    font-weight: 600;
+    padding: 10px 10px 10px 0;
+    color: #848484;
+}
+.st-hist
+{
+    font-size: 12px;
+    font-weight: 100;
+}
+.align-right
+{
+    text-align: right;
+}
+.tophead
+{
+    /*width: 79%;	*/
+    background-color: #3399cc;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+#grdFile.listingArea tbody
+{
+    width: 100%;
+}
+.txt_area
+{
+    width: 74.5%;
+    border: 1px solid #ccc;
+    color: #848484;
+}
+.txtselectbar
+{
+    border: 1px solid #ccc;
+    padding: 2px 0;
+    color: #848484;
+}
+.tablebox
+{
+    padding: 0 0 5px 0;
+}
+.tableHd td span
+{
+    font-size: 11px;
+    font-weight: 600;
+    color: #848484;
+    text-align: center;
+}
+.NormalBody2
+{
+    width: 200px;
+    float: left;
+    color: #848484;
+    font-family: verdana, Tahoma, Arial;
+    font-size: 11px;
+}
+
+
+.btnCenter
+{
+    text-align: center;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+
+.PageHeaderAction
+{
+    font-weight: bolder;
+    font-size: 10pt;
+    color: white;
+    font-family: verdana, Tahoma, Arial; /*background-color: #3399cc;*/
+    text-transform: capitalize;
+}
+
+.ColorDuplicateRow
+{
+    border-bottom: solid 1px #ff0000;
+    border-top: solid 1px #ff0000;
+}
+.ColorDuplicateRow td
+{
+    font-weight: bold !important;
+    color: Red !important;
+    background-color: #fffeca !important;
+}
+
+.allbtn
+{
+    background-color: #428bca;
+    border: 0 none;
+    color: #fff !important;
+    cursor: pointer;
+    float: inherit;
+    font-family: 'franklin_gothic_medium_condRg';
+    font-size: 14px;
+    font-weight: 400;
+    margin-right: 20px;
+    padding: 6px 30px;
+    text-transform: uppercase;
+    width: 110px;
+    line-height: 23px;
+    text-decoration: none;
+}
+.allbtn:hover
+{
+    background-color: #3276b1 !important;
+    color: #fff !important;
+}
+
+/* Start Changes on 9.3.15 by Soumyajit*/
+.allbtnDel
+{
+    background-color: #FF0000 !important;
+    border: 0 none;
+    color: #fff !important;
+    cursor: pointer;
+    float: inherit;
+    font-family: 'franklin_gothic_medium_condRg';
+    font-size: 14px;
+    font-weight: 400;
+    margin-right: 20px;
+    padding: 6px 30px;
+    text-transform: uppercase;
+    width: 110px;
+    line-height: 23px;
+    text-decoration: none;
+}
+
+.allbtnDel:hover
+{
+    background-color: #D50000 !important;
+}
+
+/* End Changes on 9.3.15 by Soumyajit*/
+
+/* Start changed on 280215 by Soumyajit*/
+.allbtninvoice
+{
+    background-color: #428bca;
+    border: 0 none;
+    color: #fff !important;
+    cursor: pointer;
+    float: inherit;
+    font-family: 'franklin_gothic_medium_condRg';
+    font-size: 14px;
+    font-weight: 400;
+    margin-right: 20px;
+    padding: 6px 30px;
+    text-transform: uppercase;
+    width: 40px;
+    line-height: 23px;
+    text-decoration: none;
+}
+.allbtninvoice:hover
+{
+    background-color: #3276b1 !important;
+    color: #fff !important;
+}
+
+/*End changed on 280215 by Soumyajit*/
+.allbtn_ActionWindow
+{
+    color: #fff !important;
+    float: right !important;
+    font-weight: bold !important;
+    text-decoration: none !important;
+    background-color: #2491cf !important;
+    border-color: #357ebd !important;
+    height: 24px;
+    line-height: 20px;
+    margin: 5px;
+    width: 110px;
+    font-size: 11px !important;
+}
+.allbtn_ActionWindow:hover
+{
+    background-color: #3276b1 !important;
+}
+
+.btnDelete_ActionWindow
+{
+    color: #fff !important;
+    float: right !important;
+    font-weight: bold !important;
+    text-decoration: none !important;
+    background-color: #FF0000 !important;
+    border-color: #357ebd !important;
+    height: 24px;
+    line-height: 20px;
+    margin: 5px;
+    width: 110px;
+    font-size: 11px !important;
+}
+.btnDelete_ActionWindow:hover
+{
+    background-color: #D50000 !important;
+}
+
+.btnApprove_ActionWindow
+{
+    color: #fff !important;
+    float: right !important;
+    font-weight: bold !important;
+    text-decoration: none !important;
+    background-color: #00CC00 !important;
+    border-color: #357ebd !important;
+    height: 24px;
+    line-height: 20px;
+    margin: 5px;
+    width: 110px;
+    font-size: 11px !important;
+}
+.btnApprove_ActionWindow:hover
+{
+    background-color: #00AA00 !important;
+}
+
+.btnRejected_ActionWindow
+{
+    color: #fff !important;
+    float: right !important;
+    font-weight: bold !important;
+    text-decoration: none !important;
+    background-color: #FFC000 !important;
+    border-color: #357ebd !important;
+    height: 24px;
+    line-height: 20px;
+    margin: 5px;
+    width: 110px;
+    font-size: 11px !important;
+}
+.btnRejected_ActionWindow:hover
+{
+    background-color: #DCAC0A !important;
+}

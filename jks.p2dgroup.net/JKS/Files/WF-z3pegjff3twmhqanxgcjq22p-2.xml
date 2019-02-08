@@ -1,0 +1,70 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <InvoiceDetail>
+    <InvoiceDetailID>4797549</InvoiceDetailID>
+    <InvoiceID>3347924</InvoiceID>
+    <SerialNo>1</SerialNo>
+    <Description>Net Amount</Description>
+    <Quantity>11.00</Quantity>
+    <Rate>120.02</Rate>
+    <VATRate>20.00</VATRate>
+    <VATAmt>264.04</VATAmt>
+    <GrossAmt>1320.22</GrossAmt>
+    <TotalAmt>1584.26</TotalAmt>
+    <PurOrderNo>0000040890</PurOrderNo>
+    <PurOrderLineNo>1</PurOrderLineNo>
+    <BuyersProdCode>Buyer Code</BuyersProdCode>
+    <ModDate>2018-07-03T14:16:46.873+01:00</ModDate>
+    <ModStamp>AAAAAAgf32c=</ModStamp>
+    <New_NettValue>1320.22</New_NettValue>
+  </InvoiceDetail>
+  <InvoiceDetail>
+    <InvoiceDetailID>5052090</InvoiceDetailID>
+    <InvoiceID>3347924</InvoiceID>
+    <SerialNo>2</SerialNo>
+    <Description />
+    <Quantity>2.00</Quantity>
+    <Rate>2.00</Rate>
+    <VATTypeID>10</VATTypeID>
+    <VATRate>20.00</VATRate>
+    <VATAmt>0.80</VATAmt>
+    <UOM />
+    <GrossAmt>4.00</GrossAmt>
+    <Discount>0.00</Discount>
+    <TotalAmt>4.80</TotalAmt>
+    <PurOrderNo />
+    <PurOrderLineNo>1</PurOrderLineNo>
+    <BuyersProdCode />
+    <ModDate>2018-09-07T16:47:11.307+01:00</ModDate>
+    <ModStamp>AAAAAAgf32g=</ModStamp>
+    <New_Type />
+    <New_DiscountPercent2>0.00</New_DiscountPercent2>
+    <New_NettValue>0</New_NettValue>
+    <New_PostDiscountValue>0.00</New_PostDiscountValue>
+    <New_TaxCode>S</New_TaxCode>
+  </InvoiceDetail>
+  <InvoiceDetail>
+    <InvoiceDetailID>5117879</InvoiceDetailID>
+    <InvoiceID>3347924</InvoiceID>
+    <SerialNo>3</SerialNo>
+    <Description />
+    <Quantity>0.00</Quantity>
+    <Rate>0.00</Rate>
+    <VATTypeID>10</VATTypeID>
+    <VATRate>15.00</VATRate>
+    <VATAmt>0.00</VATAmt>
+    <UOM />
+    <GrossAmt>0.00</GrossAmt>
+    <Discount>0.00</Discount>
+    <TotalAmt>0.00</TotalAmt>
+    <PurOrderNo />
+    <BuyersProdCode />
+    <ModDate>2018-09-28T14:53:45.943+01:00</ModDate>
+    <ModStamp>AAAAAAgf32s=</ModStamp>
+    <New_Type />
+    <New_DiscountPercent2>0.00</New_DiscountPercent2>
+    <New_NettValue>10.00</New_NettValue>
+    <New_PostDiscountValue>0.00</New_PostDiscountValue>
+    <New_TaxCode>S</New_TaxCode>
+  </InvoiceDetail>
+</NewDataSet>

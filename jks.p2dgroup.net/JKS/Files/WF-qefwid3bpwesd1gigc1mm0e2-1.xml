@@ -1,0 +1,40 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <InvoiceID>3708944</InvoiceID>
+    <InvoiceNo>invoice Test 20</InvoiceNo>
+    <SupplierCompanyID>173463</SupplierCompanyID>
+    <BuyerCompanyID>148054</BuyerCompanyID>
+    <InvoiceDate>2018-12-06T00:00:00+00:00</InvoiceDate>
+    <CurrencyTypeID>22</CurrencyTypeID>
+    <SellerVATNo />
+    <SupplierAddress1 />
+    <SupplierAddress2 />
+    <SupplierAddress3 />
+    <SupplierAddress4 />
+    <SupplierAddress5 />
+    <SupplierZIP />
+    <SupplierCountry />
+    <NetTotal>20000.00</NetTotal>
+    <VATAmt>4000.00</VATAmt>
+    <TotalAmt>24000.00</TotalAmt>
+    <ModDate>2018-12-11T14:24:40.787+00:00</ModDate>
+    <ModStamp>AAAAAAhaZPU=</ModStamp>
+    <ModUserId>40756</ModUserId>
+    <StatusId>21</StatusId>
+    <PassedToUserID>42970</PassedToUserID>
+    <DepartmentID>0</DepartmentID>
+    <TaxPointDate>2018-12-06T00:00:00+00:00</TaxPointDate>
+    <Approved1>false</Approved1>
+    <Approved1SB1>false</Approved1SB1>
+    <Approved1SB2>false</Approved1SB2>
+    <Approved2_1>false</Approved2_1>
+    <Approved2_2>false</Approved2_2>
+    <Approved2SB1>false</Approved2SB1>
+    <Approved2SB2>false</Approved2SB2>
+    <ApprovedCEO>false</ApprovedCEO>
+    <StatusID1>21</StatusID1>
+    <NetTotal1>20000.00</NetTotal1>
+    <New_DocumentType>INV</New_DocumentType>
+  </Table>
+</NewDataSet>
